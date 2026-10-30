@@ -1,0 +1,329 @@
+@font-face{font-family:Pretendard;src:url("fonts/Pretendard-400.woff2") format("woff2");font-weight:400;font-display:block}
+@font-face{font-family:Pretendard;src:url("fonts/Pretendard-600.woff2") format("woff2");font-weight:600;font-display:block}
+@font-face{font-family:Pretendard;src:url("fonts/Pretendard-700.woff2") format("woff2");font-weight:700;font-display:block}
+@font-face{font-family:Pretendard;src:url("fonts/Pretendard-800.woff2") format("woff2");font-weight:800;font-display:block}
+@font-face{font-family:MaruBuri;src:url("fonts/MaruBuri-400.woff2") format("woff2");font-weight:400;font-display:block}
+@font-face{font-family:MaruBuri;src:url("fonts/MaruBuri-700.woff2") format("woff2");font-weight:700;font-display:block}
+/* specs/design/tokens.md 1절(기본) · 2절(의미) 그대로. 값은 그 파일에만 두고 여기는 같은 이름 · 같은 값 */
+:root {
+  /* 1. 기본 토큰 (실제 값) */
+
+  /* 색 */
+  --gray-0: #ffffff;
+  --gray-50: #f5f5f5;
+  --gray-100: #e5e5e5;
+  --gray-300: #c4c4c4;
+  --gray-500: #8a8a8a;
+  --gray-700: #555555;
+  --gray-900: #111111;
+  --red-600: #d4271b;
+  --white-a85: rgba(255,255,255,.85);
+
+  /* 글꼴 */
+  --font-sans: 'Pretendard','Noto Sans KR','Malgun Gothic',sans-serif;
+  --font-mono: 'Cascadia Mono','Consolas','Pretendard',monospace;
+
+  /* 글자 크기 */
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-md: 14px;
+  --font-size-lg: 18px;
+  --font-size-xl: 28px;
+  --font-size-frame: 22px;
+  --font-size-frame-lg: 40px;
+
+  /* 굵기 */
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-heavy: 800;
+
+  /* 자간 */
+  --tracking-tight: -1.5px;
+  --tracking-snug: -0.5px;
+  --tracking-wide: 1px;
+
+  /* 행간 */
+  --leading-body: 1.6;
+
+  /* 투명도 */
+  --opacity-hover: .85;
+  --opacity-disabled: .4;
+
+  /* 여백 (4px 단위) */
+  --space-half: 2px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 56px;
+  --pill-overlap: 11px;
+
+  /* 모서리 */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-card: 14px;
+  --radius-btn: 999px;
+
+  /* 선 두께 */
+  --line-w: 1px;
+  --line-w-frame: 1.5px;
+  --line-w-focus: 2px;
+  --line-w-selected: 3px;
+
+  /* 높이 */
+  --control-h-sm: 26px;
+  --control-h-md: 32px;
+  --control-h-lg: 40px;
+  --bar-h: 56px;
+  --progress-h: 3px;
+  --icon-size: 18px;
+
+  /* 레이아웃 폭 */
+  --panel-w: 270px;
+  --side-w: 340px;
+  --content-w: 760px;
+  --dialog-w: 420px;
+  --picker-w: 1180px;
+  --picker-h: 720px;
+  --create-field-w: 460px;
+  --bubble-w: 560px;
+  --chlist-w: 240px;
+  --memo-w: 260px;
+  --review-toc-w: 196px;
+  --review-panel-w: 280px;
+  --review-paper-w: 1040px;
+  --review-h2-size: 25px;
+  --character-w: 200px;
+  --book-narrow-w: 720px;
+  --present-narrow-w: 900px;
+  --present-narrow-h: 480px;
+  --app-min-w: 1280px;
+  --app-min-h: 720px;
+
+  /* 무늬 */
+  --dot-grid: radial-gradient(var(--color-dot) 1px, transparent 1px) 0 0 / 16px 16px;
+  /* 책 코드 강조 (011, 책 HTML 안에서만): 흑백 강조 하나 (FR-024) */
+  --code-text: #222;
+  --code-keyword: #151515;
+  --code-keyword-weight: var(--font-weight-bold);
+  --code-string: #596467;
+  --code-comment: #666;
+  --code-function: #424d60;
+  --code-class: #424d60;
+  --code-constant: #222;
+  --code-tag: #151515;
+  --code-output: #222;
+  --code-rule: #333;
+  --code-bg: #fafafa;
+  --code-ln: #888;
+  --code-line: 20px;
+  /* 책 종이 (011): 회색 바깥 + 흰 종이 단 · 장 머리 · 본문 글꼴 */
+  --book-page-bg: #ecebe8;
+  --book-paper-w: 1000px;
+  --book-paper-pad-y: 44px;
+  --book-paper-pad-x: 48px;
+  --book-reading-pad: 38px 54px;
+  --book-paper-gap: 28px;
+  --book-mid-w: 1100px;
+  --book-mid-paper-pad: 26px;
+  --book-mid-reading-pad: 20px;
+  --book-bar-h: 40px;
+  --font-book: 'MaruBuri', serif;
+  --font-book-num: Georgia, 'Times New Roman', serif;
+  --font-book-code: 'Consolas','Cascadia Mono','Pretendard',monospace;
+  --book-font-size: 15px;
+  --book-leading: 1.85;
+  --book-h1-size: 40px;
+  --book-h2-size: 28px;
+  --book-h3-size: 21px;
+  --book-h4-size: 16px;
+  --book-num-size: 70px;
+  --book-small-size: 13px;
+  --book-ln-size: 10px;
+  --book-ink: #222;
+  --book-head-ink: #191919;
+  --book-sub-ink: #444;
+  --book-muted: #666;
+  --book-caption-ink: #555;
+  --book-num-ink: #ccc;
+  --book-rule: #aaa;
+  --book-rule-soft: #bbb;
+  --book-rule-faint: #ddd;
+  --book-h2-rule: 7px solid #dedede;
+  --book-table-head: #ececec;
+  --book-inline-code-bg: #f1f1f1;
+  /* 2. 의미 토큰 (쓰임 이름 → 기본 토큰) */
+
+  /* 색 */
+  --color-bg: var(--gray-0);
+  --color-surface: var(--gray-0);
+  --color-soft: var(--gray-50);
+  --color-text: var(--gray-900);
+  --color-sub: var(--gray-700);
+  --color-muted: var(--gray-500);
+  --color-faint: var(--gray-300);
+  --color-line: var(--gray-900);
+  --color-line-soft: var(--gray-100);
+  --color-dot: var(--gray-100);
+  --color-inverse-bg: var(--gray-900);
+  --color-inverse-text: var(--gray-0);
+  --color-danger: var(--red-600);
+  --color-overlay: var(--white-a85);
+
+  /* 선 */
+  --border-strong: var(--line-w) solid var(--color-line);
+  --border-frame: var(--line-w-frame) solid var(--color-line);
+  --border-soft: var(--line-w) solid var(--color-line-soft);
+  --border-dashed: var(--line-w-frame) dashed var(--color-faint);
+  --focus-ring: inset 0 0 0 var(--line-w-focus) var(--color-line);
+  --border-selected: var(--line-w-selected);
+
+  /* 레이아웃 */
+  --body-pad-y: var(--space-6);
+  --body-pad-x: var(--space-8);
+  --content-pad-y: var(--space-10);
+
+  /* 용도 높이 (roles.md) */
+  --row-h: var(--control-h-md);
+  --inline-h: var(--control-h-sm);
+  --field-h: var(--control-h-lg);
+}
+
+/* 책 HTML 안에 넣는 모양 (design-system "책" · components 책 머리 줄 · 책 종이 · 책 머리 · 책 코드 · 책 그림 · 책 팁 · tokens 책 코드 강조 · 책 종이). 값은 tokens.css 토큰만 */
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body { color: var(--book-ink); background: var(--color-bg); font: var(--book-font-size)/var(--book-leading) var(--font-book); }
+button { height: var(--inline-h); padding: 0 var(--space-3); border: var(--border-strong); border-radius: var(--radius-btn); background: var(--color-surface); color: var(--color-text); font: inherit; font-family: var(--font-sans); font-size: var(--font-size-xs); white-space: nowrap; cursor: pointer; }
+button:hover:not(:disabled) { background: var(--color-soft); }
+button:disabled { cursor: default; color: var(--color-faint); border-color: var(--color-faint); }
+button.text { border: 0; background: transparent; color: var(--color-sub); font-size: var(--font-size-sm); }
+button:focus-visible, a:focus-visible { outline: var(--line-w-focus) solid var(--color-line); outline-offset: var(--space-1); }
+
+/* 책 머리 줄(전체 폭) → 왼쪽 패널 | 본문 칸. [목차]로 패널을 접으면 본문 칸 한 단 (FR-034) */
+.reader { display: grid; grid-template-columns: var(--panel-w) minmax(0, 1fr); grid-template-rows: var(--book-bar-h) minmax(0, 1fr); height: 100vh; }
+.reader[data-toc="closed"] { grid-template-columns: minmax(0, 1fr); }
+.reader[data-toc="closed"] .toc { display: none; }
+.book-bar { grid-column: 1 / -1; display: flex; align-items: center; gap: var(--space-3); min-width: 0; height: var(--book-bar-h); padding: 0 var(--space-4); border-bottom: var(--line-w) solid var(--book-rule-soft); background: var(--color-bg); font-family: var(--font-sans); }
+.book-bar__title { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: var(--font-size-sm); font-weight: var(--font-weight-bold); }
+.toc-toggle[aria-expanded="true"] { border-color: var(--color-inverse-bg); background: var(--color-inverse-bg); color: var(--color-inverse-text); }
+.toc { min-width: 0; padding: var(--space-5) var(--space-3) var(--space-4); border-right: var(--line-w) solid var(--book-rule-soft); overflow-y: auto; font: var(--font-size-md)/var(--leading-body) var(--font-sans); }
+.caption { margin: 0 0 var(--space-2); padding: 0 var(--space-2); font: var(--font-size-xs) var(--font-mono); letter-spacing: var(--tracking-wide); color: var(--color-muted); }
+.toc-title { margin: var(--space-4) 0; padding: 0 var(--space-2); font-size: var(--font-size-lg); font-weight: var(--font-weight-heavy); overflow-wrap: anywhere; }
+.toc a { display: block; height: var(--control-h-md); margin: var(--space-1) 0; padding: 0 var(--space-2); border-radius: var(--radius-md); color: var(--color-text); font-size: var(--font-size-sm); line-height: var(--control-h-md); text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.toc a:hover { background: var(--color-soft); }
+.toc a[aria-current="true"] { background: var(--color-inverse-bg); color: var(--color-inverse-text); }
+.toc footer { padding: var(--space-4) var(--space-2); font-size: var(--font-size-xs); color: var(--color-muted); }
+
+/* 책 종이: 회색 바깥 위 흰 종이 단(책 머리 · 머리말 · 장마다 하나) */
+.reading { min-width: 0; padding: var(--book-reading-pad); overflow-y: auto; overflow-x: hidden; background: var(--book-page-bg); }
+.book-head, .preface, .chapter { position: relative; max-width: var(--book-paper-w); min-width: 0; margin: 0 auto var(--book-paper-gap); padding: var(--book-paper-pad-y) var(--book-paper-pad-x); background: var(--color-bg); overflow-wrap: anywhere; scroll-margin-top: var(--space-6); }
+
+/* 책 머리 (책 · 장) */
+.book-head h1 { margin: 0; color: var(--book-head-ink); font: var(--font-weight-heavy) var(--book-h1-size)/var(--leading-body) var(--font-sans); letter-spacing: var(--tracking-tight); overflow-wrap: anywhere; }
+.book-head p { margin: var(--space-2) 0 0; color: var(--book-muted); font: var(--font-size-sm)/var(--leading-body) var(--font-sans); }
+.eyebrow { padding-top: var(--space-2); color: var(--book-muted); font: var(--font-size-xs)/var(--leading-body) var(--font-sans); letter-spacing: var(--tracking-wide); }
+.chapter-num { position: absolute; top: var(--space-6); right: var(--book-paper-pad-x); color: var(--book-num-ink); font: var(--book-num-size)/1 var(--font-book-num); user-select: none; }
+.chapter > .chapter-num + h2, .chapter > .chapter-num + .review-block > h2 { margin: var(--space-2) 0 var(--space-8); padding: var(--space-2) calc(var(--book-num-size) * 1.4) var(--space-6) 0; border-top: 0; border-bottom: var(--book-h2-rule); color: var(--book-head-ink); font: var(--font-weight-heavy) var(--book-h2-size)/var(--leading-body) var(--font-sans); letter-spacing: var(--tracking-tight); }
+
+/* 읽는 글 */
+.preface h1, .preface h2, .chapter h2, .chapter h3 { margin: var(--space-8) 0 var(--space-3); padding-top: var(--space-4); border-top: var(--line-w) solid var(--book-rule); color: var(--book-head-ink); font: var(--font-weight-heavy) var(--book-h3-size)/var(--leading-body) var(--font-sans); }
+.chapter h4, .chapter h5 { margin: var(--space-6) 0 var(--space-2); color: var(--book-head-ink); font: var(--font-weight-bold) var(--book-h4-size)/var(--leading-body) var(--font-sans); }
+p { margin: 0 0 var(--space-3); }
+ol, ul { margin: 0 0 var(--space-3); padding-left: var(--space-5); }
+li + li { margin-top: var(--space-1); }
+table { width: 100%; margin: var(--space-5) 0; border-collapse: collapse; table-layout: fixed; font: var(--book-small-size)/var(--leading-body) var(--font-sans); }
+td, th { padding: var(--space-2) var(--space-3); border-bottom: var(--line-w) solid var(--book-rule-soft); text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+th { background: var(--book-table-head); font-weight: var(--font-weight-bold); }
+tbody tr:nth-child(even) { background: var(--code-bg); }
+blockquote { margin: var(--space-5) 0; padding: var(--space-3) 0; border-top: var(--line-w) solid var(--book-rule); border-bottom: var(--line-w) solid var(--book-rule); color: var(--book-sub-ink); }
+blockquote > :last-child { margin-bottom: 0; }
+a { color: var(--book-ink); }
+:not(pre) > code { padding: 0 var(--space-1); background: var(--book-inline-code-bg); font-family: var(--font-book-code); font-size: var(--font-size-sm); }
+.img-alt { color: var(--color-muted); }
+
+/* 책 코드: 위아래 선 상자 → 머리 줄(이름 · [복사]) → 줄 번호 | 코드 칸 (코드 · 명령 · 실행 결과) */
+.code-wrap { position: relative; min-width: 0; margin: var(--space-5) 0; border-top: var(--line-w) solid var(--code-rule); border-bottom: var(--line-w) solid var(--code-rule); }
+.code-label { display: flex; align-items: center; gap: var(--space-2); height: var(--row-h); border-bottom: var(--line-w) solid var(--book-rule-faint); background: var(--color-bg); color: var(--book-ink); font: var(--font-weight-bold) var(--font-size-xs) var(--font-sans); }
+.code-label__name { flex: 1; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.code-tools { display: flex; align-items: center; gap: var(--space-2); font-weight: var(--font-weight-regular); }
+.copy-result { font: var(--font-size-xs) var(--font-mono); color: var(--color-muted); }
+.code-body { display: flex; min-width: 0; background: var(--code-bg); }
+.code-ln { flex: none; width: var(--space-8); padding: var(--space-3) var(--space-2) var(--space-3) 0; color: var(--code-ln); font: var(--book-ln-size)/var(--code-line) var(--font-book-code); text-align: right; white-space: pre; user-select: none; }
+pre { flex: 1; min-width: 0; margin: 0; padding: var(--space-3) var(--space-3) var(--space-3) 0; overflow-x: auto; overflow-y: hidden; color: var(--code-text); font: var(--font-size-sm)/var(--code-line) var(--font-book-code); white-space: pre; tab-size: 4; }
+pre code { font: inherit; }
+.code-wrap[data-kind="output"] pre { color: var(--code-output); }
+.cmd-line::before { content: "$ "; color: var(--color-muted); user-select: none; }
+/* Prism 토큰 (tag 토큰이 다른 모양을 물려받지 않게 막는다) */
+pre .token { border: 0; padding: 0; background: none; }
+.token.keyword, .token.boolean, .token.null, .token.important { color: var(--code-keyword); font-weight: var(--code-keyword-weight); }
+.token.string, .token.attr-value, .token.template-string, .token.char, .token.regex { color: var(--code-string); }
+.token.comment, .token.prolog, .token.doctype, .token.cdata { color: var(--code-comment); font-style: italic; }
+.token.function, .token.function-variable { color: var(--code-function); }
+.token.class-name, .token.parameter { color: var(--code-class); }
+.token.number, .token.constant, .token.attr-name, .token.property, .token.literal-property, .token.symbol { color: var(--code-constant); }
+.token.tag { color: var(--code-tag); font-weight: var(--code-keyword-weight); }
+
+/* 책 그림: 테두리 없이 종이 위, 캡션 위 선 */
+.book-figure { min-width: 0; margin: var(--space-6) 0; padding: 0; text-align: center; }
+/* 기본 크기: 폭 ≤ 칸 · 비율 유지 · 키우지 않음, 사진 그림(생성형 · 캡처 · 넣은 이미지)은 높이 ≤ 보이는 본문 높이 × 0.5(책은 화면 50vh).
+   도식 SVG는 글자 크기(≥ --font-size-xs)를 지키려고 높이로 줄이지 않는다. 크기를 적은 그림은 적은 폭(칸까지), 높이 규칙 없음 */
+.figure-scroll { min-width: 0; }
+.book-figure img { display: block; width: auto; height: auto; max-width: 100%; margin: 0 auto; }
+.book-figure img[data-raster] { max-height: 50vh; }
+.book-figure[data-size] img { max-height: none; }
+.book-figure img[hidden] { display: none; }
+.book-figure img.shot { border: var(--border-soft); }
+.review { margin-bottom: var(--space-2); font: var(--font-size-xs) var(--font-mono); color: var(--color-muted); text-align: left; }
+.status-tag { display: inline-block; padding: var(--space-half) var(--space-1); border: var(--line-w) solid var(--color-muted); font: var(--font-size-xs)/1 var(--font-mono); }
+/* 참고 그림의 출처 (009 FR-024, roles "책 그림") */
+.book-figure .credit { margin: var(--space-1) 0 0; font: var(--font-size-xs)/var(--leading-body) var(--font-sans); color: var(--color-sub); overflow-wrap: anywhere; }
+.book-figure figcaption { margin-top: var(--space-2); padding-top: var(--space-2); border-top: var(--line-w) solid var(--book-rule-faint); color: var(--book-caption-ink); font: var(--font-size-sm)/var(--leading-body) var(--font-sans); text-align: left; }
+.words { display: flex; flex-wrap: wrap; justify-content: space-evenly; gap: var(--space-2); margin-top: var(--space-2); font-size: var(--font-size-md); }
+.steps { display: flex; justify-content: center; align-items: center; gap: var(--space-2); margin-top: var(--space-2); }
+.step-count { font: var(--font-size-sm) var(--font-mono); }
+.blank { text-align: left; }
+.blank__what { margin: 0 0 var(--space-1); font-weight: var(--font-weight-semibold); }
+.blank__why { margin: 0; font-size: var(--font-size-sm); color: var(--color-muted); }
+
+/* 책 팁 (components "책 팁"): 위아래 선 + 라벨 알약 반전 `팁` + 읽는 글 */
+.book-tip { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-2); min-width: 0; margin: var(--space-5) 0; padding: var(--space-3) 0; border-top: var(--line-w) solid var(--book-rule); border-bottom: var(--line-w) solid var(--book-rule); color: var(--book-sub-ink); }
+.book-tip__label { padding: var(--space-1) var(--space-3); border-radius: var(--radius-btn); background: var(--color-inverse-bg); color: var(--color-inverse-text); font: var(--font-weight-bold) var(--font-size-xs)/1 var(--font-sans); white-space: nowrap; }
+.book-tip__body { align-self: stretch; min-width: 0; overflow-wrap: anywhere; }
+.book-tip__body > :last-child { margin-bottom: 0; }
+
+/* 장 이동 줄 · 글꼴 라이선스 */
+.chapter-nav { display: flex; justify-content: space-between; align-items: center; margin-top: var(--space-8); padding-top: var(--space-4); border-top: var(--line-w) solid var(--book-rule-faint); font-family: var(--font-sans); }
+.chapter-nav span { font: var(--font-size-xs) var(--font-mono); color: var(--color-muted); }
+.license { max-width: var(--book-paper-w); margin: var(--space-8) auto; font: var(--font-size-xs)/var(--leading-body) var(--font-sans); color: var(--color-muted); }
+.license pre { padding: 0; white-space: pre-wrap; font-family: var(--font-sans); color: var(--color-muted); }
+
+/* --book-mid-w(1100px) 이하(작은 창 · 확대): 안쪽만 줄인다 */
+@media (max-width: 1100px) {
+  .reading { padding: var(--book-mid-reading-pad); }
+  .book-head, .preface, .chapter { padding: var(--book-mid-paper-pad); }
+  .chapter-num { right: var(--book-mid-paper-pad); }
+}
+
+/* 좁은 화면 (--book-narrow-w 720px 이하, FR-033 · components "책 머리 줄" · roles 패널 덮개): 목차는 접힌 채 시작하고 [목차]로 덮개를 펼친다 */
+@media (max-width: 720px) {
+  .reader, .reader[data-toc="closed"] { grid-template-columns: minmax(0, 1fr); }
+  .toc { display: none; position: fixed; top: var(--book-bar-h); right: 0; bottom: 0; left: 0; z-index: 1; border-right: 0; background: var(--color-bg); }
+  .reader[data-toc="open"] .toc { display: block; }
+  .reading { padding: 0; }
+  .book-head, .preface, .chapter { margin-bottom: var(--space-3); padding: var(--space-5) var(--space-4); }
+  .chapter-num { top: var(--space-4); right: var(--space-4); font-size: var(--book-h1-size); }
+  .chapter > .chapter-num + h2, .chapter > .chapter-num + .review-block > h2 { padding-right: calc(var(--book-h1-size) * 1.4); }
+  /* 줄이면 그림 속 글자가 --font-size-xs보다 작아지는 도식만 그림 칸 안 가로 스크롤 */
+  .figure-scroll { overflow-x: auto; }
+  .book-figure img[style*="--text-scale"] { min-width: calc(var(--text-scale) * var(--font-size-xs)); max-width: none; }
+}
+
+:root{--paper:#fbfcfd;--surface:#f1f3f7;--ink:#12151c;--muted:#5a6271;--faint:#dce1e9;--line-color:#8d97a8;--fill:#e7eaf0;--primary:#2b55f0;--primary-soft:rgba(43,85,240,.10);--on-primary:#ffffff;--code-kw:#2b55f0;--code-str:#11845b;--code-fn:#12151c;--line:2px;--line-strong:4px;--radius:10px;--radius-sm:6px;--bg-image:radial-gradient(rgba(18,21,28,.06) 1.2px, transparent 1.2px);--bg-size:28px 28px;--shadow:none;--color-bg:var(--paper);--color-surface:var(--surface);--color-soft:var(--fill);--color-text:var(--ink);--color-sub:var(--muted);--color-muted:var(--muted);--color-faint:var(--faint);--color-line:var(--line-color);--color-line-soft:var(--faint);--color-inverse-bg:var(--primary);--color-inverse-text:var(--on-primary);--code-text:var(--ink);--code-keyword:var(--code-kw);--code-string:var(--code-str);--code-function:var(--code-fn);--code-comment:var(--muted);--code-class:var(--ink);--code-constant:var(--ink);--code-tag:var(--code-kw);--code-output:var(--muted);--code-rule:var(--line-color);--code-bg:var(--fill);--code-ln:var(--muted);--book-page-bg:var(--fill);--book-ink:var(--ink);--book-head-ink:var(--ink);--book-sub-ink:var(--ink);--book-muted:var(--muted);--book-caption-ink:var(--muted);--book-num-ink:var(--faint);--book-rule:var(--line-color);--book-rule-soft:var(--faint);--book-rule-faint:var(--faint);--book-table-head:var(--fill);--book-inline-code-bg:var(--fill);--tpl-ink:var(--ink);--book-h2-rule:var(--line-strong) solid var(--faint)}
+body{background-image:var(--bg-image);background-size:var(--bg-size)}
+.site-scene{position:relative;width:100%;overflow:hidden}
+.site-scene__stage{position:absolute;left:0;top:0;transform-origin:0 0}

@@ -1,0 +1,422 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data: blob:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'"><meta name="viewport" content="width=device-width,initial-scale=1"><title>디비설계강의</title><link rel="stylesheet" href="../assets/book-e288a86a0216c70b.css"></head><body><div class="reader" data-toc="open"><header class="book-bar"><button type="button" class="toc-toggle" aria-expanded="true" aria-controls="toc">목차</button><span class="book-bar__title">디비설계강의</span></header><aside class="toc" id="toc"><p class="caption">목차 / CONTENTS</p><div class="toc-title">디비설계강의</div><a href="../index.html" data-chapter="0" title="표지" aria-current="false">표지</a><a href="01.html" data-chapter="1" title="1장. 관계형 데이터베이스와 DBMS란?" aria-current="false">1장. 관계형 데이터베이스와 DBMS란?</a><a href="02.html" data-chapter="2" title="2장. Oracle 실습 환경 구성" aria-current="false">2장. Oracle 실습 환경 구성</a><a href="03.html" data-chapter="3" title="3장. 요구사항 분석과 데이터 모델링이란?" aria-current="false">3장. 요구사항 분석과 데이터 모델링이란?</a><a href="04.html" data-chapter="4" title="4장. 식별자와 관계 설계란?" aria-current="false">4장. 식별자와 관계 설계란?</a><a href="05.html" data-chapter="5" title="5장. 정규화란?" aria-current="false">5장. 정규화란?</a><a href="06.html" data-chapter="6" title="6장. 무결성과 물리 설계란?" aria-current="false">6장. 무결성과 물리 설계란?</a><a href="07.html" data-chapter="7" title="7장. Oracle 인스턴스와 데이터베이스란?" aria-current="false">7장. Oracle 인스턴스와 데이터베이스란?</a><a href="08.html" data-chapter="8" title="8장. Oracle 저장구조와 블록 접근이란?" aria-current="false">8장. Oracle 저장구조와 블록 접근이란?</a><a href="09.html" data-chapter="9" title="9장. 트랜잭션과 읽기 일관성이란?" aria-current="false">9장. 트랜잭션과 읽기 일관성이란?</a><a href="10.html" data-chapter="10" title="10장. SQL 처리와 옵티마이저란?" aria-current="false">10장. SQL 처리와 옵티마이저란?</a><a href="11.html" data-chapter="11" title="11장. 실행 계획과 성능 측정이란?" aria-current="false">11장. 실행 계획과 성능 측정이란?</a><a href="12.html" data-chapter="12" title="12장. B-tree 인덱스와 스캔 방식이란?" aria-current="false">12장. B-tree 인덱스와 스캔 방식이란?</a><a href="13.html" data-chapter="13" title="13장. 복합 인덱스와 탐색 범위 튜닝이란?" aria-current="false">13장. 복합 인덱스와 탐색 범위 튜닝이란?</a><a href="14.html" data-chapter="14" title="14장. 테이블 접근 최소화란?" aria-current="false">14장. 테이블 접근 최소화란?</a><a href="15.html" data-chapter="15" title="15장. 검색 조건과 인덱스 활용이란?" aria-current="false">15장. 검색 조건과 인덱스 활용이란?</a><a href="16.html" data-chapter="16" title="16장. 정렬·페이징·집계 튜닝이란?" aria-current="false">16장. 정렬·페이징·집계 튜닝이란?</a><a href="17.html" data-chapter="17" title="17장. 조인·서브쿼리 튜닝이란?" aria-current="false">17장. 조인·서브쿼리 튜닝이란?</a><a href="18.html" data-chapter="18" title="18장. 특수 인덱스와 인덱스 운영이란?" aria-current="false">18장. 특수 인덱스와 인덱스 운영이란?</a><a href="19.html" data-chapter="19" title="19장. 파티셔닝과 파티션 프루닝이란?" aria-current="false">19장. 파티셔닝과 파티션 프루닝이란?</a><a href="20.html" data-chapter="20" title="20장. 파티션 인덱스와 유지관리란?" aria-current="false">20장. 파티션 인덱스와 유지관리란?</a><a href="21.html" data-chapter="21" title="21장. 반정규화와 통계 테이블 설계란?" aria-current="false">21장. 반정규화와 통계 테이블 설계란?</a><a href="22.html" data-chapter="22" title="22장. 공통코드 설계란?" aria-current="false">22장. 공통코드 설계란?</a><a href="23.html" data-chapter="23" title="23장. 계층 구조 설계란?" aria-current="false">23장. 계층 구조 설계란?</a><a href="24.html" data-chapter="24" title="24장. 상속 관계 설계란?" aria-current="false">24장. 상속 관계 설계란?</a><a href="25.html" data-chapter="25" title="25장. 데이터 변경 추적과 감사 기록이란?" aria-current="false">25장. 데이터 변경 추적과 감사 기록이란?</a><a href="26.html" data-chapter="26" title="26장. 데이터 변경 이력과 시간 모델링이란?" aria-current="true">26장. 데이터 변경 이력과 시간 모델링이란?</a><a href="27.html" data-chapter="27" title="27장. 동적 속성과 EAV 설계란?" aria-current="false">27장. 동적 속성과 EAV 설계란?</a><a href="28.html" data-chapter="28" title="28장. JSON 데이터 설계란?" aria-current="false">28장. JSON 데이터 설계란?</a><a href="29.html" data-chapter="29" title="29장. 논리 삭제란?" aria-current="false">29장. 논리 삭제란?</a><a href="30.html" data-chapter="30" title="30장. 요구사항 변경 대응과 설계·튜닝 종합 실습" aria-current="false">30장. 요구사항 변경 대응과 설계·튜닝 종합 실습</a><footer>30장</footer></aside><main class="reading"><section class="chapter" id="chapter-26"><div class="eyebrow">디비설계강의 / CHAPTER 26</div><span class="chapter-num" aria-hidden="true">26</span><h2>26장. 데이터 변경 이력과 시간 모델링이란?</h2><p><strong>시간 모델링(temporal modeling)</strong>은 데이터가 언제 유효했고 언제 기록되었는지 구분하여 설계하는 일입니다. 가격이나 주문 상태가 바뀌어도 필요한 과거 정보를 조회할 수 있어야 합니다.</p>
+<p>25장의 감사 기록은 누가 어떤 작업을 했는지 확인하는 데 초점을 두었습니다. 이 장에서는 특정 시점의 가격과 상태를 어떻게 보관하고 조회할지 다룹니다.</p>
+<h3>1. 현재값과 과거값</h3>
+<h4>1.1 현재 테이블·이력 테이블·스냅샷</h4>
+<p>현재 가격만 저장한 상품 테이블에서 가격을 덮어쓰면 이전 가격은 업무 데이터에서 사라집니다. 지난달의 판매 가격을 조회하려면 과거값을 보관할 구조가 필요합니다.</p>
+<table><thead><tr><th>저장 방식</th><th>한 행의 의미</th><th>주로 답하는 질문</th></tr></thead><tbody><tr><td>현재 테이블</td><td>대상의 현재 상태</td><td>지금 가격은 얼마인가?</td></tr><tr><td>이력 테이블</td><td>대상의 특정 버전 또는 유효 기간</td><td>그날 적용된 가격은 얼마인가?</td></tr><tr><td>스냅샷</td><td>정해진 시점에 관측한 상태</td><td>월말에 어떤 상태였는가?</td></tr></tbody></table>
+<p><strong>스냅샷(snapshot)</strong>은 특정 시점의 상태를 따로 보관한 데이터입니다. 매일 자정의 재고를 저장한다면 일별 재고 스냅샷이 됩니다. 하루 동안 재고가 여러 번 바뀌어도 자정과 다음 자정 사이의 변경을 모두 보여 주지는 않습니다.</p>
+<p>이력 테이블도 모든 변경을 자동으로 담지는 않습니다. 가격이 바뀔 때마다 기록할지, 승인된 가격만 기록할지 정해야 합니다. 같은 트랜잭션 안에서 여러 번 수정한 중간값까지 필요한지도 구분합니다.</p>
+<p>현재값과 이력을 함께 관리하는 방법은 다음과 같습니다.</p>
+<table><thead><tr><th>구조</th><th>장점</th><th>관리할 사항</th></tr></thead><tbody><tr><td>현재 테이블과 이력 테이블 분리</td><td>현재 조회가 단순함</td><td>현재값 변경과 이력 기록을 함께 확정</td></tr><tr><td>전체 버전을 이력 테이블에 저장</td><td>한 구조에서 현재와 과거 조회</td><td>현재 시점에 유효한 행을 찾는 조건 필요</td></tr><tr><td>현재 테이블과 정기 스냅샷 사용</td><td>기준일별 비교가 단순함</td><td>스냅샷 사이의 변경은 별도 기록 필요</td></tr></tbody></table>
+<p>현재 테이블과 이력 테이블을 분리했다면 두 테이블을 같은 트랜잭션에서 변경합니다. 현재 가격만 바뀌고 이력이 누락되면 과거 가격을 올바르게 복원할 수 없습니다.</p>
+<h4>1.2 변경 시점과 업무 유효 시점</h4>
+<p>데이터베이스에 가격을 입력한 시각과 가격이 적용되는 시각은 다를 수 있습니다.</p>
+<p>10월 20일에 다음 달 할인 가격을 등록했다고 가정합니다. 등록은 10월 20일에 이루어졌지만, 할인 가격은 11월 1일부터 적용됩니다.</p>
+<table><thead><tr><th>구분</th><th>의미</th><th>사례</th></tr></thead><tbody><tr><td>기록 시점</td><td>시스템에 정보를 기록한 때</td><td>10월 20일</td></tr><tr><td>업무 유효 시점</td><td>업무에서 값이 효력을 갖는 때</td><td>11월 1일</td></tr></tbody></table>
+<p><strong>업무 유효 시간(valid time)</strong>은 데이터가 업무상 유효한 기간입니다. <strong>기록 시간(transaction time)</strong>은 시스템이 그 정보를 보관한 기간입니다. 기록 시간은 시스템이 업무 사실을 언제 알게 되었는지 추적하는 시간축입니다.</p>
+<p>수정 시각 하나로 두 의미를 표현하면 예약 변경과 소급 정정을 구별하기 어렵습니다. 가격 이력에는 적용 시작 시각을 두고, 필요하면 기록 시각도 별도로 둡니다.</p>
+<p>시간의 기준도 함께 정합니다. 국내 서비스의 일별 가격이라면 한국 표준시의 날짜 경계를 사용할 수 있습니다. 여러 국가에서 같은 순간에 적용하는 정책이라면 시간대를 포함한 시각이나 UTC 기준을 정해야 합니다.</p>
+<h4>1.3 주문 당시 값과 현재 기준정보</h4>
+<p>주문 상세에 상품번호만 저장하고 현재 상품 테이블을 조인하면 현재 상품명이 표시됩니다. 상품명이 바뀌면 과거 주문 화면의 이름도 달라집니다.</p>
+<p>영수증에 주문 당시 이름이 필요하다면 주문 상세에 당시 상품명을 보관해야 합니다.</p>
+<table><thead><tr><th>데이터</th><th>저장 목적</th></tr></thead><tbody><tr><td>상품번호</td><td>어떤 상품을 주문했는지 연결</td></tr><tr><td>주문 당시 상품명</td><td>거래 당시 표시 내용을 보존</td></tr><tr><td>주문 단가</td><td>실제 거래에 적용한 단가 보존</td></tr><tr><td>수량</td><td>주문한 개수 보존</td></tr><tr><td>현재 상품명</td><td>현재 상품 정보 표시</td></tr></tbody></table>
+<p>현재 상품명과 주문 당시 상품명은 서로 다른 사실입니다. 처음에 값이 같았다는 이유로 하나를 제거하면 거래 당시 정보를 잃을 수 있습니다.</p>
+<p>주문 단가는 가격 이력에서 매번 다시 계산하지 않는 편이 적절합니다. 회원 할인이나 개별 계약으로 기준 가격과 다를 수 있기 때문입니다. 가격 이력은 기준 가격의 변화를 설명하고, 주문 단가는 확정된 거래 금액을 설명합니다.</p>
+<h3>2. 유효 기간을 가진 이력</h3>
+<h4>2.1 시작·종료 시점과 반개방 구간</h4>
+<p>유효 기간에는 시작 시점을 포함하고 종료 시점을 제외하는 반개방 구간을 사용할 수 있습니다.</p>
+<p>가격이 11월 1일에 바뀐다면 이전 가격은 11월 1일 직전까지 유효합니다. 새 가격은 11월 1일부터 유효합니다.</p>
+<table><thead><tr><th>상품번호</th><th>적용 시작</th><th>적용 종료</th><th style="text-align:right">가격</th></tr></thead><tbody><tr><td>501</td><td>2026-10-01 00:00:00</td><td>2026-11-01 00:00:00</td><td style="text-align:right">18,000</td></tr><tr><td>501</td><td>2026-11-01 00:00:00</td><td>종료 미정</td><td style="text-align:right">21,000</td></tr></tbody></table>
+<p>조회 조건은 <code>시작 &lt;= 조회 시점</code>과 <code>조회 시점 &lt; 종료</code>입니다. <code>BETWEEN</code>은 양쪽 경계를 모두 포함하므로 이 기간 조건에 그대로 사용하지 않습니다.</p>
+<p>종료 시점을 하루 전의 <code>23:59:59</code>로 저장할 필요도 없습니다. 소수 초를 저장하는 컬럼에서는 그 뒤의 시간까지 고려해야 하므로 경계가 복잡해집니다.</p>
+<p><strong>예제 26-1 — 가격 유효 기간을 저장하고 경계 시점 조회하기</strong></p>
+<p><strong>파일명:</strong> <code>ch26_price_history.sql</code></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55</div><pre><code class="language-sql" data-code="CREATE TABLE ch26_product (
+    product_id   NUMBER(10)
+        CONSTRAINT ch26_product_pk PRIMARY KEY,
+    product_name VARCHAR2(100 CHAR) NOT NULL
+);
+
+CREATE TABLE ch26_price_history (
+    product_id NUMBER(10) NOT NULL,
+    valid_from TIMESTAMP(6) NOT NULL,
+    valid_to   TIMESTAMP(6),
+    price      NUMBER(12, 0) NOT NULL,
+
+    CONSTRAINT ch26_price_hist_pk
+        PRIMARY KEY (product_id, valid_from),
+
+    CONSTRAINT ch26_price_product_fk
+        FOREIGN KEY (product_id)
+        REFERENCES ch26_product (product_id),
+
+    CONSTRAINT ch26_price_period_ck
+        CHECK (valid_to IS NULL OR valid_from &lt; valid_to),
+
+    CONSTRAINT ch26_price_amount_ck
+        CHECK (price &gt;= 0)
+);
+
+INSERT INTO ch26_product (product_id, product_name)
+VALUES (501, &#x27;무선 키보드&#x27;);
+
+INSERT INTO ch26_price_history
+    (product_id, valid_from, valid_to, price)
+VALUES
+    (501,
+     TIMESTAMP &#x27;2026-10-01 00:00:00&#x27;,
+     TIMESTAMP &#x27;2026-11-01 00:00:00&#x27;,
+     18000);
+
+INSERT INTO ch26_price_history
+    (product_id, valid_from, valid_to, price)
+VALUES
+    (501,
+     TIMESTAMP &#x27;2026-11-01 00:00:00&#x27;,
+     NULL,
+     21000);
+
+COMMIT;
+
+SELECT product_id, price
+FROM ch26_price_history
+WHERE product_id = 501
+  AND valid_from &lt;= TIMESTAMP &#x27;2026-11-01 00:00:00&#x27;
+  AND (
+      valid_to &gt; TIMESTAMP &#x27;2026-11-01 00:00:00&#x27;
+      OR valid_to IS NULL
+  );"><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> ch26_product <span class="token punctuation">(</span>
+    product_id   NUMBER<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+        <span class="token keyword">CONSTRAINT</span> ch26_product_pk <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span><span class="token punctuation">,</span>
+    product_name VARCHAR2<span class="token punctuation">(</span><span class="token number">100</span> <span class="token keyword">CHAR</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> ch26_price_history <span class="token punctuation">(</span>
+    product_id NUMBER<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    valid_from <span class="token keyword">TIMESTAMP</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    valid_to   <span class="token keyword">TIMESTAMP</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    price      NUMBER<span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+
+    <span class="token keyword">CONSTRAINT</span> ch26_price_hist_pk
+        <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span>product_id<span class="token punctuation">,</span> valid_from<span class="token punctuation">)</span><span class="token punctuation">,</span>
+
+    <span class="token keyword">CONSTRAINT</span> ch26_price_product_fk
+        <span class="token keyword">FOREIGN</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span>product_id<span class="token punctuation">)</span>
+        <span class="token keyword">REFERENCES</span> ch26_product <span class="token punctuation">(</span>product_id<span class="token punctuation">)</span><span class="token punctuation">,</span>
+
+    <span class="token keyword">CONSTRAINT</span> ch26_price_period_ck
+        <span class="token keyword">CHECK</span> <span class="token punctuation">(</span>valid_to <span class="token operator">IS</span> <span class="token boolean">NULL</span> <span class="token operator">OR</span> valid_from <span class="token operator">&lt;</span> valid_to<span class="token punctuation">)</span><span class="token punctuation">,</span>
+
+    <span class="token keyword">CONSTRAINT</span> ch26_price_amount_ck
+        <span class="token keyword">CHECK</span> <span class="token punctuation">(</span>price <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> ch26_product <span class="token punctuation">(</span>product_id<span class="token punctuation">,</span> product_name<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">501</span><span class="token punctuation">,</span> <span class="token string">'무선 키보드'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> ch26_price_history
+    <span class="token punctuation">(</span>product_id<span class="token punctuation">,</span> valid_from<span class="token punctuation">,</span> valid_to<span class="token punctuation">,</span> price<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span>
+    <span class="token punctuation">(</span><span class="token number">501</span><span class="token punctuation">,</span>
+     <span class="token keyword">TIMESTAMP</span> <span class="token string">'2026-10-01 00:00:00'</span><span class="token punctuation">,</span>
+     <span class="token keyword">TIMESTAMP</span> <span class="token string">'2026-11-01 00:00:00'</span><span class="token punctuation">,</span>
+     <span class="token number">18000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> ch26_price_history
+    <span class="token punctuation">(</span>product_id<span class="token punctuation">,</span> valid_from<span class="token punctuation">,</span> valid_to<span class="token punctuation">,</span> price<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span>
+    <span class="token punctuation">(</span><span class="token number">501</span><span class="token punctuation">,</span>
+     <span class="token keyword">TIMESTAMP</span> <span class="token string">'2026-11-01 00:00:00'</span><span class="token punctuation">,</span>
+     <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+     <span class="token number">21000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">COMMIT</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> product_id<span class="token punctuation">,</span> price
+<span class="token keyword">FROM</span> ch26_price_history
+<span class="token keyword">WHERE</span> product_id <span class="token operator">=</span> <span class="token number">501</span>
+  <span class="token operator">AND</span> valid_from <span class="token operator">&lt;=</span> <span class="token keyword">TIMESTAMP</span> <span class="token string">'2026-11-01 00:00:00'</span>
+  <span class="token operator">AND</span> <span class="token punctuation">(</span>
+      valid_to <span class="token operator">></span> <span class="token keyword">TIMESTAMP</span> <span class="token string">'2026-11-01 00:00:00'</span>
+      <span class="token operator">OR</span> valid_to <span class="token operator">IS</span> <span class="token boolean">NULL</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div></div>
+<p><strong>실행 결과</strong></p>
+<table><thead><tr><th style="text-align:right">PRODUCT_ID</th><th style="text-align:right">PRICE</th></tr></thead><tbody><tr><td style="text-align:right">501</td><td style="text-align:right">21000</td></tr></tbody></table>
+<p>이전 가격은 종료 시점이 조회 시점과 같으므로 제외됩니다. 새 가격은 시작 시점이 조회 시점과 같으므로 포함됩니다.</p>
+<p>이 예제는 모든 시각을 한국 표준시로 해석한다고 가정합니다. <code>TIMESTAMP</code> 자체에는 시간대가 들어 있지 않으므로 애플리케이션과 데이터베이스가 같은 기준을 사용해야 합니다.</p>
+<h4>2.2 기간 중복·공백·현재 행의 검증</h4>
+<p>예제 26-1의 <code>CHECK</code> 제약조건은 한 행의 시작과 종료만 검증합니다. 같은 상품의 다른 행과 기간이 겹치는지는 검사하지 않습니다.</p>
+<p>다음 두 가격은 각각 종료가 시작보다 늦지만 서로 겹칩니다.</p>
+<table><thead><tr><th>적용 시작</th><th>적용 종료</th><th style="text-align:right">가격</th></tr></thead><tbody><tr><td>10월 1일</td><td>11월 10일</td><td style="text-align:right">18,000</td></tr><tr><td>11월 1일</td><td>12월 1일</td><td style="text-align:right">21,000</td></tr></tbody></table>
+<p>11월 5일의 가격을 조회하면 두 행이 나옵니다. 한 상품에 같은 시점의 기준 가격이 하나여야 한다면 오류입니다.</p>
+<p>두 반개방 구간은 한쪽의 시작이 다른 쪽의 종료와 같을 때 겹치지 않습니다. 종료가 있는 두 구간의 중복 조건은 다음과 같습니다.</p>
+<p><strong>코드 조각</strong></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2</div><pre><code class="language-sql" data-code="a.valid_from &lt; b.valid_to
+AND b.valid_from &lt; a.valid_to">a<span class="token punctuation">.</span>valid_from <span class="token operator">&lt;</span> b<span class="token punctuation">.</span>valid_to
+<span class="token operator">AND</span> b<span class="token punctuation">.</span>valid_from <span class="token operator">&lt;</span> a<span class="token punctuation">.</span>valid_to</code></pre></div></div>
+<p>종료가 <code>NULL</code>이면 끝이 정해지지 않은 구간으로 다뤄야 합니다. 실제 중복 검사는 다음과 같이 작성할 수 있습니다.</p>
+<p><strong>코드 조각</strong></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9</div><pre><code class="language-sql" data-code="SELECT a.product_id,
+       a.valid_from AS first_start,
+       b.valid_from AS second_start
+FROM ch26_price_history a
+JOIN ch26_price_history b
+  ON b.product_id = a.product_id
+ AND a.valid_from &lt; b.valid_from
+WHERE (a.valid_to IS NULL OR b.valid_from &lt; a.valid_to)
+  AND (b.valid_to IS NULL OR a.valid_from &lt; b.valid_to);"><span class="token keyword">SELECT</span> a<span class="token punctuation">.</span>product_id<span class="token punctuation">,</span>
+       a<span class="token punctuation">.</span>valid_from <span class="token keyword">AS</span> first_start<span class="token punctuation">,</span>
+       b<span class="token punctuation">.</span>valid_from <span class="token keyword">AS</span> second_start
+<span class="token keyword">FROM</span> ch26_price_history a
+<span class="token keyword">JOIN</span> ch26_price_history b
+  <span class="token keyword">ON</span> b<span class="token punctuation">.</span>product_id <span class="token operator">=</span> a<span class="token punctuation">.</span>product_id
+ <span class="token operator">AND</span> a<span class="token punctuation">.</span>valid_from <span class="token operator">&lt;</span> b<span class="token punctuation">.</span>valid_from
+<span class="token keyword">WHERE</span> <span class="token punctuation">(</span>a<span class="token punctuation">.</span>valid_to <span class="token operator">IS</span> <span class="token boolean">NULL</span> <span class="token operator">OR</span> b<span class="token punctuation">.</span>valid_from <span class="token operator">&lt;</span> a<span class="token punctuation">.</span>valid_to<span class="token punctuation">)</span>
+  <span class="token operator">AND</span> <span class="token punctuation">(</span>b<span class="token punctuation">.</span>valid_to <span class="token operator">IS</span> <span class="token boolean">NULL</span> <span class="token operator">OR</span> a<span class="token punctuation">.</span>valid_from <span class="token operator">&lt;</span> b<span class="token punctuation">.</span>valid_to<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div></div>
+<p>기간의 공백은 이전 행의 종료와 다음 행의 시작을 비교하여 찾습니다. 이전 종료가 다음 시작보다 이르면 그 사이에 가격이 없는 기간이 생깁니다.</p>
+<p><strong>코드 조각</strong></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12</div><pre><code class="language-sql" data-code="SELECT product_id, valid_to, next_start
+FROM (
+    SELECT product_id,
+           valid_to,
+           LEAD(valid_from) OVER (
+               PARTITION BY product_id
+               ORDER BY valid_from
+           ) AS next_start
+    FROM ch26_price_history
+)
+WHERE next_start IS NOT NULL
+  AND valid_to &lt; next_start;"><span class="token keyword">SELECT</span> product_id<span class="token punctuation">,</span> valid_to<span class="token punctuation">,</span> next_start
+<span class="token keyword">FROM</span> <span class="token punctuation">(</span>
+    <span class="token keyword">SELECT</span> product_id<span class="token punctuation">,</span>
+           valid_to<span class="token punctuation">,</span>
+           LEAD<span class="token punctuation">(</span>valid_from<span class="token punctuation">)</span> <span class="token keyword">OVER</span> <span class="token punctuation">(</span>
+               <span class="token keyword">PARTITION</span> <span class="token keyword">BY</span> product_id
+               <span class="token keyword">ORDER</span> <span class="token keyword">BY</span> valid_from
+           <span class="token punctuation">)</span> <span class="token keyword">AS</span> next_start
+    <span class="token keyword">FROM</span> ch26_price_history
+<span class="token punctuation">)</span>
+<span class="token keyword">WHERE</span> next_start <span class="token operator">IS</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span>
+  <span class="token operator">AND</span> valid_to <span class="token operator">&lt;</span> next_start<span class="token punctuation">;</span></code></pre></div></div>
+<p>공백이 항상 오류인 것은 아닙니다. 판매 중지 기간에는 가격이 없어도 된다는 규칙이 있을 수 있습니다. 최초 판매일부터 가격이 끊기면 안 되는지도 별도로 정합니다.</p>
+<p>종료가 <code>NULL</code>인 행과 현재 유효한 행도 구분해야 합니다. 예제 26-1에서 10월 20일에 유효한 가격은 18,000원입니다. 종료가 <code>NULL</code>인 21,000원 행은 미래 예약 가격입니다.</p>
+<p>끝이 열린 행을 상품별로 최대 하나만 허용하려면 함수 기반 유일 인덱스를 사용할 수 있습니다.</p>
+<p><strong>코드 조각</strong></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4</div><pre><code class="language-sql" data-code="CREATE UNIQUE INDEX ch26_price_open_uq
+ON ch26_price_history (
+    CASE WHEN valid_to IS NULL THEN product_id END
+);"><span class="token keyword">CREATE</span> <span class="token keyword">UNIQUE</span> <span class="token keyword">INDEX</span> ch26_price_open_uq
+<span class="token keyword">ON</span> ch26_price_history <span class="token punctuation">(</span>
+    <span class="token keyword">CASE</span> <span class="token keyword">WHEN</span> valid_to <span class="token operator">IS</span> <span class="token boolean">NULL</span> <span class="token keyword">THEN</span> product_id <span class="token keyword">END</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div></div>
+<p>이 인덱스는 끝이 열린 행의 중복을 막습니다. 종료 시점이 있는 두 행의 기간 중복까지 막지는 않습니다.</p>
+<p>동시 등록도 고려해야 합니다. 두 세션이 모두 “겹치는 행이 없다”고 조회한 뒤 입력하면 중복 기간이 생길 수 있습니다. 같은 상품의 가격을 변경할 때는 먼저 상품 행을 <code>SELECT FOR UPDATE</code>로 잠근 뒤 검사하도록 순서를 통일할 수 있습니다. 검사와 입력은 같은 트랜잭션에서 수행합니다.</p>
+<h4>2.3 과거 시점 조회와 이력 인덱스</h4>
+<p>특정 상품의 과거 가격을 조회할 때는 상품번호와 조회 시점을 함께 사용합니다. 예제 26-1의 기본키 인덱스는 <code>(product_id, valid_from)</code> 순서이므로 이 조회에 활용할 후보가 됩니다.</p>
+<p>상품번호로 범위를 제한한 뒤, 조회 시점 이전에 시작한 가격을 찾을 수 있습니다. 다만 종료 조건까지 확인해야 하므로 오래된 이력이 많으면 여러 행을 읽을 수 있습니다.</p>
+<p>조회 목적에 따라 필요한 인덱스도 달라집니다.</p>
+<table><thead><tr><th>조회 목적</th><th>검토할 인덱스와 접근</th></tr></thead><tbody><tr><td>한 상품의 시점별 가격</td><td><code>(product_id, valid_from)</code></td></tr><tr><td>한 상품의 전체 변경 내역</td><td>상품번호와 시작 시각 순서 활용</td></tr><tr><td>특정 날짜에 유효한 모든 상품 가격</td><td>많은 상품의 기간 조건 평가</td></tr><tr><td>곧 적용될 예약 가격 목록</td><td>시작 시각을 기준으로 한 접근 검토</td></tr></tbody></table>
+<p>상품별 조회에 좋은 인덱스가 전체 상품의 기준일 조회에도 같은 효과를 내지는 않습니다. 기간 조건 두 개를 인덱스 하나로 모두 좁은 범위에서 검색하기도 어렵습니다.</p>
+<p>기간에 중복이 없다는 규칙을 보장하면 조회 시점 이전의 가장 최근 시작 행을 먼저 찾을 수도 있습니다. 이때도 종료 시점을 검사해야 합니다. 기간에 공백이 있다면 가장 가까운 과거 가격이 조회 시점에는 유효하지 않을 수 있습니다.</p>
+<p>성능을 비교할 때는 최근 시점과 오래된 시점을 모두 사용합니다. 반환 행 수가 같아도 검사하는 이력의 수는 달라질 수 있습니다.</p>
+<h3>3. 상태 전이와 과거 정정</h3>
+<h4>3.1 현재 상태와 상태 변경 사건</h4>
+<p>주문 테이블의 상태는 현재 업무를 판단하는 데 사용합니다. 상태 이력은 주문이 어떤 과정을 거쳤는지 설명합니다.</p>
+<table><thead><tr><th style="text-align:right">주문번호</th><th>현재 상태</th></tr></thead><tbody><tr><td style="text-align:right">8101</td><td>배송 중</td></tr></tbody></table>
+<table><thead><tr><th style="text-align:right">사건번호</th><th style="text-align:right">주문번호</th><th>발생 시각</th><th>이전 상태</th><th>이후 상태</th></tr></thead><tbody><tr><td style="text-align:right">1</td><td style="text-align:right">8101</td><td>10월 10일 09:00</td><td>없음</td><td>주문 접수</td></tr><tr><td style="text-align:right">2</td><td style="text-align:right">8101</td><td>10월 10일 09:05</td><td>주문 접수</td><td>결제 완료</td></tr><tr><td style="text-align:right">3</td><td style="text-align:right">8101</td><td>10월 11일 14:00</td><td>결제 완료</td><td>배송 중</td></tr></tbody></table>
+<p><strong>상태 전이(state transition)</strong>는 허용된 규칙에 따라 한 상태에서 다른 상태로 바뀌는 일입니다. 상태 변경 사건에는 발생 시각, 이전 상태, 이후 상태, 사유를 기록할 수 있습니다.</p>
+<p>같은 상태로의 변경 요청을 허용할지도 정합니다. 배송 중 상태를 다시 배송 중으로 바꾸라는 요청이 들어오면, 중복 요청으로 무시할지 별도 사건으로 남길지 구분해야 합니다.</p>
+<p>현재 상태와 사건 이력을 함께 저장한다면 둘을 같은 트랜잭션에서 변경합니다. 상태 변경에 실패했다면 성공한 것처럼 이력만 남아서는 안 됩니다.</p>
+<p>사건번호는 사건을 구별하는 키입니다. 번호가 크다는 이유만으로 업무 발생 순서나 커밋 순서를 단정하지 않습니다. 업무 순서가 필요하면 주문별 순번 등 별도의 규칙을 정합니다.</p>
+<h4>3.2 허용 전이·취소·소급 변경</h4>
+<p>상태 코드가 유효하다는 것과 상태 변경이 허용된다는 것은 다른 규칙입니다. <code>CHECK</code>나 외래키로 ‘배송 중’이라는 값을 검증할 수는 있습니다. 하지만 ‘주문 접수에서 배송 중으로 바로 변경할 수 있는가’까지 검증하지는 않습니다.</p>
+<table><thead><tr><th>이전 상태</th><th>요청 상태</th><th>판단 사례</th></tr></thead><tbody><tr><td>주문 접수</td><td>결제 완료</td><td>결제가 확인되면 허용</td></tr><tr><td>결제 완료</td><td>배송 중</td><td>출고가 확인되면 허용</td></tr><tr><td>주문 접수</td><td>배송 중</td><td>결제 단계를 건너뛰므로 거부</td></tr><tr><td>배송 완료</td><td>주문 취소</td><td>반품·환불 절차가 필요한지 별도 판단</td></tr></tbody></table>
+<p>동시에 상태를 변경할 때는 앞서 읽은 상태가 여전히 같은지도 확인합니다.</p>
+<p><strong>코드 조각</strong></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4</div><pre><code class="language-sql" data-code="UPDATE orders
+SET status_code = :new_status
+WHERE order_id = :order_id
+  AND status_code = :expected_status;"><span class="token keyword">UPDATE</span> orders
+<span class="token keyword">SET</span> status_code <span class="token operator">=</span> :new_status
+<span class="token keyword">WHERE</span> order_id <span class="token operator">=</span> :order_id
+  <span class="token operator">AND</span> status_code <span class="token operator">=</span> :expected_status<span class="token punctuation">;</span></code></pre></div></div>
+<p>변경 행 수가 1일 때만 상태 이력을 추가합니다. 0이면 다른 세션이 상태를 바꾸었거나 주문이 없는 경우이므로 다시 확인합니다. 허용 전이 검증도 함께 수행해야 합니다.</p>
+<p>취소는 과거 사건을 삭제하는 일과 다릅니다. 결제 후 취소했다면 결제 사건과 취소 사건이 모두 필요합니다. 과거 사건을 지우면 실제 경과를 설명하기 어렵습니다.</p>
+<p>소급 변경은 업무 발생 시각보다 늦게 정보를 반영하는 일입니다. 실제 배송은 10월 11일에 시작되었지만 시스템에는 10월 12일에 입력할 수 있습니다. 두 시각을 분리해야 배송 소요 시간과 입력 지연을 각각 계산할 수 있습니다.</p>
+<p>잘못 기록한 사건을 정정할 때는 정정 대상 사건번호와 사유를 남깁니다. 사건을 추가로 보관하는 방식이라면 조회할 때 취소되거나 대체된 사건을 어떻게 제외할지도 정해야 합니다.</p>
+<h4>3.3 업무 시간과 기록 시간을 함께 관리하는 설계</h4>
+<p>과거 가격을 정정할 때는 두 질문이 생깁니다.</p>
+<p>“현재 확인한 사실을 기준으로 11월 5일의 가격은 얼마인가?”</p>
+<p>“11월 6일 당시 시스템은 11월 5일의 가격을 얼마로 알고 있었는가?”</p>
+<p>첫 질문에는 업무 유효 시간이 필요합니다. 두 번째 질문에는 당시의 기록도 필요합니다. 두 시간축을 함께 사용하는 설계를 <strong>이중 시간 모델(bitemporal model)</strong>이라고 합니다.</p>
+<p>다음 사례에서는 11월 가격을 21,000원으로 등록했다가 11월 10일에 20,000원이 맞다고 정정했습니다. 표의 기록 시작과 종료는 시스템이 각 내용을 알고 있던 기간입니다.</p>
+<table><thead><tr><th>업무 시작</th><th>업무 종료</th><th style="text-align:right">가격</th><th>기록 시작</th><th>기록 종료</th></tr></thead><tbody><tr><td>11월 1일</td><td>12월 1일</td><td style="text-align:right">21,000</td><td>10월 20일</td><td>11월 10일</td></tr><tr><td>11월 1일</td><td>12월 1일</td><td style="text-align:right">20,000</td><td>11월 10일</td><td>종료 미정</td></tr></tbody></table>
+<p>11월 6일 당시 알고 있던 11월 5일 가격은 21,000원입니다. 현재 정정된 사실로 판단한 11월 5일 가격은 20,000원입니다.</p>
+<figure class="book-figure" data-type="generated" id="figure-ee0f8a97f571"><div class="figure-scroll"><img src="../assets/img/3754c44760d6e6a8.png" alt="가격에 적용되는 두 시간축" data-raster="true"/></div><figcaption>가격에 적용되는 두 시간축</figcaption></figure>
+<p>그림 26-1처럼 업무 기간이 같아도 기록 기간이 다르면 별도의 버전입니다. 정정할 때는 이전 버전의 기록 종료를 닫고 새 버전을 추가합니다.</p>
+<p>두 시간축을 조회할 때는 각각 반개방 구간 조건을 적용합니다.</p>
+<p><strong>코드 조각</strong></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5
+6
+7</div><pre><code class="language-sql" data-code="SELECT price
+FROM price_bitemporal
+WHERE product_id = :product_id
+  AND valid_from &lt;= :business_at
+  AND (valid_to &gt; :business_at OR valid_to IS NULL)
+  AND recorded_from &lt;= :known_at
+  AND (recorded_to &gt; :known_at OR recorded_to IS NULL);"><span class="token keyword">SELECT</span> price
+<span class="token keyword">FROM</span> price_bitemporal
+<span class="token keyword">WHERE</span> product_id <span class="token operator">=</span> :product_id
+  <span class="token operator">AND</span> valid_from <span class="token operator">&lt;=</span> :business_at
+  <span class="token operator">AND</span> <span class="token punctuation">(</span>valid_to <span class="token operator">></span> :business_at <span class="token operator">OR</span> valid_to <span class="token operator">IS</span> <span class="token boolean">NULL</span><span class="token punctuation">)</span>
+  <span class="token operator">AND</span> recorded_from <span class="token operator">&lt;=</span> :known_at
+  <span class="token operator">AND</span> <span class="token punctuation">(</span>recorded_to <span class="token operator">></span> :known_at <span class="token operator">OR</span> recorded_to <span class="token operator">IS</span> <span class="token boolean">NULL</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div></div>
+<p>이 코드는 두 시간축의 조회 형태를 보여 줍니다. <code>business_at</code>은 가격을 적용할 업무 시점이고, <code>known_at</code>은 당시 알고 있던 정보를 확인할 기록 시점입니다.</p>
+<p>기록 시각을 <code>SYSTIMESTAMP</code>로 입력했다고 해서 커밋 시각이 되는 것은 아닙니다. 입력 후 커밋까지 시간이 걸릴 수 있습니다. 커밋 기준의 정확한 과거 상태가 필요하다면 애플리케이션의 기록 시각만으로 요구를 충족하는지 따로 판단해야 합니다.</p>
+<p>이중 시간 모델에는 추가 저장공간과 복잡한 정정 절차가 필요합니다. 당시 보고 내용을 재현해야 하는 업무처럼 두 질문이 모두 필요한 경우에 적용합니다.</p>
+<h3>4. Oracle의 과거 조회 기능</h3>
+<h4>4.1 Flashback Query와 UNDO 보존 범위</h4>
+<p><strong>Flashback Query</strong>는 지정한 과거 시점에 커밋되어 있던 데이터를 조회하는 기능입니다. <code>AS OF TIMESTAMP</code> 또는 <code>AS OF SCN</code>을 사용합니다. 일반적인 Flashback Query는 UNDO를 이용합니다.</p>
+<p><strong>코드 조각</strong></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4</div><pre><code class="language-sql" data-code="SELECT product_id, product_name
+FROM ch26_product
+AS OF TIMESTAMP (SYSTIMESTAMP - INTERVAL &#x27;10&#x27; MINUTE)
+WHERE product_id = 501;"><span class="token keyword">SELECT</span> product_id<span class="token punctuation">,</span> product_name
+<span class="token keyword">FROM</span> ch26_product
+<span class="token keyword">AS</span> <span class="token keyword">OF</span> <span class="token keyword">TIMESTAMP</span> <span class="token punctuation">(</span>SYSTIMESTAMP <span class="token operator">-</span> <span class="token keyword">INTERVAL</span> <span class="token string">'10'</span> <span class="token keyword">MINUTE</span><span class="token punctuation">)</span>
+<span class="token keyword">WHERE</span> product_id <span class="token operator">=</span> <span class="token number">501</span><span class="token punctuation">;</span></code></pre></div></div>
+<p>이 코드는 테이블이 10분 전에도 존재했고 필요한 과거 정보가 남아 있을 때 사용합니다. 다른 스키마의 테이블을 조회하려면 조회 권한과 <code>FLASHBACK</code> 권한 등이 필요합니다.</p>
+<p><code>UNDO_RETENTION</code> 설정만으로 조회 가능 기간이 보장되지는 않습니다. 조회 가능한 기간은 UNDO 공간과 보존 설정의 영향을 받습니다. 필요한 UNDO가 사라지면 과거 조회가 실패할 수 있으며, 테이블 구조 변경도 제약이 됩니다.</p>
+<p>Flashback Query가 보여 주는 것은 데이터베이스의 과거 상태입니다. 미래 적용 가격을 어제 등록했다면 어제의 조회 결과에도 그 행이 존재할 수 있습니다. 그 가격이 어제 업무상 유효했다는 뜻은 아닙니다.</p>
+<h4>4.2 Flashback Data Archive와 업무 이력의 비교</h4>
+<p><strong>Flashback Data Archive</strong>는 활성화한 테이블의 과거 버전을 지정한 보존 기간에 따라 보관하는 기능입니다. 필요한 이력이 아카이브에 있으면 일반 UNDO의 보존 범위를 넘는 과거도 조회할 수 있습니다.</p>
+<table><thead><tr><th>구분</th><th>Flashback Data Archive</th><th>직접 설계한 업무 이력</th></tr></thead><tbody><tr><td>중심 질문</td><td>과거에 테이블에 무엇이 있었는가?</td><td>업무상 언제 어떤 값이 유효했는가?</td></tr><tr><td>기록 방식</td><td>대상 테이블의 버전을 자동 보관</td><td>업무 규칙에 따라 이력 생성</td></tr><tr><td>업무 사유</td><td>업무 컬럼으로 별도 설계 필요</td><td>사건과 정정 사유를 함께 설계 가능</td></tr></tbody></table>
+<p>사용하려면 관리자가 저장공간, 보존 기간, 권한과 적용 제약을 확인해야 합니다. 활성화 이전의 업무 이력이 자동으로 만들어지지는 않습니다.</p>
+<p>업무 유효 기간이 있는 테이블에 적용하면 정정 전 데이터베이스 상태를 확인하는 데 도움이 됩니다. 다만 허용 상태 전이나 가격 기간의 중복까지 검증해 주는 기능은 아닙니다.</p>
+<h3>5. 연습문제 — 가격 이력과 주문 상태 이력 설계</h3>
+<p><strong>요구사항</strong></p>
+<p>주문 서비스가 다음 규칙을 사용합니다.</p>
+<ol>
+<li>상품별 기준 가격은 적용 시작 시각부터 유효합니다.</li>
+<li>미래 가격을 미리 등록할 수 있습니다.</li>
+<li>판매 가능한 기간에는 기준 가격이 하나여야 합니다.</li>
+<li>주문에는 주문 당시 상품명과 실제 적용 단가를 보관합니다.</li>
+<li>주문은 주문 접수, 결제 완료, 배송 중, 배송 완료 상태를 거칩니다.</li>
+<li>취소 가능 여부는 주문 상태와 출고 여부에 따라 판단합니다.</li>
+<li>배송 발생 시각과 시스템 기록 시각은 다를 수 있습니다.</li>
+<li>과거 가격의 오류를 정정해도 정정 전 보고 내용을 확인해야 합니다.</li>
+</ol>
+<p><strong>작성할 내용</strong></p>
+<ol>
+<li>draw.io로 상품, 가격 이력, 주문, 주문 상세, 상태 변경 사건의 ERD를 작성합니다.</li>
+<li>각 테이블에서 한 행의 의미와 키를 정의합니다.</li>
+<li>가격의 업무 유효 기간과 기록 기간을 구분합니다.</li>
+<li>기간 중복·공백·끝이 열린 행의 검증 방법을 작성합니다.</li>
+<li>주문 상태별 허용 전이와 취소 규칙을 표로 작성합니다.</li>
+<li>가격 정정과 상태 변경을 확정하는 트랜잭션의 범위를 정합니다.</li>
+<li>다음 질문에 답하는 조회 SQL을 작성합니다.
+<ul>
+<li>특정 업무 시점에 적용되는 상품 가격</li>
+<li>정정 이전에 알고 있던 특정 업무 시점의 가격</li>
+<li>주문의 상태 변경 순서와 각 사건의 발생·기록 시각</li>
+</ul>
+</li>
+</ol>
+<p><strong>검증할 입력</strong></p>
+<table><thead><tr><th>입력 상황</th><th>확인할 내용</th></tr></thead><tbody><tr><td>이전 가격 종료와 새 가격 시작이 같음</td><td>경계 시점에 새 가격 하나만 조회</td></tr><tr><td>같은 상품의 가격 기간이 겹침</td><td>등록 거부</td></tr><tr><td>판매 기간에 가격 공백이 생김</td><td>검증에서 발견</td></tr><tr><td>두 세션이 같은 상품의 가격을 동시에 등록</td><td>기간 중복 방지</td></tr><tr><td>결제 완료 주문을 두 세션이 동시에 변경</td><td>충돌을 감지하고 이력 일치 유지</td></tr><tr><td>과거 가격을 소급 정정</td><td>정정 전후의 판단 결과를 각각 조회</td></tr></tbody></table>
+<p><strong>완료 조건</strong></p>
+<ul>
+<li>종료가 미정인 행과 현재 유효한 행을 구분합니다.</li>
+<li>가격이 바뀌어도 확정된 주문 단가가 달라지지 않습니다.</li>
+<li>가격의 기간 중복을 동시 등록 상황에서도 방지합니다.</li>
+<li>현재 주문 상태와 상태 변경 이력이 같은 트랜잭션에서 확정됩니다.</li>
+<li>과거 정정의 대상과 사유를 추적할 수 있습니다.</li>
+<li>Flashback 기능의 보관 범위와 업무 이력의 보관 요구를 구분하여 설명합니다.</li>
+</ul><nav class="chapter-nav"><button type="button" class="text" data-prev="true" data-href="25.html">← 이전 장</button><span>26 / 30</span><button type="button" class="text" data-next="true" data-href="27.html">다음 장 →</button></nav></section></main></div><script src="../assets/book-fe9af60309390aae.js"></script></body></html>

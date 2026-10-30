@@ -1,0 +1,604 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data: blob:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'"><meta name="viewport" content="width=device-width,initial-scale=1"><title>디비설계강의</title><link rel="stylesheet" href="../assets/book-e288a86a0216c70b.css"></head><body><div class="reader" data-toc="open"><header class="book-bar"><button type="button" class="toc-toggle" aria-expanded="true" aria-controls="toc">목차</button><span class="book-bar__title">디비설계강의</span></header><aside class="toc" id="toc"><p class="caption">목차 / CONTENTS</p><div class="toc-title">디비설계강의</div><a href="../index.html" data-chapter="0" title="표지" aria-current="false">표지</a><a href="01.html" data-chapter="1" title="1장. 관계형 데이터베이스와 DBMS란?" aria-current="false">1장. 관계형 데이터베이스와 DBMS란?</a><a href="02.html" data-chapter="2" title="2장. Oracle 실습 환경 구성" aria-current="false">2장. Oracle 실습 환경 구성</a><a href="03.html" data-chapter="3" title="3장. 요구사항 분석과 데이터 모델링이란?" aria-current="false">3장. 요구사항 분석과 데이터 모델링이란?</a><a href="04.html" data-chapter="4" title="4장. 식별자와 관계 설계란?" aria-current="false">4장. 식별자와 관계 설계란?</a><a href="05.html" data-chapter="5" title="5장. 정규화란?" aria-current="false">5장. 정규화란?</a><a href="06.html" data-chapter="6" title="6장. 무결성과 물리 설계란?" aria-current="false">6장. 무결성과 물리 설계란?</a><a href="07.html" data-chapter="7" title="7장. Oracle 인스턴스와 데이터베이스란?" aria-current="false">7장. Oracle 인스턴스와 데이터베이스란?</a><a href="08.html" data-chapter="8" title="8장. Oracle 저장구조와 블록 접근이란?" aria-current="false">8장. Oracle 저장구조와 블록 접근이란?</a><a href="09.html" data-chapter="9" title="9장. 트랜잭션과 읽기 일관성이란?" aria-current="false">9장. 트랜잭션과 읽기 일관성이란?</a><a href="10.html" data-chapter="10" title="10장. SQL 처리와 옵티마이저란?" aria-current="false">10장. SQL 처리와 옵티마이저란?</a><a href="11.html" data-chapter="11" title="11장. 실행 계획과 성능 측정이란?" aria-current="false">11장. 실행 계획과 성능 측정이란?</a><a href="12.html" data-chapter="12" title="12장. B-tree 인덱스와 스캔 방식이란?" aria-current="true">12장. B-tree 인덱스와 스캔 방식이란?</a><a href="13.html" data-chapter="13" title="13장. 복합 인덱스와 탐색 범위 튜닝이란?" aria-current="false">13장. 복합 인덱스와 탐색 범위 튜닝이란?</a><a href="14.html" data-chapter="14" title="14장. 테이블 접근 최소화란?" aria-current="false">14장. 테이블 접근 최소화란?</a><a href="15.html" data-chapter="15" title="15장. 검색 조건과 인덱스 활용이란?" aria-current="false">15장. 검색 조건과 인덱스 활용이란?</a><a href="16.html" data-chapter="16" title="16장. 정렬·페이징·집계 튜닝이란?" aria-current="false">16장. 정렬·페이징·집계 튜닝이란?</a><a href="17.html" data-chapter="17" title="17장. 조인·서브쿼리 튜닝이란?" aria-current="false">17장. 조인·서브쿼리 튜닝이란?</a><a href="18.html" data-chapter="18" title="18장. 특수 인덱스와 인덱스 운영이란?" aria-current="false">18장. 특수 인덱스와 인덱스 운영이란?</a><a href="19.html" data-chapter="19" title="19장. 파티셔닝과 파티션 프루닝이란?" aria-current="false">19장. 파티셔닝과 파티션 프루닝이란?</a><a href="20.html" data-chapter="20" title="20장. 파티션 인덱스와 유지관리란?" aria-current="false">20장. 파티션 인덱스와 유지관리란?</a><a href="21.html" data-chapter="21" title="21장. 반정규화와 통계 테이블 설계란?" aria-current="false">21장. 반정규화와 통계 테이블 설계란?</a><a href="22.html" data-chapter="22" title="22장. 공통코드 설계란?" aria-current="false">22장. 공통코드 설계란?</a><a href="23.html" data-chapter="23" title="23장. 계층 구조 설계란?" aria-current="false">23장. 계층 구조 설계란?</a><a href="24.html" data-chapter="24" title="24장. 상속 관계 설계란?" aria-current="false">24장. 상속 관계 설계란?</a><a href="25.html" data-chapter="25" title="25장. 데이터 변경 추적과 감사 기록이란?" aria-current="false">25장. 데이터 변경 추적과 감사 기록이란?</a><a href="26.html" data-chapter="26" title="26장. 데이터 변경 이력과 시간 모델링이란?" aria-current="false">26장. 데이터 변경 이력과 시간 모델링이란?</a><a href="27.html" data-chapter="27" title="27장. 동적 속성과 EAV 설계란?" aria-current="false">27장. 동적 속성과 EAV 설계란?</a><a href="28.html" data-chapter="28" title="28장. JSON 데이터 설계란?" aria-current="false">28장. JSON 데이터 설계란?</a><a href="29.html" data-chapter="29" title="29장. 논리 삭제란?" aria-current="false">29장. 논리 삭제란?</a><a href="30.html" data-chapter="30" title="30장. 요구사항 변경 대응과 설계·튜닝 종합 실습" aria-current="false">30장. 요구사항 변경 대응과 설계·튜닝 종합 실습</a><footer>30장</footer></aside><main class="reading"><section class="chapter" id="chapter-12"><div class="eyebrow">디비설계강의 / CHAPTER 12</div><span class="chapter-num" aria-hidden="true">12</span><h2>12장. B-tree 인덱스와 스캔 방식이란?</h2><h3>1. B-tree 인덱스의 구조</h3>
+<h4>1.1 루트·브랜치·리프와 키 정렬</h4>
+<p><strong>B-tree 인덱스(B-tree index)</strong>는 키 값을 정렬하고, 키 범위에 따라 탐색 경로를 나누는 균형 트리 구조입니다. 균형이란 루트에서 어느 리프까지 내려가더라도 거치는 단계 수가 같다는 뜻입니다.</p>
+<p>이 장에서는 일반적인 힙 테이블에 만든 오름차순 B-tree 인덱스를 기준으로 설명합니다. 테이블과 인덱스는 별도의 세그먼트에 저장됩니다. 인덱스를 만들어도 테이블 행이 인덱스 키 순서로 재배치되지는 않습니다.</p>
+<p>B-tree 인덱스의 블록은 다음 역할을 맡습니다.</p>
+<table><thead><tr><th>구성</th><th>역할</th></tr></thead><tbody><tr><td>루트(root)</td><td>탐색을 시작하고 하위 블록으로 가는 경로를 결정합니다.</td></tr><tr><td>브랜치(branch)</td><td>키 범위를 구분하여 다음 하위 블록으로 안내합니다.</td></tr><tr><td>리프(leaf)</td><td>인덱스 키와 테이블 행을 찾는 ROWID를 저장합니다.</td></tr></tbody></table>
+<p>작은 인덱스에서는 루트 블록이 리프 역할도 맡습니다. 데이터가 늘어나면 하위 블록과 브랜치 단계가 추가될 수 있습니다.</p>
+<p>리프의 항목은 키 순서로 정렬됩니다. 인접한 리프 블록은 양방향으로 연결되어 있어 앞이나 뒤로 이어 읽을 수 있습니다. 비유일 인덱스에는 같은 키 값을 가진 항목이 여러 개 저장됩니다. 이때 ROWID도 정렬에 사용합니다. <a href="https://docs.oracle.com/en/database/oracle/oracle-database/21/cncpt/indexes-and-index-organized-tables.html" target="_blank" rel="noopener noreferrer">Oracle Database Concepts</a></p>
+<figure class="book-figure" data-type="generated" id="figure-cc30940c6111"><div class="figure-scroll"><img src="../assets/img/8092fdd1c6e841ba.png" alt="B-tree의 탐색 경로와 리프 연결" data-raster="true"/></div><figcaption>B-tree의 탐색 경로와 리프 연결</figcaption></figure>
+<p>그림 12-1에서 정렬되어 있는 것은 인덱스의 키입니다. 테이블 블록의 행까지 같은 순서로 배치된다는 뜻은 아닙니다. 이 차이 때문에 인덱스를 적게 읽고도 테이블을 많이 읽는 실행이 생길 수 있습니다.</p>
+<h4>1.2 수직 탐색·수평 탐색·ROWID 접근</h4>
+<p>인덱스로 주문번호의 일정 구간을 조회한다고 가정하겠습니다. 이때 작업은 수직 탐색, 수평 탐색, ROWID 접근으로 구분합니다.</p>
+<p><strong>수직 탐색(vertical traversal)</strong>은 루트에서 시작해 조건에 맞는 리프 위치를 찾는 과정입니다. 각 블록에서 키 범위를 비교하고 다음 하위 블록을 선택합니다. 모든 리프를 처음부터 읽지는 않습니다.</p>
+<p><strong>수평 탐색(horizontal traversal)</strong>은 시작 위치부터 리프의 항목을 키 순서로 읽는 과정입니다. 현재 리프에서 탐색이 끝나지 않으면 연결된 다음 리프로 이동합니다. 조건의 상한을 넘으면 범위 탐색을 마칩니다.</p>
+<p>리프에서 찾은 ROWID는 테이블 행에 접근할 때 사용합니다. 조회에 필요한 컬럼이 인덱스에 없다면 해당 ROWID로 테이블 블록을 읽습니다.</p>
+<table><thead><tr><th>작업</th><th>찾거나 읽는 대상</th></tr></thead><tbody><tr><td>수직 탐색</td><td>조건에 맞는 리프의 시작 위치</td></tr><tr><td>수평 탐색</td><td>조건 범위의 인덱스 항목</td></tr><tr><td>ROWID 접근</td><td>인덱스에 없는 컬럼을 가진 테이블 행</td></tr></tbody></table>
+<p>인덱스가 주문번호만 저장한다고 가정하겠습니다. 주문번호만 조회하면 인덱스에서 결과를 만들 수 있습니다. 배송지까지 조회하려면 테이블 행도 읽어야 합니다.</p>
+<p>인덱스 접근 비용은 트리를 내려가는 비용만으로 설명할 수 없습니다. 리프를 얼마나 읽는지, 테이블에 얼마나 접근하는지도 함께 봐야 합니다.</p>
+<h4>1.3 복합키와 NULL 저장 규칙</h4>
+<p><strong>복합 인덱스(composite index)</strong>는 둘 이상의 컬럼을 키로 사용하는 인덱스입니다. <code>(주문상태, 주문번호)</code> 순서로 만들면 주문상태를 먼저 비교합니다. 주문상태가 같은 항목 안에서 주문번호를 비교합니다.</p>
+<table><thead><tr><th>주문상태</th><th style="text-align:right">주문번호</th></tr></thead><tbody><tr><td>NEW</td><td style="text-align:right">1001</td></tr><tr><td>NEW</td><td style="text-align:right">1004</td></tr><tr><td>NEW</td><td style="text-align:right">1010</td></tr><tr><td>PAID</td><td style="text-align:right">1002</td></tr><tr><td>PAID</td><td style="text-align:right">1003</td></tr></tbody></table>
+<p>이 인덱스에서 주문번호 전체가 작은 값부터 정렬되는 것은 아닙니다. <code>NEW</code> 구간과 <code>PAID</code> 구간 각각에서 주문번호가 정렬됩니다. 인덱스의 첫 번째 컬럼을 <strong>선두 컬럼(leading column)</strong>이라고 합니다.</p>
+<p>일반적인 오름차순 B-tree 인덱스는 키 컬럼이 모두 NULL인 행을 저장하지 않습니다. 복합키 중 하나라도 NULL이 아니면 그 행의 항목을 저장합니다.</p>
+<table><thead><tr><th>인덱스 키</th><th>행의 값</th><th>항목 저장</th></tr></thead><tbody><tr><td><code>(취소사유)</code></td><td><code>NULL</code></td><td>저장하지 않음</td></tr><tr><td><code>(주문상태, 취소사유)</code></td><td><code>(&#x27;NEW&#x27;, NULL)</code></td><td>저장함</td></tr><tr><td><code>(주문상태, 취소사유)</code></td><td><code>(NULL, &#x27;CUSTOMER&#x27;)</code></td><td>저장함</td></tr><tr><td><code>(주문상태, 취소사유)</code></td><td><code>(NULL, NULL)</code></td><td>저장하지 않음</td></tr></tbody></table>
+<p>따라서 NULL을 허용하는 단일 컬럼 인덱스에는 테이블의 모든 행이 들어 있지 않을 수 있습니다. 그 인덱스만 읽어서 테이블 전체 행 수를 세면 NULL인 행을 빠뜨리게 됩니다.</p>
+<p>반면 복합 인덱스에 <code>NOT NULL</code> 컬럼이 포함되어 있으면 모든 행이 인덱스에 저장됩니다. 인덱스만으로 쿼리를 실행할 수 있는지 판단할 때는 필요한 컬럼을 확인합니다. 필요한 행이 빠짐없이 저장되어 있는지도 함께 확인합니다.</p>
+<h3>2. 인덱스 스캔 방식</h3>
+<h4>2.1 Index Unique Scan·Index Range Scan</h4>
+<p><strong>Index Unique Scan</strong>은 유일 인덱스의 키 전체에 동등 조건을 적용하여 최대 한 행의 ROWID를 찾는 방식입니다. 일치하는 키가 없으면 반환 행은 0건입니다.</p>
+<p>복합 유일 인덱스에서는 키 컬럼 전체를 동등 조건으로 지정해야 합니다. <code>(회원번호, 배송지번호)</code>가 유일하더라도 회원번호만 지정하면 여러 배송지가 일치할 수 있습니다.</p>
+<p><strong>Index Range Scan</strong>은 조건에 해당하는 키 구간을 읽는 방식입니다. 수직 탐색으로 시작 위치를 찾고, 리프를 따라 조건 범위를 읽습니다. 실제 결과는 0건, 1건 또는 여러 건일 수 있습니다.</p>
+<table><thead><tr><th>조건과 인덱스</th><th>가능한 대표 스캔 방식</th></tr></thead><tbody><tr><td>유일한 주문번호에 <code>주문번호 = 120</code></td><td>Index Unique Scan</td></tr><tr><td>주문번호에 <code>주문번호 BETWEEN 120 AND 130</code></td><td>Index Range Scan</td></tr><tr><td>비유일한 회원번호에 <code>회원번호 = 25</code></td><td>Index Range Scan</td></tr></tbody></table>
+<p>동등 조건이라고 항상 Unique Scan이 되는 것은 아닙니다. 반대로 Range Scan이라고 반드시 여러 행을 반환하는 것도 아닙니다. 스캔 이름은 실제 결과 건수보다 키의 유일성과 탐색 방법을 나타냅니다.</p>
+<p>다음 예제는 이 장에서 사용할 데이터를 준비합니다. 앞 장의 테이블과 충돌하지 않도록 별도 이름을 사용합니다. 같은 이름의 객체가 없는 실습 스키마에서 한 번 실행합니다.</p>
+<p><strong>예제 12-1 — 스캔 비교용 주문 데이터 준비하기</strong></p>
+<p><strong>파일명:</strong> <code>ch12_setup.sql</code></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52</div><pre><code class="language-sql" data-code="CREATE TABLE ch12_order (
+    order_id     NUMBER(10)    NOT NULL,
+    order_status VARCHAR2(10)  NOT NULL,
+    customer_id  NUMBER(10)    NOT NULL,
+    order_date   DATE          NOT NULL,
+    amount       NUMBER(12)    NOT NULL,
+    memo         VARCHAR2(200) NOT NULL,
+    CONSTRAINT pk_ch12_order PRIMARY KEY (order_id)
+);
+
+INSERT INTO ch12_order (
+    order_id,
+    order_status,
+    customer_id,
+    order_date,
+    amount,
+    memo
+)
+SELECT
+    LEVEL,
+    CASE MOD(LEVEL, 3)
+        WHEN 0 THEN &#x27;NEW&#x27;
+        WHEN 1 THEN &#x27;PAID&#x27;
+        ELSE &#x27;SHIPPED&#x27;
+    END,
+    MOD(LEVEL - 1, 1000) + 1,
+    DATE &#x27;2025-01-01&#x27; + MOD(LEVEL - 1, 365),
+    10000 + MOD(LEVEL, 100) * 100,
+    RPAD(&#x27;order-&#x27; || TO_CHAR(LEVEL), 200, &#x27;x&#x27;)
+FROM dual
+CONNECT BY LEVEL &lt;= 30000;
+
+CREATE INDEX ix_ch12_status_id
+    ON ch12_order (order_status, order_id);
+
+COMMIT;
+
+BEGIN
+    DBMS_STATS.GATHER_TABLE_STATS(
+        ownname          =&gt; USER,
+        tabname          =&gt; &#x27;CH12_ORDER&#x27;,
+        estimate_percent =&gt; DBMS_STATS.AUTO_SAMPLE_SIZE,
+        method_opt       =&gt; &#x27;FOR ALL COLUMNS SIZE 1&#x27;,
+        cascade          =&gt; TRUE
+    );
+END;
+/
+
+SELECT order_status, COUNT(*) AS order_count
+FROM ch12_order
+GROUP BY order_status
+ORDER BY order_status;"><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> ch12_order <span class="token punctuation">(</span>
+    order_id     NUMBER<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>    <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    order_status VARCHAR2<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>  <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    customer_id  NUMBER<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>    <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    order_date   <span class="token keyword">DATE</span>          <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    amount       NUMBER<span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span>    <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    memo         VARCHAR2<span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token keyword">CONSTRAINT</span> pk_ch12_order <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span>order_id<span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> ch12_order <span class="token punctuation">(</span>
+    order_id<span class="token punctuation">,</span>
+    order_status<span class="token punctuation">,</span>
+    customer_id<span class="token punctuation">,</span>
+    order_date<span class="token punctuation">,</span>
+    amount<span class="token punctuation">,</span>
+    memo
+<span class="token punctuation">)</span>
+<span class="token keyword">SELECT</span>
+    <span class="token keyword">LEVEL</span><span class="token punctuation">,</span>
+    <span class="token keyword">CASE</span> <span class="token function">MOD</span><span class="token punctuation">(</span><span class="token keyword">LEVEL</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+        <span class="token keyword">WHEN</span> <span class="token number">0</span> <span class="token keyword">THEN</span> <span class="token string">'NEW'</span>
+        <span class="token keyword">WHEN</span> <span class="token number">1</span> <span class="token keyword">THEN</span> <span class="token string">'PAID'</span>
+        <span class="token keyword">ELSE</span> <span class="token string">'SHIPPED'</span>
+    <span class="token keyword">END</span><span class="token punctuation">,</span>
+    <span class="token function">MOD</span><span class="token punctuation">(</span><span class="token keyword">LEVEL</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token keyword">DATE</span> <span class="token string">'2025-01-01'</span> <span class="token operator">+</span> <span class="token function">MOD</span><span class="token punctuation">(</span><span class="token keyword">LEVEL</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">365</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token number">10000</span> <span class="token operator">+</span> <span class="token function">MOD</span><span class="token punctuation">(</span><span class="token keyword">LEVEL</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">,</span>
+    RPAD<span class="token punctuation">(</span><span class="token string">'order-'</span> <span class="token operator">||</span> TO_CHAR<span class="token punctuation">(</span><span class="token keyword">LEVEL</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">,</span> <span class="token string">'x'</span><span class="token punctuation">)</span>
+<span class="token keyword">FROM</span> dual
+<span class="token keyword">CONNECT</span> <span class="token keyword">BY</span> <span class="token keyword">LEVEL</span> <span class="token operator">&lt;=</span> <span class="token number">30000</span><span class="token punctuation">;</span>
+
+<span class="token keyword">CREATE</span> <span class="token keyword">INDEX</span> ix_ch12_status_id
+    <span class="token keyword">ON</span> ch12_order <span class="token punctuation">(</span>order_status<span class="token punctuation">,</span> order_id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">COMMIT</span><span class="token punctuation">;</span>
+
+<span class="token keyword">BEGIN</span>
+    DBMS_STATS<span class="token punctuation">.</span>GATHER_TABLE_STATS<span class="token punctuation">(</span>
+        ownname          <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">USER</span><span class="token punctuation">,</span>
+        tabname          <span class="token operator">=</span><span class="token operator">></span> <span class="token string">'CH12_ORDER'</span><span class="token punctuation">,</span>
+        estimate_percent <span class="token operator">=</span><span class="token operator">></span> DBMS_STATS<span class="token punctuation">.</span>AUTO_SAMPLE_SIZE<span class="token punctuation">,</span>
+        method_opt       <span class="token operator">=</span><span class="token operator">></span> <span class="token string">'FOR ALL COLUMNS SIZE 1'</span><span class="token punctuation">,</span>
+        <span class="token keyword">cascade</span>          <span class="token operator">=</span><span class="token operator">></span> <span class="token boolean">TRUE</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">END</span><span class="token punctuation">;</span>
+<span class="token operator">/</span>
+
+<span class="token keyword">SELECT</span> order_status<span class="token punctuation">,</span> <span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> order_count
+<span class="token keyword">FROM</span> ch12_order
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span> order_status
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span> order_status<span class="token punctuation">;</span></code></pre></div></div>
+<p><strong>실행 결과</strong></p>
+<div class="code-wrap" data-kind="output" data-lang="text"><div class="code-label"><span class="code-label__name">출력</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5</div><pre><code data-code="ORDER_STATUS  ORDER_COUNT
+------------  -----------
+NEW                 10000
+PAID                10000
+SHIPPED             10000">ORDER_STATUS  ORDER_COUNT
+------------  -----------
+NEW                 10000
+PAID                10000
+SHIPPED             10000</code></pre></div></div>
+<p><code>memo</code>는 인덱스에 포함하지 않은 비교용 컬럼입니다. 이 컬럼을 조회하면 테이블 접근이 필요합니다. 상태별 건수는 같고, 각 상태의 주문번호는 전체 번호 사이에 섞여 있습니다.</p>
+<p>다음 예제부터는 예제 12-1의 객체가 준비되어 있어야 합니다. 예제 12-2~12-5는 서로의 조회 결과에 의존하지 않으므로 준비 후 각각 반복할 수 있습니다. 실행 통계는 11장 2.2항의 공통 실행 방법으로 확인합니다. 각 측정 SQL에 고유 주석을 붙이고, 조회한 <code>SQL_ID</code>와 <code>CHILD_NUMBER</code>를 계획 조회에 명시합니다.</p>
+<p><strong>예제 12-2 — 유일 탐색과 범위 탐색 비교하기</strong></p>
+<p><strong>이어서:</strong> 예제 12-1</p>
+<p><strong>파일명:</strong> <code>ch12_unique_range.sql</code></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</div><pre><code class="language-sql" data-code="SELECT /*+ GATHER_PLAN_STATISTICS INDEX(o pk_ch12_order) */
+       o.order_id, o.order_status
+FROM ch12_order o
+WHERE o.order_id = 120;
+
+SELECT *
+FROM TABLE(
+    DBMS_XPLAN.DISPLAY_CURSOR(
+        NULL, NULL, &#x27;ALLSTATS LAST +PREDICATE&#x27;
+    )
+);
+
+SELECT /*+ GATHER_PLAN_STATISTICS INDEX(o pk_ch12_order) */
+       o.order_id, o.order_status
+FROM ch12_order o
+WHERE o.order_id BETWEEN 120 AND 122
+ORDER BY o.order_id;
+
+SELECT *
+FROM TABLE(
+    DBMS_XPLAN.DISPLAY_CURSOR(
+        NULL, NULL, &#x27;ALLSTATS LAST +PREDICATE&#x27;
+    )
+);"><span class="token keyword">SELECT</span> <span class="token comment">/*+ GATHER_PLAN_STATISTICS INDEX(o pk_ch12_order) */</span>
+       o<span class="token punctuation">.</span>order_id<span class="token punctuation">,</span> o<span class="token punctuation">.</span>order_status
+<span class="token keyword">FROM</span> ch12_order o
+<span class="token keyword">WHERE</span> o<span class="token punctuation">.</span>order_id <span class="token operator">=</span> <span class="token number">120</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> <span class="token keyword">TABLE</span><span class="token punctuation">(</span>
+    DBMS_XPLAN<span class="token punctuation">.</span>DISPLAY_CURSOR<span class="token punctuation">(</span>
+        <span class="token boolean">NULL</span><span class="token punctuation">,</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span> <span class="token string">'ALLSTATS LAST +PREDICATE'</span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> <span class="token comment">/*+ GATHER_PLAN_STATISTICS INDEX(o pk_ch12_order) */</span>
+       o<span class="token punctuation">.</span>order_id<span class="token punctuation">,</span> o<span class="token punctuation">.</span>order_status
+<span class="token keyword">FROM</span> ch12_order o
+<span class="token keyword">WHERE</span> o<span class="token punctuation">.</span>order_id <span class="token operator">BETWEEN</span> <span class="token number">120</span> <span class="token operator">AND</span> <span class="token number">122</span>
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span> o<span class="token punctuation">.</span>order_id<span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> <span class="token keyword">TABLE</span><span class="token punctuation">(</span>
+    DBMS_XPLAN<span class="token punctuation">.</span>DISPLAY_CURSOR<span class="token punctuation">(</span>
+        <span class="token boolean">NULL</span><span class="token punctuation">,</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span> <span class="token string">'ALLSTATS LAST +PREDICATE'</span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div></div>
+<p><strong>실행 결과</strong></p>
+<p>첫 번째 조회는 다음 한 행을 반환합니다.</p>
+<div class="code-wrap" data-kind="output" data-lang="text"><div class="code-label"><span class="code-label__name">출력</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3</div><pre><code data-code="ORDER_ID  ORDER_STATUS
+--------  ------------
+     120  NEW">ORDER_ID  ORDER_STATUS
+--------  ------------
+     120  NEW</code></pre></div></div>
+<p>두 번째 조회는 다음 세 행을 반환합니다.</p>
+<div class="code-wrap" data-kind="output" data-lang="text"><div class="code-label"><span class="code-label__name">출력</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5</div><pre><code data-code="ORDER_ID  ORDER_STATUS
+--------  ------------
+     120  NEW
+     121  PAID
+     122  SHIPPED">ORDER_ID  ORDER_STATUS
+--------  ------------
+     120  NEW
+     121  PAID
+     122  SHIPPED</code></pre></div></div>
+<p>첫 번째 계획에서는 <code>INDEX UNIQUE SCAN</code>, 두 번째 계획에서는 <code>INDEX RANGE SCAN</code>을 확인합니다. 주문상태를 읽기 위한 <code>TABLE ACCESS BY INDEX ROWID</code> 계열 연산도 함께 나타날 수 있습니다.</p>
+<p>예제의 <code>INDEX</code> 힌트는 비교할 인덱스를 지정합니다. 힌트는 실행 방식을 관찰하기 위한 실습 장치입니다. 실제로 적용되었는지는 실행 계획으로 확인해야 합니다.</p>
+<p>여기에 제시한 행 값과 건수는 데이터 생성식으로 정해집니다. 실행 계획의 비용과 Buffers는 환경에 따라 달라지므로 고정된 숫자로 제시하지 않습니다.</p>
+<h4>2.2 Index Full Scan·Index Fast Full Scan</h4>
+<p><strong>Index Full Scan</strong>은 리프의 한쪽 끝을 찾은 뒤 키 순서대로 인덱스를 읽는 방식입니다. 시작·종료 키로 범위를 좁히지 않고 전체 키 구간을 읽습니다. 일반적으로 단일 블록 읽기를 사용합니다.</p>
+<p><strong>Index Fast Full Scan</strong>은 인덱스를 테이블 대신 읽는 방식입니다. 키 순서보다 블록을 효율적으로 읽는 데 초점을 둡니다. 다중 블록 읽기를 사용할 수 있지만 키 순서를 보장하지 않습니다. 필요한 컬럼과 행을 인덱스만으로 제공할 수 있어야 합니다.</p>
+<table><thead><tr><th>비교 항목</th><th>Index Full Scan</th><th>Index Fast Full Scan</th></tr></thead><tbody><tr><td>읽는 방법</td><td>리프 연결을 따라 키 순서로 읽음</td><td>인덱스 블록을 키 순서와 무관하게 읽음</td></tr><tr><td>대표적인 읽기 방식</td><td>단일 블록 읽기</td><td>다중 블록 읽기 가능</td></tr><tr><td>정렬 활용</td><td>요구한 순서와 맞으면 정렬 생략 가능</td><td>키 순서를 이용한 정렬 생략 불가</td></tr><tr><td>테이블 접근</td><td>필요한 컬럼이 없으면 뒤따를 수 있음</td><td>인덱스만으로 조회 수행</td></tr><tr><td>대표적인 용도</td><td>키 순서가 필요한 넓은 범위 조회</td><td>인덱스 컬럼만 필요한 전체 조회·집계</td></tr></tbody></table>
+<p>Fast Full Scan의 이름에 <code>Fast</code>가 있어도 모든 SQL에서 더 빠르다는 뜻은 아닙니다. 정렬이 필요한 조회라면 별도 정렬 비용이 생깁니다.</p>
+<p>결과 순서가 필요하면 SQL에 <code>ORDER BY</code>를 작성해야 합니다. 인덱스 스캔 방식에 기대어 출력 순서를 가정하면 실행 계획이 바뀔 때 결과 순서도 달라질 수 있습니다.</p>
+<p><strong>예제 12-3 — 순서대로 읽기와 전체 블록 읽기 비교하기</strong></p>
+<p><strong>이어서:</strong> 예제 12-1</p>
+<p><strong>파일명:</strong> <code>ch12_full_ffs.sql</code></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</div><pre><code class="language-sql" data-code="SELECT /*+ GATHER_PLAN_STATISTICS
+           INDEX_ASC(o ix_ch12_status_id) */
+       o.order_status, o.order_id
+FROM ch12_order o
+ORDER BY o.order_status, o.order_id;
+
+SELECT *
+FROM TABLE(
+    DBMS_XPLAN.DISPLAY_CURSOR(
+        NULL, NULL, &#x27;ALLSTATS LAST +PREDICATE&#x27;
+    )
+);
+
+SELECT /*+ GATHER_PLAN_STATISTICS
+           INDEX_FFS(o ix_ch12_status_id) */
+       COUNT(*) AS order_count
+FROM ch12_order o;
+
+SELECT *
+FROM TABLE(
+    DBMS_XPLAN.DISPLAY_CURSOR(
+        NULL, NULL, &#x27;ALLSTATS LAST +PREDICATE&#x27;
+    )
+);"><span class="token keyword">SELECT</span> <span class="token comment">/*+ GATHER_PLAN_STATISTICS
+           INDEX_ASC(o ix_ch12_status_id) */</span>
+       o<span class="token punctuation">.</span>order_status<span class="token punctuation">,</span> o<span class="token punctuation">.</span>order_id
+<span class="token keyword">FROM</span> ch12_order o
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span> o<span class="token punctuation">.</span>order_status<span class="token punctuation">,</span> o<span class="token punctuation">.</span>order_id<span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> <span class="token keyword">TABLE</span><span class="token punctuation">(</span>
+    DBMS_XPLAN<span class="token punctuation">.</span>DISPLAY_CURSOR<span class="token punctuation">(</span>
+        <span class="token boolean">NULL</span><span class="token punctuation">,</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span> <span class="token string">'ALLSTATS LAST +PREDICATE'</span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> <span class="token comment">/*+ GATHER_PLAN_STATISTICS
+           INDEX_FFS(o ix_ch12_status_id) */</span>
+       <span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> order_count
+<span class="token keyword">FROM</span> ch12_order o<span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> <span class="token keyword">TABLE</span><span class="token punctuation">(</span>
+    DBMS_XPLAN<span class="token punctuation">.</span>DISPLAY_CURSOR<span class="token punctuation">(</span>
+        <span class="token boolean">NULL</span><span class="token punctuation">,</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span> <span class="token string">'ALLSTATS LAST +PREDICATE'</span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div></div>
+<p><strong>실행 결과</strong></p>
+<p>첫 번째 조회는 상태와 주문번호 순서로 30,000행을 반환합니다. 처음 몇 행은 다음과 같습니다.</p>
+<div class="code-wrap" data-kind="output" data-lang="text"><div class="code-label"><span class="code-label__name">출력</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5</div><pre><code data-code="ORDER_STATUS  ORDER_ID
+------------  --------
+NEW                  3
+NEW                  6
+NEW                  9">ORDER_STATUS  ORDER_ID
+------------  --------
+NEW                  3
+NEW                  6
+NEW                  9</code></pre></div></div>
+<p>두 번째 조회는 다음 한 행을 반환합니다.</p>
+<div class="code-wrap" data-kind="output" data-lang="text"><div class="code-label"><span class="code-label__name">출력</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3</div><pre><code data-code="ORDER_COUNT
+-----------
+      30000">ORDER_COUNT
+-----------
+      30000</code></pre></div></div>
+<p>첫 번째 조회는 공통 실행 방법에 따라 전체 결과를 인출한 뒤 계획을 확인합니다.</p>
+<p>첫 번째 계획에서는 <code>INDEX FULL SCAN</code>과 정렬 연산의 유무를 확인합니다. 두 번째 계획에서는 <code>INDEX FAST FULL SCAN</code>을 확인합니다. 집계 연산인 <code>SORT AGGREGATE</code>가 나타나더라도 결과 순서를 만드는 <code>SORT ORDER BY</code>와 혼동하지 않습니다.</p>
+<p>두 조회 모두 필요한 값을 인덱스가 제공합니다. 따라서 일반적인 실행에서는 테이블 접근이 필요하지 않습니다. <code>order_status</code>와 <code>order_id</code>가 모두 <code>NOT NULL</code>이므로 전체 행 수를 집계할 때도 빠지는 행이 없습니다.</p>
+<h4>2.3 Index Skip Scan의 조건과 비용</h4>
+<p><strong>Index Skip Scan</strong>은 복합 인덱스의 선두 컬럼 조건이 없을 때 사용할 수 있는 접근 방식입니다. 인덱스를 선두 컬럼 값별로 나눈 여러 작은 인덱스처럼 논리적으로 다룹니다.</p>
+<p><code>(주문상태, 주문번호)</code> 인덱스에서 주문번호만 조회한다고 가정하겠습니다. 주문번호는 상태별 구간마다 따로 정렬되어 있습니다. Skip Scan은 필요한 상태 구간을 찾아가며 뒤쪽 컬럼 조건을 탐색합니다.</p>
+<figure class="book-figure" data-type="generated" id="figure-63ff9d9cf8ff"><div class="figure-scroll"><img src="../assets/img/a41b8aac25c2ca4f.png" alt="선두 컬럼 값별로 나누어 탐색하는 Skip Scan" data-raster="true"/></div><figcaption>선두 컬럼 값별로 나누어 탐색하는 Skip Scan</figcaption></figure>
+<p>Skip Scan은 선두 컬럼의 서로 다른 값이 적고 뒤쪽 컬럼 조건이 충분히 좁을 때 유리할 수 있습니다. 선두 값이 많아지면 찾아가야 할 구간과 탐색 작업이 늘어납니다.</p>
+<p>선두 컬럼 조건이 없다는 이유로 인덱스를 사용할 수 없다고 단정해서는 안 됩니다. 반대로 Skip Scan이 가능하다는 이유로 컬럼 순서를 무시해서도 안 됩니다. 옵티마이저는 인덱스 크기와 데이터 분포, 예상 행 수를 함께 고려합니다.</p>
+<p>다음 조회는 선두 컬럼인 주문상태를 조건에서 제외합니다. 기본키 인덱스도 존재하므로 비교를 위해 Skip Scan 힌트로 대상 인덱스를 지정합니다.</p>
+<p><strong>예제 12-4 — 선두 컬럼 조건 없이 복합 인덱스 탐색하기</strong></p>
+<p><strong>이어서:</strong> 예제 12-1</p>
+<p><strong>파일명:</strong> <code>ch12_skip_scan.sql</code></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13</div><pre><code class="language-sql" data-code="SELECT /*+ GATHER_PLAN_STATISTICS
+           INDEX_SS(o ix_ch12_status_id) */
+       o.order_status, o.order_id
+FROM ch12_order o
+WHERE o.order_id BETWEEN 120 AND 122
+ORDER BY o.order_id;
+
+SELECT *
+FROM TABLE(
+    DBMS_XPLAN.DISPLAY_CURSOR(
+        NULL, NULL, &#x27;ALLSTATS LAST +PREDICATE&#x27;
+    )
+);"><span class="token keyword">SELECT</span> <span class="token comment">/*+ GATHER_PLAN_STATISTICS
+           INDEX_SS(o ix_ch12_status_id) */</span>
+       o<span class="token punctuation">.</span>order_status<span class="token punctuation">,</span> o<span class="token punctuation">.</span>order_id
+<span class="token keyword">FROM</span> ch12_order o
+<span class="token keyword">WHERE</span> o<span class="token punctuation">.</span>order_id <span class="token operator">BETWEEN</span> <span class="token number">120</span> <span class="token operator">AND</span> <span class="token number">122</span>
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span> o<span class="token punctuation">.</span>order_id<span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> <span class="token keyword">TABLE</span><span class="token punctuation">(</span>
+    DBMS_XPLAN<span class="token punctuation">.</span>DISPLAY_CURSOR<span class="token punctuation">(</span>
+        <span class="token boolean">NULL</span><span class="token punctuation">,</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span> <span class="token string">'ALLSTATS LAST +PREDICATE'</span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div></div>
+<p><strong>실행 결과</strong></p>
+<div class="code-wrap" data-kind="output" data-lang="text"><div class="code-label"><span class="code-label__name">출력</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5</div><pre><code data-code="ORDER_STATUS  ORDER_ID
+------------  --------
+NEW                120
+PAID               121
+SHIPPED            122">ORDER_STATUS  ORDER_ID
+------------  --------
+NEW                120
+PAID               121
+SHIPPED            122</code></pre></div></div>
+<p>계획에서는 <code>IX_CH12_STATUS_ID</code>에 대한 <code>INDEX SKIP SCAN</code>을 확인합니다. 해당 연산이 없다면 힌트 적용 여부와 인덱스 이름부터 확인합니다.</p>
+<p>이 인덱스에서는 주문상태를 먼저 정렬합니다. 따라서 주문번호만을 기준으로 정렬하려면 별도의 정렬 연산이 나타날 수 있습니다.</p>
+<p>힌트를 제거했을 때 기본키의 Range Scan이 선택되어도 잘못된 결과가 아닙니다. 이 실습의 목적은 Skip Scan의 동작을 관찰하는 데 있습니다. 해당 SQL의 최적 경로를 입증하는 예제는 아닙니다.</p>
+<h3>3. 인덱스 접근과 전체 스캔의 선택</h3>
+<h4>3.1 반환 비율·블록 수·테이블 접근 비용</h4>
+<p>인덱스와 전체 테이블 스캔 중 어느 쪽을 선택할지는 반환 행 비율만으로 결정되지 않습니다. 반환 비율은 전체 행 중 결과로 반환하는 행이 차지하는 비율입니다.</p>
+<p>인덱스를 거쳐 테이블을 읽는 경우에는 인덱스 블록과 테이블 블록을 모두 읽습니다. 전체 테이블 스캔은 스캔 대상인 테이블 블록을 읽으며 조건을 검사합니다.</p>
+<table><thead><tr><th>판단 요소</th><th>확인할 내용</th></tr></thead><tbody><tr><td>반환 비율</td><td>전체 행 중 몇 행이 필요한가</td></tr><tr><td>테이블 블록 수</td><td>전체 스캔으로 읽을 블록이 얼마나 되는가</td></tr><tr><td>인덱스 크기</td><td>탐색하거나 전체로 읽을 인덱스가 얼마나 큰가</td></tr><tr><td>행의 분포</td><td>필요한 행이 적은 블록에 모였는가</td></tr><tr><td>조회 컬럼</td><td>인덱스만으로 결과를 만들 수 있는가</td></tr><tr><td>읽기 환경</td><td>캐시 상태와 I/O 특성이 어떠한가</td></tr></tbody></table>
+<p>같은 1,000행을 반환하더라도 행이 소수의 테이블 블록에 모여 있는 경우와 수많은 블록에 흩어진 경우는 비용이 다릅니다. 행 수를 블록 수와 같은 뜻으로 사용하면 안 됩니다.</p>
+<p>작은 테이블은 전체 스캔이 더 저렴할 수 있습니다. 인덱스를 내려갔다가 테이블로 이동하는 작업보다 몇 개의 테이블 블록을 읽는 편이 간단하기 때문입니다.</p>
+<p>반대로 많은 행을 반환하더라도 필요한 컬럼이 작은 인덱스에 모두 있으면 인덱스 전체 스캔이 유리할 수 있습니다. 테이블보다 적은 블록을 읽고 결과를 만들 수 있기 때문입니다.</p>
+<p>“전체의 몇 퍼센트 이하면 인덱스를 사용한다”는 고정 기준은 없습니다. 실행 계획과 실제 읽기량을 함께 비교해야 합니다.</p>
+<h4>3.2 인덱스를 사용해도 느려지는 이유</h4>
+<p>인덱스가 선택되었다는 사실만으로 효율적인 실행이라고 판단할 수 없습니다. 탐색 범위가 넓으면 리프를 많이 읽습니다. 테이블 컬럼까지 필요하면 ROWID 접근도 이어집니다.</p>
+<p>특히 리프에서 찾은 행이 테이블 여러 블록에 흩어져 있으면 테이블 읽기 비용이 커집니다. 실행 계획에 <code>TABLE ACCESS BY INDEX ROWID BATCHED</code>가 나타나기도 합니다. 여러 ROWID를 모아 블록 접근을 효율화하는 방식입니다. 테이블 접근 비용 자체가 사라지는 것은 아닙니다.</p>
+<p>캐시에 있는 블록을 다시 읽으면 물리적 읽기는 줄어들 수 있습니다. 그래도 논리적 읽기와 CPU 작업은 발생합니다. 물리적 읽기가 적다는 이유만으로 SQL이 효율적이라고 단정할 수 없습니다.</p>
+<p>다음 예제는 같은 결과를 인덱스 접근과 전체 스캔으로 각각 구합니다. 결과를 인출할 때 생기는 차이를 줄이기 위해 집계 한 행만 반환합니다.</p>
+<p><strong>예제 12-5 — 같은 결과를 인덱스 접근과 전체 스캔으로 비교하기</strong></p>
+<p><strong>이어서:</strong> 예제 12-1</p>
+<p><strong>파일명:</strong> <code>ch12_index_vs_full.sql</code></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</div><pre><code class="language-sql" data-code="SELECT /*+ GATHER_PLAN_STATISTICS
+           INDEX(o ix_ch12_status_id) */
+       COUNT(*) AS order_count,
+       SUM(LENGTH(o.memo)) AS memo_length_sum
+FROM ch12_order o
+WHERE o.order_status = &#x27;NEW&#x27;;
+
+SELECT *
+FROM TABLE(
+    DBMS_XPLAN.DISPLAY_CURSOR(
+        NULL, NULL, &#x27;ALLSTATS LAST +PREDICATE&#x27;
+    )
+);
+
+SELECT /*+ GATHER_PLAN_STATISTICS FULL(o) */
+       COUNT(*) AS order_count,
+       SUM(LENGTH(o.memo)) AS memo_length_sum
+FROM ch12_order o
+WHERE o.order_status = &#x27;NEW&#x27;;
+
+SELECT *
+FROM TABLE(
+    DBMS_XPLAN.DISPLAY_CURSOR(
+        NULL, NULL, &#x27;ALLSTATS LAST +PREDICATE&#x27;
+    )
+);"><span class="token keyword">SELECT</span> <span class="token comment">/*+ GATHER_PLAN_STATISTICS
+           INDEX(o ix_ch12_status_id) */</span>
+       <span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> order_count<span class="token punctuation">,</span>
+       <span class="token function">SUM</span><span class="token punctuation">(</span>LENGTH<span class="token punctuation">(</span>o<span class="token punctuation">.</span>memo<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> memo_length_sum
+<span class="token keyword">FROM</span> ch12_order o
+<span class="token keyword">WHERE</span> o<span class="token punctuation">.</span>order_status <span class="token operator">=</span> <span class="token string">'NEW'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> <span class="token keyword">TABLE</span><span class="token punctuation">(</span>
+    DBMS_XPLAN<span class="token punctuation">.</span>DISPLAY_CURSOR<span class="token punctuation">(</span>
+        <span class="token boolean">NULL</span><span class="token punctuation">,</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span> <span class="token string">'ALLSTATS LAST +PREDICATE'</span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> <span class="token comment">/*+ GATHER_PLAN_STATISTICS FULL(o) */</span>
+       <span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> order_count<span class="token punctuation">,</span>
+       <span class="token function">SUM</span><span class="token punctuation">(</span>LENGTH<span class="token punctuation">(</span>o<span class="token punctuation">.</span>memo<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> memo_length_sum
+<span class="token keyword">FROM</span> ch12_order o
+<span class="token keyword">WHERE</span> o<span class="token punctuation">.</span>order_status <span class="token operator">=</span> <span class="token string">'NEW'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> <span class="token keyword">TABLE</span><span class="token punctuation">(</span>
+    DBMS_XPLAN<span class="token punctuation">.</span>DISPLAY_CURSOR<span class="token punctuation">(</span>
+        <span class="token boolean">NULL</span><span class="token punctuation">,</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span> <span class="token string">'ALLSTATS LAST +PREDICATE'</span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div></div>
+<p><strong>실행 결과</strong></p>
+<p>두 조회는 같은 집계값을 반환합니다.</p>
+<div class="code-wrap" data-kind="output" data-lang="text"><div class="code-label"><span class="code-label__name">출력</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3</div><pre><code data-code="ORDER_COUNT  MEMO_LENGTH_SUM
+-----------  ---------------
+      10000          2000000">ORDER_COUNT  MEMO_LENGTH_SUM
+-----------  ---------------
+      10000          2000000</code></pre></div></div>
+<p>첫 번째 계획에서는 상태 조건에 대한 인덱스 스캔과 테이블 접근을 확인합니다. <code>memo</code>는 인덱스에 없으므로 테이블을 읽어야 합니다. 두 번째 계획에서는 <code>TABLE ACCESS FULL</code>을 확인합니다.</p>
+<p>실행 계획의 Buffers와 경과 시간을 공통 실행 방법에 따라 기록합니다.</p>
+<p>이 데이터에서 <code>NEW</code>는 전체의 3분의 1입니다. 해당 행은 주문번호 순서 사이에 반복해서 배치됩니다. 따라서 인덱스 접근이 전체 스캔보다 많은 논리적 읽기를 요구할 가능성이 있습니다. 어느 쪽이 빠른지는 실제 통계로 판단합니다.</p>
+<p>공통 실행 방법에 따라 실행 순서를 바꾸어 반복하고 최초 실행과 반복 실행을 구분합니다.</p>
+<h3>4. 연습문제 — 스캔 방식별 실행 계획 비교</h3>
+<p>예제 12-1의 테이블을 사용하여 스캔 방식과 읽기량을 비교합니다. 처음에는 힌트가 있는 예제로 각 방식의 구조를 확인합니다. 이후 힌트를 제거하여 옵티마이저의 선택을 기록합니다.</p>
+<p><strong>요구사항</strong></p>
+<ol>
+<li>예제 12-2의 동등 조건과 범위 조건을 실행합니다. Unique Scan과 Range Scan의 반환 행 수를 확인합니다.</li>
+<li>예제 12-3의 첫 번째 조회는 30,000행을 끝까지 인출합니다. Full Scan과 Fast Full Scan의 차이를 기록합니다.</li>
+<li>예제 12-4에서 Skip Scan의 대상 인덱스를 확인합니다. 힌트를 제거한 계획과 비교합니다.</li>
+<li>예제 12-5의 두 SQL을 실행합니다. 결과가 같은지 확인한 뒤 Buffers와 경과 시간을 비교합니다.</li>
+<li>예제 12-5의 인덱스 조회에서 <code>SUM(LENGTH(o.memo))</code>를 제거하고 <code>COUNT(*)</code>만 조회합니다. 테이블 접근이 남아 있는지 확인합니다.</li>
+<li>예제 12-5의 상태 조건을 <code>o.order_id BETWEEN 120 AND 122</code>로 바꿉니다. 인덱스 힌트도 <code>INDEX(o pk_ch12_order)</code>로 바꾸어 전체 스캔과 비교합니다.</li>
+</ol>
+<p>측정 결과는 다음 형식으로 작성합니다.</p>
+<table><thead><tr><th>조회 조건·대상</th><th>주요 스캔 방식</th><th>테이블 접근</th><th style="text-align:right">반환 행 수</th><th style="text-align:right">Buffers</th><th style="text-align:right">경과 시간</th></tr></thead><tbody><tr><td>주문번호 동등 조건</td><td></td><td></td><td style="text-align:right"></td><td style="text-align:right"></td><td style="text-align:right"></td></tr><tr><td>주문번호 범위 조건</td><td></td><td></td><td style="text-align:right"></td><td style="text-align:right"></td><td style="text-align:right"></td></tr><tr><td>상태·주문번호 전체 조회</td><td></td><td></td><td style="text-align:right"></td><td style="text-align:right"></td><td style="text-align:right"></td></tr><tr><td>인덱스 전체 행 수 집계</td><td></td><td></td><td style="text-align:right"></td><td style="text-align:right"></td><td style="text-align:right"></td></tr><tr><td>선두 컬럼 없는 범위 조건</td><td></td><td></td><td style="text-align:right"></td><td style="text-align:right"></td><td style="text-align:right"></td></tr><tr><td>NEW 상태의 메모 길이 집계</td><td></td><td></td><td style="text-align:right"></td><td style="text-align:right"></td><td style="text-align:right"></td></tr></tbody></table>
+<p>집계 SQL의 최종 반환 행은 1건입니다. 이 숫자와 집계에 참여한 주문 행 수를 구분합니다. 필요한 경우 테이블 접근과 인덱스 스캔의 A-Rows를 따로 기록합니다.</p>
+<p><strong>완료 조건</strong></p>
+<ul>
+<li>다섯 가지 인덱스 스캔 방식이 읽는 범위를 설명합니다.</li>
+<li>Unique Scan과 Range Scan을 결과 건수만으로 구분하지 않습니다.</li>
+<li>Full Scan과 Fast Full Scan의 키 순서 차이를 설명합니다.</li>
+<li>Skip Scan을 관찰한 계획과 힌트 없이 선택된 계획을 구분합니다.</li>
+<li>테이블 접근이 필요한 이유를 조회 컬럼으로 설명합니다.</li>
+<li>결과가 같은 SQL끼리 실행 통계를 비교합니다.</li>
+<li>실제 계획이 예상과 다르면 관찰한 계획을 그대로 기록하고 원인을 검토합니다.</li>
+</ul><nav class="chapter-nav"><button type="button" class="text" data-prev="true" data-href="11.html">← 이전 장</button><span>12 / 30</span><button type="button" class="text" data-next="true" data-href="13.html">다음 장 →</button></nav></section></main></div><script src="../assets/book-fe9af60309390aae.js"></script></body></html>

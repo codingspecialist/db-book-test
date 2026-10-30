@@ -1,0 +1,588 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data: blob:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'"><meta name="viewport" content="width=device-width,initial-scale=1"><title>디비설계강의</title><link rel="stylesheet" href="../assets/book-e288a86a0216c70b.css"></head><body><div class="reader" data-toc="open"><header class="book-bar"><button type="button" class="toc-toggle" aria-expanded="true" aria-controls="toc">목차</button><span class="book-bar__title">디비설계강의</span></header><aside class="toc" id="toc"><p class="caption">목차 / CONTENTS</p><div class="toc-title">디비설계강의</div><a href="../index.html" data-chapter="0" title="표지" aria-current="false">표지</a><a href="01.html" data-chapter="1" title="1장. 관계형 데이터베이스와 DBMS란?" aria-current="false">1장. 관계형 데이터베이스와 DBMS란?</a><a href="02.html" data-chapter="2" title="2장. Oracle 실습 환경 구성" aria-current="false">2장. Oracle 실습 환경 구성</a><a href="03.html" data-chapter="3" title="3장. 요구사항 분석과 데이터 모델링이란?" aria-current="false">3장. 요구사항 분석과 데이터 모델링이란?</a><a href="04.html" data-chapter="4" title="4장. 식별자와 관계 설계란?" aria-current="false">4장. 식별자와 관계 설계란?</a><a href="05.html" data-chapter="5" title="5장. 정규화란?" aria-current="false">5장. 정규화란?</a><a href="06.html" data-chapter="6" title="6장. 무결성과 물리 설계란?" aria-current="false">6장. 무결성과 물리 설계란?</a><a href="07.html" data-chapter="7" title="7장. Oracle 인스턴스와 데이터베이스란?" aria-current="false">7장. Oracle 인스턴스와 데이터베이스란?</a><a href="08.html" data-chapter="8" title="8장. Oracle 저장구조와 블록 접근이란?" aria-current="false">8장. Oracle 저장구조와 블록 접근이란?</a><a href="09.html" data-chapter="9" title="9장. 트랜잭션과 읽기 일관성이란?" aria-current="false">9장. 트랜잭션과 읽기 일관성이란?</a><a href="10.html" data-chapter="10" title="10장. SQL 처리와 옵티마이저란?" aria-current="false">10장. SQL 처리와 옵티마이저란?</a><a href="11.html" data-chapter="11" title="11장. 실행 계획과 성능 측정이란?" aria-current="false">11장. 실행 계획과 성능 측정이란?</a><a href="12.html" data-chapter="12" title="12장. B-tree 인덱스와 스캔 방식이란?" aria-current="false">12장. B-tree 인덱스와 스캔 방식이란?</a><a href="13.html" data-chapter="13" title="13장. 복합 인덱스와 탐색 범위 튜닝이란?" aria-current="false">13장. 복합 인덱스와 탐색 범위 튜닝이란?</a><a href="14.html" data-chapter="14" title="14장. 테이블 접근 최소화란?" aria-current="false">14장. 테이블 접근 최소화란?</a><a href="15.html" data-chapter="15" title="15장. 검색 조건과 인덱스 활용이란?" aria-current="false">15장. 검색 조건과 인덱스 활용이란?</a><a href="16.html" data-chapter="16" title="16장. 정렬·페이징·집계 튜닝이란?" aria-current="false">16장. 정렬·페이징·집계 튜닝이란?</a><a href="17.html" data-chapter="17" title="17장. 조인·서브쿼리 튜닝이란?" aria-current="false">17장. 조인·서브쿼리 튜닝이란?</a><a href="18.html" data-chapter="18" title="18장. 특수 인덱스와 인덱스 운영이란?" aria-current="false">18장. 특수 인덱스와 인덱스 운영이란?</a><a href="19.html" data-chapter="19" title="19장. 파티셔닝과 파티션 프루닝이란?" aria-current="false">19장. 파티셔닝과 파티션 프루닝이란?</a><a href="20.html" data-chapter="20" title="20장. 파티션 인덱스와 유지관리란?" aria-current="false">20장. 파티션 인덱스와 유지관리란?</a><a href="21.html" data-chapter="21" title="21장. 반정규화와 통계 테이블 설계란?" aria-current="false">21장. 반정규화와 통계 테이블 설계란?</a><a href="22.html" data-chapter="22" title="22장. 공통코드 설계란?" aria-current="false">22장. 공통코드 설계란?</a><a href="23.html" data-chapter="23" title="23장. 계층 구조 설계란?" aria-current="false">23장. 계층 구조 설계란?</a><a href="24.html" data-chapter="24" title="24장. 상속 관계 설계란?" aria-current="false">24장. 상속 관계 설계란?</a><a href="25.html" data-chapter="25" title="25장. 데이터 변경 추적과 감사 기록이란?" aria-current="false">25장. 데이터 변경 추적과 감사 기록이란?</a><a href="26.html" data-chapter="26" title="26장. 데이터 변경 이력과 시간 모델링이란?" aria-current="false">26장. 데이터 변경 이력과 시간 모델링이란?</a><a href="27.html" data-chapter="27" title="27장. 동적 속성과 EAV 설계란?" aria-current="false">27장. 동적 속성과 EAV 설계란?</a><a href="28.html" data-chapter="28" title="28장. JSON 데이터 설계란?" aria-current="false">28장. JSON 데이터 설계란?</a><a href="29.html" data-chapter="29" title="29장. 논리 삭제란?" aria-current="true">29장. 논리 삭제란?</a><a href="30.html" data-chapter="30" title="30장. 요구사항 변경 대응과 설계·튜닝 종합 실습" aria-current="false">30장. 요구사항 변경 대응과 설계·튜닝 종합 실습</a><footer>30장</footer></aside><main class="reading"><section class="chapter" id="chapter-29"><div class="eyebrow">디비설계강의 / CHAPTER 29</div><span class="chapter-num" aria-hidden="true">29</span><h2>29장. 논리 삭제란?</h2><h3>1. 삭제 상태의 모델링</h3>
+<h4>1.1 물리 삭제와 논리 삭제의 선택 기준</h4>
+<p><strong>물리 삭제(physical delete)</strong>는 <code>DELETE</code>로 테이블에서 행을 제거하는 방식입니다. <strong>논리 삭제(soft delete)</strong>는 행을 남겨 두고 삭제 상태로 변경하는 방식입니다. 일반 조회에서는 삭제된 행을 제외합니다. 사용자는 해당 데이터가 삭제된 것으로 인식합니다.</p>
+<p>회원 탈퇴를 예로 들면, 물리 삭제는 회원 행을 제거합니다. 논리 삭제는 회원 행에 삭제 시각을 기록합니다. 회원번호와 기존 데이터는 남지만 로그인이나 회원 검색에서는 제외합니다.</p>
+<table><thead><tr><th>판단 기준</th><th>물리 삭제</th><th>논리 삭제</th></tr></thead><tbody><tr><td>일반 조회</td><td>제거된 행은 조회되지 않음</td><td>삭제 조건을 적용해야 함</td></tr><tr><td>복원</td><td>별도의 복구 자료가 필요함</td><td>보관된 행을 다시 활성화할 수 있음</td></tr><tr><td>참조 관계</td><td>외래키의 삭제 정책을 적용함</td><td>외래키 연결이 그대로 남음</td></tr><tr><td>업무 키 재사용</td><td>삭제된 키를 다시 사용할 수 있음</td><td>활성 행에만 유일성을 적용할지 정해야 함</td></tr><tr><td>저장공간</td><td>행 제거에 따른 공간 재사용을 고려함</td><td>데이터가 계속 쌓임</td></tr><tr><td>정보 보관</td><td>별도 보관 구조가 필요할 수 있음</td><td>보관 기한과 최종 제거가 필요함</td></tr></tbody></table>
+<p>논리 삭제는 실수로 지운 데이터를 복원하거나 업무 기록을 유지할 때 유용합니다. 다만 삭제 표시만 추가한다고 설계가 끝나지는 않습니다. 조회, 유일성, 참조 관계, 복원도 함께 고려해야 합니다.</p>
+<p>탈퇴와 계정 정지가 다른 업무 상태라면 구분해서 저장합니다. 정지된 회원은 여전히 서비스의 관리 대상일 수 있습니다. 정지를 삭제로 표현하면 재가입 허용 여부나 통계 기준이 모호해집니다.</p>
+<h4>1.2 삭제 여부·삭제 시각·삭제 주체</h4>
+<p>삭제 상태를 저장할 때는 각 컬럼이 어떤 정보를 나타내는지 정합니다.</p>
+<table><thead><tr><th>컬럼 예</th><th>의미</th></tr></thead><tbody><tr><td><code>deleted_yn</code></td><td>삭제 상태인지</td></tr><tr><td><code>deleted_at</code></td><td>언제 삭제 상태가 되었는지</td></tr><tr><td><code>deleted_by</code></td><td>누가 삭제했는지</td></tr><tr><td><code>delete_reason</code></td><td>왜 삭제했는지</td></tr></tbody></table>
+<p>삭제 여부와 삭제 시각을 모두 저장하면 두 값이 어긋날 수 있습니다. <code>deleted_yn</code>은 <code>N</code>인데 <code>deleted_at</code>에는 시각이 있는 식입니다. 두 컬럼이 모두 필요하다면 값이 일치하도록 규칙도 구현해야 합니다.</p>
+<p>이 장에서는 <code>deleted_at IS NULL</code>이면 활성 행으로 정합니다. 삭제 시각이 있으면 삭제된 행입니다. 별도의 삭제 여부는 저장하지 않습니다.</p>
+<p>삭제 주체는 회원 본인, 관리자, 자동 작업을 구분할 수 있어야 합니다. 커넥션 풀을 사용하면 DB 접속 사용자만으로 실제 작업자를 구별하기 어렵습니다. 애플리케이션이 확인한 작업자 식별자를 기록해야 합니다.</p>
+<p><strong>예제 29-1 — 삭제 상태를 가진 회원과 주문 만들기</strong></p>
+<p><strong>파일명:</strong> <code>ch29_01_create.sql</code></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60</div><pre><code class="language-sql" data-code="CREATE TABLE ch29_member (
+    member_id    NUMBER(10)
+        CONSTRAINT pk_ch29_member PRIMARY KEY,
+    email        VARCHAR2(200 CHAR) NOT NULL,
+    member_name  VARCHAR2(50 CHAR) NOT NULL,
+    deleted_at   TIMESTAMP(6) WITH TIME ZONE,
+    deleted_by   VARCHAR2(100 CHAR),
+    CONSTRAINT ck_ch29_member_delete CHECK (
+        (deleted_at IS NULL AND deleted_by IS NULL)
+        OR
+        (deleted_at IS NOT NULL AND deleted_by IS NOT NULL)
+    )
+);
+
+CREATE TABLE ch29_orders (
+    order_id      NUMBER(10)
+        CONSTRAINT pk_ch29_orders PRIMARY KEY,
+    member_id     NUMBER(10) NOT NULL,
+    order_amount  NUMBER(12, 2) NOT NULL,
+    CONSTRAINT fk_ch29_orders_member
+        FOREIGN KEY (member_id)
+        REFERENCES ch29_member (member_id),
+    CONSTRAINT ck_ch29_orders_amount
+        CHECK (order_amount &gt;= 0)
+);
+
+CREATE INDEX ix_ch29_orders_member
+    ON ch29_orders (member_id);
+
+INSERT INTO ch29_member (member_id, email, member_name)
+VALUES (101, &#x27;mira@example.test&#x27;, &#x27;이미라&#x27;);
+
+INSERT INTO ch29_member (member_id, email, member_name)
+VALUES (102, &#x27;jun@example.test&#x27;, &#x27;박준&#x27;);
+
+INSERT INTO ch29_orders (order_id, member_id, order_amount)
+VALUES (9001, 101, 25000);
+
+INSERT INTO ch29_orders (order_id, member_id, order_amount)
+VALUES (9002, 102, 40000);
+
+UPDATE ch29_member
+SET deleted_at = TO_TIMESTAMP_TZ(
+        &#x27;2026-10-01 09:00:00 +09:00&#x27;,
+        &#x27;YYYY-MM-DD HH24:MI:SS TZH:TZM&#x27;
+    ),
+    deleted_by = &#x27;MEMBER:101&#x27;
+WHERE member_id = 101
+  AND deleted_at IS NULL;
+
+COMMIT;
+
+SELECT member_id,
+       member_name,
+       CASE
+           WHEN deleted_at IS NULL THEN &#x27;ACTIVE&#x27;
+           ELSE &#x27;DELETED&#x27;
+       END AS member_state
+FROM ch29_member
+ORDER BY member_id;"><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> ch29_member <span class="token punctuation">(</span>
+    member_id    NUMBER<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+        <span class="token keyword">CONSTRAINT</span> pk_ch29_member <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span><span class="token punctuation">,</span>
+    email        VARCHAR2<span class="token punctuation">(</span><span class="token number">200</span> <span class="token keyword">CHAR</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    member_name  VARCHAR2<span class="token punctuation">(</span><span class="token number">50</span> <span class="token keyword">CHAR</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    deleted_at   <span class="token keyword">TIMESTAMP</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span> <span class="token keyword">WITH</span> <span class="token keyword">TIME</span> ZONE<span class="token punctuation">,</span>
+    deleted_by   VARCHAR2<span class="token punctuation">(</span><span class="token number">100</span> <span class="token keyword">CHAR</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token keyword">CONSTRAINT</span> ck_ch29_member_delete <span class="token keyword">CHECK</span> <span class="token punctuation">(</span>
+        <span class="token punctuation">(</span>deleted_at <span class="token operator">IS</span> <span class="token boolean">NULL</span> <span class="token operator">AND</span> deleted_by <span class="token operator">IS</span> <span class="token boolean">NULL</span><span class="token punctuation">)</span>
+        <span class="token operator">OR</span>
+        <span class="token punctuation">(</span>deleted_at <span class="token operator">IS</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token operator">AND</span> deleted_by <span class="token operator">IS</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">)</span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> ch29_orders <span class="token punctuation">(</span>
+    order_id      NUMBER<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+        <span class="token keyword">CONSTRAINT</span> pk_ch29_orders <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span><span class="token punctuation">,</span>
+    member_id     NUMBER<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    order_amount  NUMBER<span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token keyword">CONSTRAINT</span> fk_ch29_orders_member
+        <span class="token keyword">FOREIGN</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span>member_id<span class="token punctuation">)</span>
+        <span class="token keyword">REFERENCES</span> ch29_member <span class="token punctuation">(</span>member_id<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token keyword">CONSTRAINT</span> ck_ch29_orders_amount
+        <span class="token keyword">CHECK</span> <span class="token punctuation">(</span>order_amount <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">CREATE</span> <span class="token keyword">INDEX</span> ix_ch29_orders_member
+    <span class="token keyword">ON</span> ch29_orders <span class="token punctuation">(</span>member_id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> ch29_member <span class="token punctuation">(</span>member_id<span class="token punctuation">,</span> email<span class="token punctuation">,</span> member_name<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">101</span><span class="token punctuation">,</span> <span class="token string">'mira@example.test'</span><span class="token punctuation">,</span> <span class="token string">'이미라'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> ch29_member <span class="token punctuation">(</span>member_id<span class="token punctuation">,</span> email<span class="token punctuation">,</span> member_name<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">102</span><span class="token punctuation">,</span> <span class="token string">'jun@example.test'</span><span class="token punctuation">,</span> <span class="token string">'박준'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> ch29_orders <span class="token punctuation">(</span>order_id<span class="token punctuation">,</span> member_id<span class="token punctuation">,</span> order_amount<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">9001</span><span class="token punctuation">,</span> <span class="token number">101</span><span class="token punctuation">,</span> <span class="token number">25000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> ch29_orders <span class="token punctuation">(</span>order_id<span class="token punctuation">,</span> member_id<span class="token punctuation">,</span> order_amount<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">9002</span><span class="token punctuation">,</span> <span class="token number">102</span><span class="token punctuation">,</span> <span class="token number">40000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">UPDATE</span> ch29_member
+<span class="token keyword">SET</span> deleted_at <span class="token operator">=</span> TO_TIMESTAMP_TZ<span class="token punctuation">(</span>
+        <span class="token string">'2026-10-01 09:00:00 +09:00'</span><span class="token punctuation">,</span>
+        <span class="token string">'YYYY-MM-DD HH24:MI:SS TZH:TZM'</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    deleted_by <span class="token operator">=</span> <span class="token string">'MEMBER:101'</span>
+<span class="token keyword">WHERE</span> member_id <span class="token operator">=</span> <span class="token number">101</span>
+  <span class="token operator">AND</span> deleted_at <span class="token operator">IS</span> <span class="token boolean">NULL</span><span class="token punctuation">;</span>
+
+<span class="token keyword">COMMIT</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> member_id<span class="token punctuation">,</span>
+       member_name<span class="token punctuation">,</span>
+       <span class="token keyword">CASE</span>
+           <span class="token keyword">WHEN</span> deleted_at <span class="token operator">IS</span> <span class="token boolean">NULL</span> <span class="token keyword">THEN</span> <span class="token string">'ACTIVE'</span>
+           <span class="token keyword">ELSE</span> <span class="token string">'DELETED'</span>
+       <span class="token keyword">END</span> <span class="token keyword">AS</span> member_state
+<span class="token keyword">FROM</span> ch29_member
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span> member_id<span class="token punctuation">;</span></code></pre></div></div>
+<p><strong>실행 결과</strong></p>
+<div class="code-wrap" data-kind="output" data-lang="text"><div class="code-label"><span class="code-label__name">출력</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4</div><pre><code data-code="MEMBER_ID  MEMBER_NAME  MEMBER_STATE
+---------  -----------  ------------
+101        이미라       DELETED
+102        박준         ACTIVE">MEMBER_ID  MEMBER_NAME  MEMBER_STATE
+---------  -----------  ------------
+101        이미라       DELETED
+102        박준         ACTIVE</code></pre></div></div>
+<p>삭제 시각과 삭제 주체는 함께 채워집니다. 제약조건은 둘 중 하나만 입력한 상태를 막습니다.</p>
+<p><code>WHERE</code> 절의 <code>deleted_at IS NULL</code> 조건은 이미 삭제된 회원의 삭제 정보를 다시 덮어쓰지 않도록 합니다. 애플리케이션은 변경된 행 수를 확인하여 실제로 상태가 바뀌었는지 판단해야 합니다.</p>
+<h4>1.3 보관 기간과 최종 제거 정책</h4>
+<p>논리 삭제한 행도 테이블과 인덱스의 공간을 사용합니다. 삭제된 행이 늘면 일반 조회에서 제외해야 할 데이터도 늘어납니다. 삭제 상태 변경은 <code>UPDATE</code>이므로 관련 인덱스 갱신과 UNDO·REDO 기록도 발생합니다.</p>
+<p>보관 정책에는 삭제 이후의 단계를 구체적으로 적습니다. 예를 들어 복원 가능 기간에는 회원 정보를 유지하고, 기간이 끝나면 개인정보를 제거할 수 있습니다. 주문 기록은 별도의 보관 기준에 따라 유지할 수 있습니다.</p>
+<table><thead><tr><th>정책 항목</th><th>정할 내용</th></tr></thead><tbody><tr><td>기간의 기준</td><td>탈퇴 요청 시각, 탈퇴 확정 시각 중 무엇인지</td></tr><tr><td>복원 가능 기간</td><td>언제까지 복원을 허용하는지</td></tr><tr><td>최종 제거 대상</td><td>회원 행 전체인지, 특정 개인정보인지</td></tr><tr><td>제거 보류</td><td>분쟁이나 진행 중인 업무가 있으면 보류하는지</td></tr><tr><td>관련 저장소</td><td>감사 기록, 검색 색인, 외부 전달 데이터의 처리</td></tr><tr><td>실행 방식</td><td>소량씩 반복 삭제할지, 별도 보관 후 제거할지</td></tr></tbody></table>
+<p>논리 삭제는 개인정보를 없애는 작업과 다릅니다. 로그인 대상에서 제외했어도 이메일과 이름이 남아 있으면 개인정보는 여전히 보관됩니다. 실제 보관 기간은 업무 요구와 적용되는 보관·파기 기준에 맞춰 확정해야 합니다.</p>
+<p>대량으로 제거할 때는 한 번에 모든 행을 삭제하기보다 처리 단위를 나누는 방안을 검토합니다. 삭제 중 발생할 잠금, 로그량, 자식 데이터 처리도 확인합니다. 행을 삭제했다고 데이터파일 크기가 즉시 줄어드는 것은 아닙니다.</p>
+<h3>2. 조회와 유일성</h3>
+<h4>2.1 일반 조회·조인·집계의 삭제 조건</h4>
+<p>일반 회원 조회에는 <code>deleted_at IS NULL</code>을 적용합니다. 회원번호로 한 행을 조회할 때도 같습니다. 기본키로 찾은 행이라고 해서 활성 회원인 것은 아닙니다.</p>
+<p>활성 회원을 자주 조회한다면 뷰에 조회 조건을 모을 수 있습니다.</p>
+<p><strong>예제 29-2 — 활성 회원과 주문 이력을 구분하여 조회하기</strong></p>
+<p><strong>이어서:</strong> 예제 29-1</p>
+<p>실습 계정에는 <code>CREATE VIEW</code> 권한이 필요합니다. 예제 29-1을 완료한 뒤 실행합니다. 예제 29-3의 재가입 데이터를 입력한 뒤에는 결과가 달라지므로, 제시한 결과를 다시 확인하려면 예제 29-1의 데이터 상태로 준비합니다.</p>
+<p><strong>파일명:</strong> <code>ch29_02_query.sql</code></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</div><pre><code class="language-sql" data-code="CREATE OR REPLACE VIEW ch29_active_member AS
+SELECT member_id, email, member_name
+FROM ch29_member
+WHERE deleted_at IS NULL;
+
+SELECT member_id, member_name
+FROM ch29_active_member
+ORDER BY member_id;
+
+SELECT o.order_id,
+       o.order_amount,
+       m.member_name AS active_member_name
+FROM ch29_orders o
+LEFT JOIN ch29_member m
+    ON m.member_id = o.member_id
+   AND m.deleted_at IS NULL
+ORDER BY o.order_id;
+
+SELECT COUNT(*) AS active_member_count
+FROM ch29_active_member;
+
+SELECT SUM(order_amount) AS all_order_amount
+FROM ch29_orders;"><span class="token keyword">CREATE</span> <span class="token operator">OR</span> <span class="token keyword">REPLACE</span> <span class="token keyword">VIEW</span> ch29_active_member <span class="token keyword">AS</span>
+<span class="token keyword">SELECT</span> member_id<span class="token punctuation">,</span> email<span class="token punctuation">,</span> member_name
+<span class="token keyword">FROM</span> ch29_member
+<span class="token keyword">WHERE</span> deleted_at <span class="token operator">IS</span> <span class="token boolean">NULL</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> member_id<span class="token punctuation">,</span> member_name
+<span class="token keyword">FROM</span> ch29_active_member
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span> member_id<span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> o<span class="token punctuation">.</span>order_id<span class="token punctuation">,</span>
+       o<span class="token punctuation">.</span>order_amount<span class="token punctuation">,</span>
+       m<span class="token punctuation">.</span>member_name <span class="token keyword">AS</span> active_member_name
+<span class="token keyword">FROM</span> ch29_orders o
+<span class="token keyword">LEFT</span> <span class="token keyword">JOIN</span> ch29_member m
+    <span class="token keyword">ON</span> m<span class="token punctuation">.</span>member_id <span class="token operator">=</span> o<span class="token punctuation">.</span>member_id
+   <span class="token operator">AND</span> m<span class="token punctuation">.</span>deleted_at <span class="token operator">IS</span> <span class="token boolean">NULL</span>
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span> o<span class="token punctuation">.</span>order_id<span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> <span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> active_member_count
+<span class="token keyword">FROM</span> ch29_active_member<span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> <span class="token function">SUM</span><span class="token punctuation">(</span>order_amount<span class="token punctuation">)</span> <span class="token keyword">AS</span> all_order_amount
+<span class="token keyword">FROM</span> ch29_orders<span class="token punctuation">;</span></code></pre></div></div>
+<p><strong>실행 결과</strong></p>
+<div class="code-wrap" data-kind="output" data-lang="text"><div class="code-label"><span class="code-label__name">출력</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3</div><pre><code data-code="MEMBER_ID  MEMBER_NAME
+---------  -----------
+102        박준">MEMBER_ID  MEMBER_NAME
+---------  -----------
+102        박준</code></pre></div></div>
+<div class="code-wrap" data-kind="output" data-lang="text"><div class="code-label"><span class="code-label__name">출력</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4</div><pre><code data-code="ORDER_ID  ORDER_AMOUNT  ACTIVE_MEMBER_NAME
+--------  ------------  ------------------
+9001      25000         NULL
+9002      40000         박준">ORDER_ID  ORDER_AMOUNT  ACTIVE_MEMBER_NAME
+--------  ------------  ------------------
+9001      25000         NULL
+9002      40000         박준</code></pre></div></div>
+<div class="code-wrap" data-kind="output" data-lang="text"><div class="code-label"><span class="code-label__name">출력</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3</div><pre><code data-code="ACTIVE_MEMBER_COUNT
+-------------------
+1">ACTIVE_MEMBER_COUNT
+-------------------
+1</code></pre></div></div>
+<div class="code-wrap" data-kind="output" data-lang="text"><div class="code-label"><span class="code-label__name">출력</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3</div><pre><code data-code="ALL_ORDER_AMOUNT
+----------------
+65000">ALL_ORDER_AMOUNT
+----------------
+65000</code></pre></div></div>
+<p>두 번째 결과의 <code>NULL</code>은 설명을 위한 표기입니다. SQL Developer 설정에 따라 빈칸으로 표시될 수 있습니다.</p>
+<p>주문 조회에서는 모든 주문을 유지하면서 활성 회원 정보만 연결합니다. 탈퇴한 회원의 주문도 남지만 회원명은 연결되지 않습니다. <code>ON</code> 절에서 활성 여부를 판단했기 때문입니다.</p>
+<p><strong>코드 조각</strong></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5</div><pre><code class="language-sql" data-code="SELECT o.order_id, o.order_amount, m.member_name
+FROM ch29_orders o
+LEFT JOIN ch29_member m
+    ON m.member_id = o.member_id
+WHERE m.deleted_at IS NULL;"><span class="token keyword">SELECT</span> o<span class="token punctuation">.</span>order_id<span class="token punctuation">,</span> o<span class="token punctuation">.</span>order_amount<span class="token punctuation">,</span> m<span class="token punctuation">.</span>member_name
+<span class="token keyword">FROM</span> ch29_orders o
+<span class="token keyword">LEFT</span> <span class="token keyword">JOIN</span> ch29_member m
+    <span class="token keyword">ON</span> m<span class="token punctuation">.</span>member_id <span class="token operator">=</span> o<span class="token punctuation">.</span>member_id
+<span class="token keyword">WHERE</span> m<span class="token punctuation">.</span>deleted_at <span class="token operator">IS</span> <span class="token boolean">NULL</span><span class="token punctuation">;</span></code></pre></div></div>
+<p>위 코드처럼 조건을 <code>WHERE</code> 절로 옮기면 의미가 달라집니다. 삭제된 회원과 연결된 주문은 결과에서 제외됩니다. 외부 조인에서는 조건의 위치에 따라 결과에 남는 행이 달라집니다.</p>
+<p>집계도 목적에 따라 기준을 나눕니다. 활성 회원 수를 셀 때는 삭제된 회원을 제외합니다. 반면 과거 주문금액을 합산할 때는 회원이 탈퇴했다는 이유만으로 주문을 제외하지 않습니다.</p>
+<p>뷰는 조회 조건을 모으는 수단입니다. 원본 테이블에 직접 접근하는 SQL까지 자동으로 제한하지는 않습니다. 조회 경로와 권한도 함께 관리해야 합니다.</p>
+<h4>2.2 활성 데이터의 업무 키 중복 방지</h4>
+<p>회원번호와 이메일은 서로 다른 역할을 합니다. 회원번호는 계정을 식별합니다. 이메일은 업무 규칙에 따라 중복 사용을 제한하는 값입니다.</p>
+<p>이메일을 재사용할 수 있는지에 따라 유일성 규칙도 달라집니다.</p>
+<table><thead><tr><th>업무 규칙</th><th>구현 방향</th></tr></thead><tbody><tr><td>탈퇴 후에도 이메일 재사용 금지</td><td>전체 행에 이메일 유일성 적용</td></tr><tr><td>활성 회원끼리만 중복 금지</td><td>활성 행에만 이메일 유일성 적용</td></tr><tr><td>일정 기간이 지난 뒤 재사용 허용</td><td>재사용 가능 시점을 반영하는 별도 정책 필요</td></tr></tbody></table>
+<p>이 장에서는 활성 회원끼리만 이메일 중복을 금지합니다. 대소문자와 앞뒤 공백은 같은 이메일로 취급합니다. 이 규칙은 서비스가 정한 비교 정책입니다. 모든 업무에 그대로 적용되는 것은 아닙니다.</p>
+<p><code>UNIQUE(email, deleted_yn)</code>으로 구현하면 삭제 상태에서도 같은 이메일을 한 건만 허용합니다. 같은 이메일로 가입과 탈퇴를 반복해 여러 삭제 행이 남아야 하는 요구를 충족하지 못합니다.</p>
+<p>등록 전에 중복 여부를 조회하는 방법만으로는 부족합니다. 두 세션이 동시에 조회하면 둘 다 사용 가능하다고 판단할 수 있습니다. 최종 중복 방지는 데이터베이스가 맡아야 합니다.</p>
+<h4>2.3 함수 기반 유일 인덱스와 복원 충돌</h4>
+<p>활성 행에서는 이메일을 반환하고, 삭제 행에서는 <code>NULL</code>을 반환하는 표현식에 유일 인덱스를 만들 수 있습니다. Oracle에서는 함수 기반 유일 인덱스로 조건부 유일성을 구현합니다. 일반 B-tree 인덱스는 모든 키 값이 <code>NULL</code>인 행을 저장하지 않습니다. <a href="https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/CREATE-INDEX.html" target="_blank" rel="noopener noreferrer">Oracle Database 21c SQL Language Reference</a></p>
+<p>따라서 삭제 행은 유일성 검사 대상에서 빠지고, 활성 행의 이메일만 서로 비교됩니다.</p>
+<p><strong>예제 29-3 — 탈퇴한 이메일로 재가입하고 복원 충돌 확인하기</strong></p>
+<p><strong>이어서:</strong> 예제 29-2</p>
+<p><strong>파일명:</strong> <code>ch29_03_unique.sql</code></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43</div><pre><code class="language-sql" data-code="SET SERVEROUTPUT ON
+
+CREATE UNIQUE INDEX ux_ch29_member_email
+ON ch29_member (
+    CASE
+        WHEN deleted_at IS NULL THEN LOWER(TRIM(email))
+    END
+);
+
+INSERT INTO ch29_member (member_id, email, member_name)
+VALUES (103, &#x27;MIRA@example.test&#x27;, &#x27;이미라&#x27;);
+
+COMMIT;
+
+BEGIN
+    BEGIN
+        UPDATE ch29_member
+        SET deleted_at = NULL,
+            deleted_by = NULL
+        WHERE member_id = 101
+          AND deleted_at IS NOT NULL;
+
+        RAISE_APPLICATION_ERROR(
+            -20001,
+            &#x27;예상과 달리 복원에 성공했습니다.&#x27;
+        );
+    EXCEPTION
+        WHEN DUP_VAL_ON_INDEX THEN
+            DBMS_OUTPUT.PUT_LINE(
+                &#x27;복원 거부: 같은 이메일의 활성 회원이 있습니다.&#x27;
+            );
+    END;
+END;
+/
+
+SELECT member_id,
+       email,
+       CASE
+           WHEN deleted_at IS NULL THEN &#x27;ACTIVE&#x27;
+           ELSE &#x27;DELETED&#x27;
+       END AS member_state
+FROM ch29_member
+ORDER BY member_id;"><span class="token keyword">SET</span> SERVEROUTPUT <span class="token keyword">ON</span>
+
+<span class="token keyword">CREATE</span> <span class="token keyword">UNIQUE</span> <span class="token keyword">INDEX</span> ux_ch29_member_email
+<span class="token keyword">ON</span> ch29_member <span class="token punctuation">(</span>
+    <span class="token keyword">CASE</span>
+        <span class="token keyword">WHEN</span> deleted_at <span class="token operator">IS</span> <span class="token boolean">NULL</span> <span class="token keyword">THEN</span> LOWER<span class="token punctuation">(</span>TRIM<span class="token punctuation">(</span>email<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">END</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> ch29_member <span class="token punctuation">(</span>member_id<span class="token punctuation">,</span> email<span class="token punctuation">,</span> member_name<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">103</span><span class="token punctuation">,</span> <span class="token string">'MIRA@example.test'</span><span class="token punctuation">,</span> <span class="token string">'이미라'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">COMMIT</span><span class="token punctuation">;</span>
+
+<span class="token keyword">BEGIN</span>
+    <span class="token keyword">BEGIN</span>
+        <span class="token keyword">UPDATE</span> ch29_member
+        <span class="token keyword">SET</span> deleted_at <span class="token operator">=</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+            deleted_by <span class="token operator">=</span> <span class="token boolean">NULL</span>
+        <span class="token keyword">WHERE</span> member_id <span class="token operator">=</span> <span class="token number">101</span>
+          <span class="token operator">AND</span> deleted_at <span class="token operator">IS</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">;</span>
+
+        RAISE_APPLICATION_ERROR<span class="token punctuation">(</span>
+            <span class="token operator">-</span><span class="token number">20001</span><span class="token punctuation">,</span>
+            <span class="token string">'예상과 달리 복원에 성공했습니다.'</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    EXCEPTION
+        <span class="token keyword">WHEN</span> DUP_VAL_ON_INDEX <span class="token keyword">THEN</span>
+            DBMS_OUTPUT<span class="token punctuation">.</span>PUT_LINE<span class="token punctuation">(</span>
+                <span class="token string">'복원 거부: 같은 이메일의 활성 회원이 있습니다.'</span>
+            <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">END</span><span class="token punctuation">;</span>
+<span class="token keyword">END</span><span class="token punctuation">;</span>
+<span class="token operator">/</span>
+
+<span class="token keyword">SELECT</span> member_id<span class="token punctuation">,</span>
+       email<span class="token punctuation">,</span>
+       <span class="token keyword">CASE</span>
+           <span class="token keyword">WHEN</span> deleted_at <span class="token operator">IS</span> <span class="token boolean">NULL</span> <span class="token keyword">THEN</span> <span class="token string">'ACTIVE'</span>
+           <span class="token keyword">ELSE</span> <span class="token string">'DELETED'</span>
+       <span class="token keyword">END</span> <span class="token keyword">AS</span> member_state
+<span class="token keyword">FROM</span> ch29_member
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span> member_id<span class="token punctuation">;</span></code></pre></div></div>
+<p><strong>실행 결과</strong></p>
+<p>SQL Developer에서 스크립트 실행으로 실행하면 다음 메시지가 표시됩니다.</p>
+<div class="code-wrap" data-kind="output" data-lang="text"><div class="code-label"><span class="code-label__name">출력</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1</div><pre><code data-code="복원 거부: 같은 이메일의 활성 회원이 있습니다.">복원 거부: 같은 이메일의 활성 회원이 있습니다.</code></pre></div></div>
+<p>조회 결과는 다음과 같습니다.</p>
+<div class="code-wrap" data-kind="output" data-lang="text"><div class="code-label"><span class="code-label__name">출력</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5</div><pre><code data-code="MEMBER_ID  EMAIL               MEMBER_STATE
+---------  ------------------  ------------
+101        mira@example.test   DELETED
+102        jun@example.test    ACTIVE
+103        MIRA@example.test   ACTIVE">MEMBER_ID  EMAIL               MEMBER_STATE
+---------  ------------------  ------------
+101        mira@example.test   DELETED
+102        jun@example.test    ACTIVE
+103        MIRA@example.test   ACTIVE</code></pre></div></div>
+<p>101번 회원은 삭제 상태이므로 이메일을 재사용할 수 있습니다. 103번 회원이 활성 상태로 등록된 뒤에는 101번 회원을 복원할 수 없습니다. 대소문자를 통일한 인덱스 값이 충돌하기 때문입니다.</p>
+<p>예제는 예상한 유일성 오류만 처리합니다. 실패한 <code>UPDATE</code> 문장은 취소되므로 101번 회원은 삭제 상태로 남습니다.</p>
+<p>공백만 있는 이메일은 <code>TRIM()</code> 결과가 <code>NULL</code>이 될 수 있습니다. 실제 입력 경로에서는 공백뿐인 값과 잘못된 형식을 거부해야 합니다. <code>NOT NULL</code>만으로 이메일 형식까지 검증되지는 않습니다.</p>
+<p>복원 충돌이 발생했을 때의 해결 방법도 업무 정책으로 정합니다. 복원을 거부하거나, 본인 확인 후 다른 이메일을 지정할 수 있습니다. 재가입한 계정과 과거 계정을 합치려면 주문과 권한의 귀속까지 검토해야 합니다. 두 계정이 같은 이메일을 사용했다는 사실만으로 자동 통합해서는 안 됩니다.</p>
+<p>복합 업무 키에 같은 방식을 적용한다면 삭제 행에서 모든 인덱스 표현식이 <code>NULL</code>을 반환하도록 구성합니다. 이 인덱스를 만들었다고 일반 활성 회원 조회가 자동으로 빨라지는 것은 아닙니다. 조회용 인덱스는 검색 조건과 실행 계획을 기준으로 별도로 판단합니다.</p>
+<h3>3. 참조 관계와 복원</h3>
+<h4>3.1 삭제된 부모를 참조하는 자식의 처리</h4>
+<p>외래키는 참조 대상 행이 존재하는지 확인합니다. 부모가 활성 상태인지까지 확인하지는 않습니다.</p>
+<p>예제의 101번 회원은 삭제 상태이지만 행은 남아 있습니다. 따라서 회원번호 101을 참조하는 새 주문은 외래키 검사만으로 거부되지 않습니다.</p>
+<table><thead><tr><th>업무</th><th>삭제된 부모를 참조하는 자식의 처리</th></tr></thead><tbody><tr><td>기존 주문 보관</td><td>회원과의 연결을 유지함</td></tr><tr><td>새 주문 등록</td><td>활성 회원인지 확인하고 거부함</td></tr><tr><td>회원의 임시 설정</td><td>회원 삭제와 함께 삭제할 수 있음</td></tr><tr><td>감사 기록</td><td>별도 보관 정책에 따라 유지함</td></tr></tbody></table>
+<p><code>ON DELETE CASCADE</code>도 논리 삭제에는 적용되지 않습니다. 삭제 시각을 바꾸는 작업은 <code>UPDATE</code>이기 때문입니다. 연관 데이터의 상태를 바꾸려면 명시적인 처리가 필요합니다.</p>
+<p>새 주문을 등록할 때 활성 여부를 먼저 조회한 뒤 주문을 넣는다면 동시성도 고려해야 합니다. 조회 직후 다른 세션이 회원을 삭제할 수 있습니다.</p>
+<p><strong>코드 조각</strong></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9
+10</div><pre><code class="language-sql" data-code="SELECT member_id
+FROM ch29_member
+WHERE member_id = :member_id
+  AND deleted_at IS NULL
+FOR UPDATE;
+
+INSERT INTO ch29_orders (order_id, member_id, order_amount)
+VALUES (:order_id, :member_id, :order_amount);
+
+COMMIT;"><span class="token keyword">SELECT</span> member_id
+<span class="token keyword">FROM</span> ch29_member
+<span class="token keyword">WHERE</span> member_id <span class="token operator">=</span> :member_id
+  <span class="token operator">AND</span> deleted_at <span class="token operator">IS</span> <span class="token boolean">NULL</span>
+<span class="token keyword">FOR</span> <span class="token keyword">UPDATE</span><span class="token punctuation">;</span>
+
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> ch29_orders <span class="token punctuation">(</span>order_id<span class="token punctuation">,</span> member_id<span class="token punctuation">,</span> order_amount<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span>:order_id<span class="token punctuation">,</span> :member_id<span class="token punctuation">,</span> :order_amount<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">COMMIT</span><span class="token punctuation">;</span></code></pre></div></div>
+<p>이 코드는 활성 회원 행을 잠근 뒤 주문을 등록하는 흐름입니다. 회원이 조회되지 않으면 등록을 중단해야 합니다. 상태 확인과 주문 등록이 같은 트랜잭션에서 이루어져야 잠금이 의미가 있습니다.</p>
+<p>회원 삭제 경로도 같은 회원 행을 기준으로 업무 규칙을 확인해야 합니다. 예를 들어 진행 중인 주문이 있으면 탈퇴를 거부하는 규칙은 회원 행의 잠금을 확보한 뒤 검사합니다. 관련 작업이 같은 잠금 순서를 따라야 검사와 변경 사이의 빈틈을 줄일 수 있습니다.</p>
+<p>잠금으로 작업 순서를 정하는 것과 탈퇴 허용 여부를 정하는 것은 별개입니다. 어떤 주문이 남아 있을 때 탈퇴를 허용할지는 업무 규칙으로 명시해야 합니다.</p>
+<h4>3.2 연쇄 논리 삭제와 복원 범위</h4>
+<p>부모가 삭제되었다고 모든 자식을 삭제할 필요는 없습니다. 회원의 장바구니는 함께 숨길 수 있지만 결제된 주문은 보관할 수 있습니다. 테이블별로 부모 삭제의 영향을 정해야 합니다.</p>
+<p>연쇄 논리 삭제를 사용한다면 복원 범위를 식별할 정보도 필요합니다. 자식의 삭제 시각만 보고 복원하면 이전에 사용자가 직접 삭제한 자식까지 살아날 수 있습니다.</p>
+<p>예를 들어 회원이 배송지 A를 먼저 삭제했다고 가정합니다. 이후 탈퇴하면서 배송지 B도 삭제되었습니다. 회원을 복원할 때는 탈퇴 때문에 삭제된 B만 복원 대상으로 삼아야 합니다.</p>
+<table><thead><tr><th>배송지</th><th>삭제 원인</th><th>회원 복원 시 처리</th></tr></thead><tbody><tr><td>A</td><td>사용자의 개별 삭제</td><td>삭제 상태 유지</td></tr><tr><td>B</td><td>회원 탈퇴에 따른 연쇄 삭제</td><td>복원 정책에 따라 복원</td></tr></tbody></table>
+<p>이 구분에는 삭제 작업 식별자나 삭제 원인 정보를 사용할 수 있습니다. 같은 연쇄 삭제 작업으로 변경된 행에 동일한 작업 식별자를 남기면 복원 대상을 추적하기 쉽습니다.</p>
+<p>복원은 삭제 표시를 일괄적으로 비우는 작업이 아닙니다. 복원 시점의 유일성, 부모 상태, 보관 기한을 다시 검사해야 합니다. 최종 제거되었거나 개인정보가 이미 지워진 데이터는 같은 방식으로 되살릴 수 없습니다.</p>
+<p>작은 데이터 묶음은 한 트랜잭션에서 상태를 변경할 수 있습니다. 데이터가 많아 여러 번 나누어 변경한다면 중간 상태도 설계해야 합니다. ‘삭제 진행 중’인 부모의 신규 작업을 막아야 합니다. 실패한 작업을 다시 실행해도 같은 결과가 나도록 구성합니다.</p>
+<h4>3.3 감사·이력·통계 데이터에 미치는 영향</h4>
+<p>논리 삭제는 현재 행의 상태를 나타냅니다. 삭제 이전의 모든 변경 과정을 설명하지는 않습니다. 삭제 후 복원하면서 <code>deleted_at</code>을 비우면 해당 컬럼만으로 과거 삭제 사실을 확인할 수 없습니다.</p>
+<p>삭제와 복원 사실이 필요하다면 별도의 감사 기록이나 상태 변경 이력에 남깁니다. 현재 상태를 위한 컬럼과 과거 사건을 위한 기록은 역할이 다릅니다.</p>
+<table><thead><tr><th>데이터</th><th>논리 삭제 시 판단할 내용</th></tr></thead><tbody><tr><td>감사 기록</td><td>삭제·복원 주체와 대상, 작업 시각을 기록할지</td></tr><tr><td>업무 이력</td><td>삭제를 상태 전이로 남길지</td></tr><tr><td>주문 당시 정보</td><td>회원 정보 변경과 무관하게 유지할 값이 무엇인지</td></tr><tr><td>통계 테이블</td><td>삭제로 어떤 지표를 변경할지</td></tr><tr><td>외부 전달 데이터</td><td>삭제·복원 사건을 어떻게 반영할지</td></tr></tbody></table>
+<p>회원 탈퇴는 보통 과거 매출을 취소하는 사건이 아닙니다. 활성 회원 수는 줄어들지만 이미 확정된 주문금액까지 줄어들지는 않습니다. 반대로 잘못된 주문을 삭제하고 집계에서도 제외하기로 했다면 통계 정정이 필요할 수 있습니다.</p>
+<p>통계는 이름보다 집계 기준을 확인해야 합니다. ‘회원 수’도 누적 가입자 수, 현재 활성 회원 수, 기간 내 탈퇴자 수가 서로 다릅니다. 어떤 상태와 시점을 기준으로 계산하는지 명시해야 원본 데이터와 대조할 수 있습니다.</p>
+<p>감사 기록과 이력에도 개인정보가 포함될 수 있습니다. 원본 회원 테이블에서 값을 제거해도 변경 전 값이 다른 테이블에 남을 수 있습니다. 최종 제거 정책은 관련 기록과 복제된 데이터까지 포함하여 정해야 합니다.</p>
+<h3>4. 연습문제 — 회원 탈퇴·재가입·복원 정책 설계</h3>
+<p><strong>요구사항</strong></p>
+<p>주문 서비스의 회원 탈퇴 기능을 설계합니다. 다음 업무 조건을 사용합니다.</p>
+<ol>
+<li>활성 회원의 이메일은 대소문자와 앞뒤 공백을 무시하고 중복될 수 없습니다.</li>
+<li>탈퇴한 이메일로 새 회원이 가입할 수 있습니다. 새 회원에게는 새 회원번호를 발급합니다.</li>
+<li>탈퇴 후 30일 동안 복원을 요청할 수 있습니다.</li>
+<li>같은 이메일의 활성 회원이 있으면 기존 회원의 복원을 거부합니다.</li>
+<li>탈퇴한 회원의 기존 주문은 보관합니다. 새 주문은 등록할 수 없습니다.</li>
+<li>장바구니는 탈퇴와 함께 논리 삭제합니다. 탈퇴 전에 개별 삭제한 항목은 회원 복원 시 되살리지 않습니다.</li>
+<li>탈퇴해도 과거 매출은 유지합니다. 활성 회원 수에는 반영합니다.</li>
+<li>복원 가능 기간이 끝난 뒤 개인정보를 최종 제거하는 기준을 정합니다. 보관이 필요한 주문 정보와 구분합니다.</li>
+</ol>
+<p><strong>작성할 내용</strong></p>
+<ol>
+<li>회원·주문·장바구니의 논리 ERD를 draw.io로 작성합니다.</li>
+<li>삭제 상태, 삭제 주체, 삭제 원인, 복원 범위를 나타낼 컬럼을 정의합니다.</li>
+<li>활성 이메일 중복을 막는 인덱스와 필요한 제약조건을 작성합니다.</li>
+<li>일반 회원 조회, 기존 주문 조회, 활성 회원 수 집계 SQL을 작성합니다.</li>
+<li>탈퇴·주문 등록·복원 작업의 트랜잭션 경계와 잠금 순서를 설명합니다.</li>
+<li>재가입 이후 복원 충돌과 장바구니 복원 대상을 검증하는 SQL을 작성합니다.</li>
+<li>최종 제거 대상, 제거 보류 조건, 감사·이력·통계 반영 정책을 문서로 작성합니다.</li>
+</ol>
+<p><strong>완료 조건</strong></p>
+<ul>
+<li>삭제된 회원은 일반 회원 조회에 나타나지 않습니다.</li>
+<li>두 세션이 같은 이메일로 동시에 가입해도 활성 회원은 한 명만 남습니다.</li>
+<li>재가입한 회원과 탈퇴한 회원의 회원번호 및 주문 귀속이 구분됩니다.</li>
+<li>탈퇴와 주문 등록이 겹칠 때 허용되는 결과를 설명할 수 있습니다.</li>
+<li>복원 충돌이 발생하면 기존 삭제 상태와 관련 데이터가 유지됩니다.</li>
+<li>회원 복원 시 탈퇴 때문에 삭제된 장바구니만 복원 대상으로 식별됩니다.</li>
+<li>탈퇴 전후의 과거 매출 합계는 같고 활성 회원 수만 달라집니다.</li>
+<li>논리 삭제와 개인정보 최종 제거가 각각 어떤 작업인지 구분되어 있습니다.</li>
+</ul><nav class="chapter-nav"><button type="button" class="text" data-prev="true" data-href="28.html">← 이전 장</button><span>29 / 30</span><button type="button" class="text" data-next="true" data-href="30.html">다음 장 →</button></nav></section></main></div><script src="../assets/book-fe9af60309390aae.js"></script></body></html>

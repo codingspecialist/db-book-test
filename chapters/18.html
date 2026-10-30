@@ -1,0 +1,517 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data: blob:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'"><meta name="viewport" content="width=device-width,initial-scale=1"><title>디비설계강의</title><link rel="stylesheet" href="../assets/book-e288a86a0216c70b.css"></head><body><div class="reader" data-toc="open"><header class="book-bar"><button type="button" class="toc-toggle" aria-expanded="true" aria-controls="toc">목차</button><span class="book-bar__title">디비설계강의</span></header><aside class="toc" id="toc"><p class="caption">목차 / CONTENTS</p><div class="toc-title">디비설계강의</div><a href="../index.html" data-chapter="0" title="표지" aria-current="false">표지</a><a href="01.html" data-chapter="1" title="1장. 관계형 데이터베이스와 DBMS란?" aria-current="false">1장. 관계형 데이터베이스와 DBMS란?</a><a href="02.html" data-chapter="2" title="2장. Oracle 실습 환경 구성" aria-current="false">2장. Oracle 실습 환경 구성</a><a href="03.html" data-chapter="3" title="3장. 요구사항 분석과 데이터 모델링이란?" aria-current="false">3장. 요구사항 분석과 데이터 모델링이란?</a><a href="04.html" data-chapter="4" title="4장. 식별자와 관계 설계란?" aria-current="false">4장. 식별자와 관계 설계란?</a><a href="05.html" data-chapter="5" title="5장. 정규화란?" aria-current="false">5장. 정규화란?</a><a href="06.html" data-chapter="6" title="6장. 무결성과 물리 설계란?" aria-current="false">6장. 무결성과 물리 설계란?</a><a href="07.html" data-chapter="7" title="7장. Oracle 인스턴스와 데이터베이스란?" aria-current="false">7장. Oracle 인스턴스와 데이터베이스란?</a><a href="08.html" data-chapter="8" title="8장. Oracle 저장구조와 블록 접근이란?" aria-current="false">8장. Oracle 저장구조와 블록 접근이란?</a><a href="09.html" data-chapter="9" title="9장. 트랜잭션과 읽기 일관성이란?" aria-current="false">9장. 트랜잭션과 읽기 일관성이란?</a><a href="10.html" data-chapter="10" title="10장. SQL 처리와 옵티마이저란?" aria-current="false">10장. SQL 처리와 옵티마이저란?</a><a href="11.html" data-chapter="11" title="11장. 실행 계획과 성능 측정이란?" aria-current="false">11장. 실행 계획과 성능 측정이란?</a><a href="12.html" data-chapter="12" title="12장. B-tree 인덱스와 스캔 방식이란?" aria-current="false">12장. B-tree 인덱스와 스캔 방식이란?</a><a href="13.html" data-chapter="13" title="13장. 복합 인덱스와 탐색 범위 튜닝이란?" aria-current="false">13장. 복합 인덱스와 탐색 범위 튜닝이란?</a><a href="14.html" data-chapter="14" title="14장. 테이블 접근 최소화란?" aria-current="false">14장. 테이블 접근 최소화란?</a><a href="15.html" data-chapter="15" title="15장. 검색 조건과 인덱스 활용이란?" aria-current="false">15장. 검색 조건과 인덱스 활용이란?</a><a href="16.html" data-chapter="16" title="16장. 정렬·페이징·집계 튜닝이란?" aria-current="false">16장. 정렬·페이징·집계 튜닝이란?</a><a href="17.html" data-chapter="17" title="17장. 조인·서브쿼리 튜닝이란?" aria-current="false">17장. 조인·서브쿼리 튜닝이란?</a><a href="18.html" data-chapter="18" title="18장. 특수 인덱스와 인덱스 운영이란?" aria-current="true">18장. 특수 인덱스와 인덱스 운영이란?</a><a href="19.html" data-chapter="19" title="19장. 파티셔닝과 파티션 프루닝이란?" aria-current="false">19장. 파티셔닝과 파티션 프루닝이란?</a><a href="20.html" data-chapter="20" title="20장. 파티션 인덱스와 유지관리란?" aria-current="false">20장. 파티션 인덱스와 유지관리란?</a><a href="21.html" data-chapter="21" title="21장. 반정규화와 통계 테이블 설계란?" aria-current="false">21장. 반정규화와 통계 테이블 설계란?</a><a href="22.html" data-chapter="22" title="22장. 공통코드 설계란?" aria-current="false">22장. 공통코드 설계란?</a><a href="23.html" data-chapter="23" title="23장. 계층 구조 설계란?" aria-current="false">23장. 계층 구조 설계란?</a><a href="24.html" data-chapter="24" title="24장. 상속 관계 설계란?" aria-current="false">24장. 상속 관계 설계란?</a><a href="25.html" data-chapter="25" title="25장. 데이터 변경 추적과 감사 기록이란?" aria-current="false">25장. 데이터 변경 추적과 감사 기록이란?</a><a href="26.html" data-chapter="26" title="26장. 데이터 변경 이력과 시간 모델링이란?" aria-current="false">26장. 데이터 변경 이력과 시간 모델링이란?</a><a href="27.html" data-chapter="27" title="27장. 동적 속성과 EAV 설계란?" aria-current="false">27장. 동적 속성과 EAV 설계란?</a><a href="28.html" data-chapter="28" title="28장. JSON 데이터 설계란?" aria-current="false">28장. JSON 데이터 설계란?</a><a href="29.html" data-chapter="29" title="29장. 논리 삭제란?" aria-current="false">29장. 논리 삭제란?</a><a href="30.html" data-chapter="30" title="30장. 요구사항 변경 대응과 설계·튜닝 종합 실습" aria-current="false">30장. 요구사항 변경 대응과 설계·튜닝 종합 실습</a><footer>30장</footer></aside><main class="reading"><section class="chapter" id="chapter-18"><div class="eyebrow">디비설계강의 / CHAPTER 18</div><span class="chapter-num" aria-hidden="true">18</span><h2>18장. 특수 인덱스와 인덱스 운영이란?</h2><p>인덱스를 추가하면 조회 경로가 늘어납니다. 동시에 데이터를 변경할 때 관리해야 할 구조도 늘어납니다. 조회 한 문장이 빨라졌더라도 주문 등록이나 상태 변경이 느려졌다면 업무 전체의 성능을 다시 평가해야 합니다.</p>
+<p>특수 인덱스는 조회 방식과 데이터 변경 특성에 맞추어 선택합니다. 기존 인덱스를 유지하거나 제거할 때도 판단 근거를 수집하고 변경 영향을 검증해야 합니다.</p>
+<h3>1. 특수 인덱스의 선택</h3>
+<h4>1.1 비트맵 인덱스와 분석 조회·동시 DML</h4>
+<p><strong>비트맵 인덱스(bitmap index)</strong>는 키 값에 해당하는 행들을 비트로 표현하는 인덱스입니다. 하나의 인덱스 엔트리가 여러 행을 나타냅니다. 여러 조건의 비트맵을 결합하면 테이블에 접근하기 전에 후보 행을 줄일 수 있습니다.</p>
+<p>예를 들어 적재가 끝난 주문 분석 테이블에서 판매 채널과 배송 지역을 함께 검색한다고 합시다. 다음 표는 비트맵의 결합 원리를 보여 줍니다. 실제 저장 형식과 압축 방식은 생략했습니다.</p>
+<table><thead><tr><th>조건</th><th style="text-align:right">행 A</th><th style="text-align:right">행 B</th><th style="text-align:right">행 C</th><th style="text-align:right">행 D</th></tr></thead><tbody><tr><td>판매 채널이 APP</td><td style="text-align:right">1</td><td style="text-align:right">0</td><td style="text-align:right">1</td><td style="text-align:right">1</td></tr><tr><td>배송 지역이 제주</td><td style="text-align:right">0</td><td style="text-align:right">1</td><td style="text-align:right">1</td><td style="text-align:right">0</td></tr><tr><td>두 조건을 모두 만족</td><td style="text-align:right">0</td><td style="text-align:right">0</td><td style="text-align:right">1</td><td style="text-align:right">0</td></tr></tbody></table>
+<p>행 C만 두 조건을 만족합니다. 조건의 조합이 자주 바뀌는 분석 조회에서는 이런 결합이 유용합니다.</p>
+<p>그러나 구별되는 값이 적다는 이유만으로 비트맵 인덱스를 선택하면 안 됩니다. 비트맵 엔트리를 변경할 때는 잠금이 여러 행에 영향을 줄 수 있습니다. 서로 다른 주문을 변경하더라도 같은 비트맵 조각에 영향을 주면 대기할 수 있습니다.</p>
+<p>따라서 수많은 사용자가 주문 상태를 수시로 바꾸는 테이블에는 신중하게 적용해야 합니다. 반면 정해진 시간에 일괄 적재하고 주로 조회하는 분석 테이블은 후보가 됩니다. 값의 종류뿐 아니라 변경 방식과 동시 실행량도 판단 기준에 포함됩니다.</p>
+<p><strong>기본 문법</strong></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2</div><pre><code class="language-sql" data-code="CREATE BITMAP INDEX 인덱스명
+    ON 테이블명 (컬럼명);"><span class="token keyword">CREATE</span> BITMAP <span class="token keyword">INDEX</span> 인덱스명
+    <span class="token keyword">ON</span> 테이블명 <span class="token punctuation">(</span>컬럼명<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div></div>
+<p>비트맵 인덱스는 일반 B-tree 인덱스와 달리 NULL도 저장합니다. 다만 NULL 저장 여부만으로 인덱스 유형을 고르지는 않습니다. 실습 전에는 2장에서 확인한 서버 에디션과 사용 가능 기능을 확인합니다.</p>
+<h4>1.2 리버스 키 인덱스와 삽입 집중·범위 검색</h4>
+<p><strong>리버스 키 인덱스(reverse key index)</strong>는 각 키 컬럼의 저장 바이트 순서를 뒤집는 B-tree 인덱스입니다. 복합 인덱스의 컬럼 순서를 뒤집거나 숫자의 십진수 자릿수를 뒤집는 기능은 아닙니다.</p>
+<p>순차적으로 증가하는 주문번호를 일반 인덱스에 넣으면 새 키가 오른쪽 끝의 리프 블록에 집중됩니다. 동시 삽입이 많으면 그 블록을 변경하려는 세션들이 경합할 수 있습니다. 리버스 키 인덱스는 인접한 번호의 저장 위치를 분산하여 삽입 집중을 완화하는 데 사용합니다.</p>
+<p>그 대신 원래 값의 범위 순서를 활용하기 어렵습니다. 주문번호 한 건을 동등 조건으로 찾는 용도와 주문번호 구간을 읽는 용도를 구분해야 합니다.</p>
+<table><thead><tr><th>검색 또는 처리</th><th>적용 판단</th></tr></thead><tbody><tr><td>주문번호 한 건 검색</td><td>리버스 키 인덱스로 탐색 가능</td></tr><tr><td>주문번호 구간 검색</td><td>원래 값 순서의 범위 스캔에 부적합</td></tr><tr><td>주문번호 순서로 목록 반환</td><td>정렬 생략을 기대하기 어려움</td></tr><tr><td>순차 키의 동시 삽입</td><td>리프 블록 경합이 확인되면 검토</td></tr></tbody></table>
+<p><strong>기본 문법</strong></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3</div><pre><code class="language-sql" data-code="CREATE INDEX 인덱스명
+    ON 테이블명 (컬럼명)
+    REVERSE;"><span class="token keyword">CREATE</span> <span class="token keyword">INDEX</span> 인덱스명
+    <span class="token keyword">ON</span> 테이블명 <span class="token punctuation">(</span>컬럼명<span class="token punctuation">)</span>
+    REVERSE<span class="token punctuation">;</span></code></pre></div></div>
+<p>순차 키를 쓴다는 사실만으로 리버스 키가 필요한 것은 아닙니다. 먼저 삽입 대기가 해당 인덱스에 집중되는지 확인해야 합니다. 조회와 쓰기 부하를 함께 측정하여 분산의 이익이 범위 검색의 손실보다 큰지 판단합니다.</p>
+<h4>1.3 내림차순 인덱스의 적용 기준</h4>
+<p><strong>내림차순 인덱스(descending index)</strong>는 지정한 키 컬럼을 내림차순으로 탐색할 수 있도록 구성한 인덱스입니다. 컬럼마다 <code>ASC</code>와 <code>DESC</code>를 지정할 수 있습니다.</p>
+<p>16장에서 확인했듯 오름차순 인덱스도 역방향으로 읽을 수 있습니다. 따라서 최신순 조회가 있다는 이유만으로 내림차순 인덱스를 추가할 필요는 없습니다. 별도 인덱스가 필요한지는 복합 정렬의 방향을 함께 보고 판단합니다.</p>
+<table><thead><tr><th>인덱스 키 순서</th><th>순서대로 활용할 수 있는 대표 정렬</th></tr></thead><tbody><tr><td><code>(ordered_at ASC, order_id ASC)</code></td><td>두 컬럼 모두 오름차순</td></tr><tr><td>위 인덱스의 역방향 스캔</td><td>두 컬럼 모두 내림차순</td></tr><tr><td><code>(ordered_at DESC, order_id ASC)</code></td><td>주문일시는 내림차순, 주문번호는 오름차순</td></tr></tbody></table>
+<p>다음은 정렬 방향이 섞인 조회를 위한 후보입니다.</p>
+<p><strong>코드 조각</strong></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5
+6
+7</div><pre><code class="language-sql" data-code="CREATE INDEX ix_orders_time_id
+    ON orders (ordered_at DESC, order_id ASC);
+
+SELECT order_id, ordered_at
+FROM orders
+ORDER BY ordered_at DESC, order_id ASC
+FETCH FIRST 20 ROWS ONLY;"><span class="token keyword">CREATE</span> <span class="token keyword">INDEX</span> ix_orders_time_id
+    <span class="token keyword">ON</span> orders <span class="token punctuation">(</span>ordered_at <span class="token keyword">DESC</span><span class="token punctuation">,</span> order_id <span class="token keyword">ASC</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> order_id<span class="token punctuation">,</span> ordered_at
+<span class="token keyword">FROM</span> orders
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span> ordered_at <span class="token keyword">DESC</span><span class="token punctuation">,</span> order_id <span class="token keyword">ASC</span>
+<span class="token keyword">FETCH</span> <span class="token keyword">FIRST</span> <span class="token number">20</span> <span class="token keyword">ROWS</span> ONLY<span class="token punctuation">;</span></code></pre></div></div>
+<p>이 코드는 <code>orders</code> 테이블이 이미 있다고 가정한 설계 조각입니다. 인덱스 생성 후에는 통계를 수집하고 실제 실행 계획에서 정렬 연산을 확인합니다. 검색 조건과 접근 경로에 따라서도 정렬 생략 여부가 달라집니다.</p>
+<p>앞쪽 컬럼이 동등 조건으로 고정되면 뒤쪽 컬럼의 순서를 활용할 여지도 있습니다. 인덱스 정의와 <code>ORDER BY</code>만 따로 비교하지 말고 전체 SQL을 기준으로 판단해야 합니다.</p>
+<h3>2. 인덱스 유지 비용</h3>
+<h4>2.1 INSERT·UPDATE·DELETE와 인덱스 갱신</h4>
+<p>Oracle은 테이블의 변경에 맞추어 인덱스도 관리합니다. 애플리케이션이 별도로 인덱스 갱신 SQL을 작성할 필요는 없습니다. 자동으로 관리되는 만큼 변경 비용도 발생합니다.</p>
+<table><thead><tr><th>작업</th><th>일반적인 B-tree 인덱스에서 필요한 일</th></tr></thead><tbody><tr><td><code>INSERT</code></td><td>새 행의 키와 ROWID에 해당하는 엔트리 추가</td></tr><tr><td>인덱스 키를 바꾸는 <code>UPDATE</code></td><td>이전 키 엔트리 삭제와 새 키 엔트리 추가</td></tr><tr><td><code>DELETE</code></td><td>해당 행의 인덱스 엔트리 삭제 처리</td></tr><tr><td>인덱스와 무관한 컬럼의 <code>UPDATE</code></td><td>해당 인덱스 키의 교체는 일반적으로 불필요</td></tr></tbody></table>
+<p>일반 B-tree 인덱스는 모든 키 컬럼이 NULL인 행을 저장하지 않습니다. 따라서 모든 행이 모든 인덱스에 반드시 엔트리 하나를 추가하는 것은 아닙니다.</p>
+<p>주문 테이블에 주문일시, 회원번호, 주문상태 인덱스가 각각 있다고 합시다. 주문을 등록할 때는 세 인덱스의 관리 비용을 부담합니다. 주문상태만 바꾸는 작업은 주문상태를 포함한 인덱스에 영향을 줍니다. 주문상태를 포함한 복합 인덱스가 여러 개라면 그만큼 관리 대상도 늘어납니다.</p>
+<p>인덱스 변경에는 블록 접근과 CPU가 필요합니다. 언두와 리두도 발생합니다. 커버링 인덱스에 컬럼을 더하면 조회 시 테이블 접근을 줄일 수 있습니다. 이때도 쓰기에서 늘어나는 비용을 함께 비교해야 합니다.</p>
+<h4>2.2 블록 분할·공간 사용·삽입 경합</h4>
+<p><strong>블록 분할(block split)</strong>은 새 키를 넣을 공간이 부족할 때 블록을 나누어 저장공간을 확보하는 과정입니다. B-tree 인덱스가 커지면서 발생할 수 있는 정상적인 동작입니다.</p>
+<p>문제는 분할 자체보다 업무에 미치는 영향입니다. 키가 넓으면 같은 블록에 들어가는 엔트리 수가 줄어듭니다. 삽입 위치에 따라 공간 사용 양상도 달라집니다. 특정 리프 블록에 동시 삽입이 몰리면 분할과 별개로 변경 경합이 생길 수 있습니다.</p>
+<p>공간 부족과 삽입 경합은 구분해야 합니다. 공간이 충분해도 같은 블록을 동시에 바꾸려 하면 대기할 수 있습니다. 반대로 동시 사용자가 적더라도 인덱스가 넓으면 공간과 변경량이 커집니다.</p>
+<p>삭제 후 인덱스 세그먼트의 크기가 바로 줄지 않는다고 해서 장애는 아닙니다. 비워진 공간은 이후 작업에서 재사용될 수 있습니다. 할당된 크기만 보고 낭비라고 판단하면 안 됩니다.</p>
+<p>공간 상태를 확인할 때는 다음 항목을 함께 봅니다.</p>
+<table><thead><tr><th>관찰 항목</th><th>판단에 사용하는 내용</th></tr></thead><tbody><tr><td>할당 공간</td><td>인덱스 세그먼트가 확보한 공간</td></tr><tr><td><code>LEAF_BLOCKS</code></td><td>통계에 기록된 리프 블록 수</td></tr><tr><td><code>BLEVEL</code></td><td>루트에서 리프까지 탐색하는 수준</td></tr><tr><td>업무 SQL의 읽기량</td><td>공간 상태가 조회 비용에 미치는 영향</td></tr><tr><td>동시 삽입의 대기와 처리량</td><td>특정 블록의 변경 집중 여부</td></tr></tbody></table>
+<p><code>USER_INDEXES</code>의 통계 값과 현재 할당 공간은 같은 시점을 나타내지 않을 수 있습니다. 통계 수집 시각도 확인해야 합니다.</p>
+<h4>2.3 중복·유사·미사용 인덱스 판단</h4>
+<p>인덱스를 정리할 때는 업무에서 맡은 역할을 비교하여 유지 비용을 줄입니다. 정의가 비슷하다는 이유만으로 삭제하지 않습니다.</p>
+<p>예를 들어 다음 두 인덱스가 있다고 합시다.</p>
+<table><thead><tr><th>인덱스</th><th>키 컬럼</th></tr></thead><tbody><tr><td>인덱스 A</td><td><code>(member_id)</code></td></tr><tr><td>인덱스 B</td><td><code>(member_id, ordered_at)</code></td></tr></tbody></table>
+<p>인덱스 B는 회원번호 검색에 활용될 수 있습니다. 그렇다고 인덱스 A가 항상 불필요한 것은 아닙니다. A가 더 작아서 특정 집계나 넓은 인덱스 스캔에서 유리할 수도 있습니다. 반대로 두 인덱스를 유지할 이익이 거의 없다면 A는 제거 후보가 됩니다.</p>
+<p>컬럼 집합이 같더라도 순서, 정렬 방향, 유일성, 표현식이 다르면 역할이 달라집니다. 기본키나 유일성 제약조건을 지원하는 인덱스인지도 먼저 확인해야 합니다. 외래키 인덱스는 조회뿐 아니라 부모 행 변경 시 잠금에 미치는 영향도 고려합니다.</p>
+<p>다음 코드는 인덱스 정의와 제약조건의 연결을 확인할 때 사용합니다.</p>
+<p><strong>코드 조각</strong></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</div><pre><code class="language-sql" data-code="SELECT index_name, index_type, uniqueness,
+       visibility, status, blevel, leaf_blocks,
+       last_analyzed
+FROM user_indexes
+WHERE table_name = &#x27;ORDERS&#x27;
+ORDER BY index_name;
+
+SELECT index_name, column_position, column_name, descend
+FROM user_ind_columns
+WHERE table_name = &#x27;ORDERS&#x27;
+ORDER BY index_name, column_position;
+
+SELECT constraint_name, constraint_type, index_name
+FROM user_constraints
+WHERE table_name = &#x27;ORDERS&#x27;
+  AND constraint_type IN (&#x27;P&#x27;, &#x27;U&#x27;);
+
+SELECT index_name, column_position, column_expression
+FROM user_ind_expressions
+WHERE table_name = &#x27;ORDERS&#x27;
+ORDER BY index_name, column_position;"><span class="token keyword">SELECT</span> index_name<span class="token punctuation">,</span> index_type<span class="token punctuation">,</span> uniqueness<span class="token punctuation">,</span>
+       visibility<span class="token punctuation">,</span> <span class="token keyword">status</span><span class="token punctuation">,</span> blevel<span class="token punctuation">,</span> leaf_blocks<span class="token punctuation">,</span>
+       last_analyzed
+<span class="token keyword">FROM</span> user_indexes
+<span class="token keyword">WHERE</span> table_name <span class="token operator">=</span> <span class="token string">'ORDERS'</span>
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span> index_name<span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> index_name<span class="token punctuation">,</span> column_position<span class="token punctuation">,</span> column_name<span class="token punctuation">,</span> descend
+<span class="token keyword">FROM</span> user_ind_columns
+<span class="token keyword">WHERE</span> table_name <span class="token operator">=</span> <span class="token string">'ORDERS'</span>
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span> index_name<span class="token punctuation">,</span> column_position<span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> constraint_name<span class="token punctuation">,</span> constraint_type<span class="token punctuation">,</span> index_name
+<span class="token keyword">FROM</span> user_constraints
+<span class="token keyword">WHERE</span> table_name <span class="token operator">=</span> <span class="token string">'ORDERS'</span>
+  <span class="token operator">AND</span> constraint_type <span class="token operator">IN</span> <span class="token punctuation">(</span><span class="token string">'P'</span><span class="token punctuation">,</span> <span class="token string">'U'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> index_name<span class="token punctuation">,</span> column_position<span class="token punctuation">,</span> column_expression
+<span class="token keyword">FROM</span> user_ind_expressions
+<span class="token keyword">WHERE</span> table_name <span class="token operator">=</span> <span class="token string">'ORDERS'</span>
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span> index_name<span class="token punctuation">,</span> column_position<span class="token punctuation">;</span></code></pre></div></div>
+<p>함수 기반 인덱스는 표현식까지 확인해야 합니다. 컬럼 이름만 비교하면 실제 검색 대상을 놓칠 수 있습니다.</p>
+<p>사용 여부는 일정 기간 관찰할 수 있습니다.</p>
+<p><strong>코드 조각</strong></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8</div><pre><code class="language-sql" data-code="ALTER INDEX ix_orders_member MONITORING USAGE;
+
+SELECT index_name, monitoring, used,
+       start_monitoring, end_monitoring
+FROM user_object_usage
+WHERE index_name = &#x27;IX_ORDERS_MEMBER&#x27;;
+
+ALTER INDEX ix_orders_member NOMONITORING USAGE;"><span class="token keyword">ALTER</span> <span class="token keyword">INDEX</span> ix_orders_member MONITORING <span class="token keyword">USAGE</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> index_name<span class="token punctuation">,</span> monitoring<span class="token punctuation">,</span> used<span class="token punctuation">,</span>
+       start_monitoring<span class="token punctuation">,</span> end_monitoring
+<span class="token keyword">FROM</span> user_object_usage
+<span class="token keyword">WHERE</span> index_name <span class="token operator">=</span> <span class="token string">'IX_ORDERS_MEMBER'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">ALTER</span> <span class="token keyword">INDEX</span> ix_orders_member NOMONITORING <span class="token keyword">USAGE</span><span class="token punctuation">;</span></code></pre></div></div>
+<p>관찰 시작과 종료 사이에 대표 업무를 실행합니다. <code>USED</code>는 관찰 기간의 사용 여부를 나타냅니다. 사용 횟수나 성능 기여도를 나타내지는 않습니다. <code>MONITORING USAGE</code>를 다시 지정하면 이전 관찰 정보가 초기화됩니다.</p>
+<p>Oracle 21c에서는 <code>USER_OBJECT_USAGE</code>를 사용합니다. 예전 자료의 <code>V$OBJECT_USAGE</code>를 그대로 사용하지 않습니다.</p>
+<p>평일 조회만 관찰했다면 월말 정산 인덱스는 미사용으로 보일 수 있습니다. 관찰 기간에 실행되지 않은 업무가 무엇인지 기록해야 합니다. 미사용 표시는 제거 검토의 출발점입니다.</p>
+<h3>3. 인덱스 변경 검증</h3>
+<h4>3.1 Invisible Index를 이용한 영향 확인</h4>
+<p><strong>Invisible Index</strong>는 기본 설정에서 옵티마이저가 접근 경로를 선택할 때 제외하는 인덱스입니다. 인덱스 구조는 남아 있으며 DML에 따른 갱신도 계속됩니다.</p>
+<p>기존 인덱스를 Invisible로 바꾸면 제거 후의 조회 경로를 시험할 수 있습니다. 새 후보를 Invisible로 만들면 특정 테스트 세션에서만 후보를 허용할 수 있습니다.</p>
+<table><thead><tr><th>작업</th><th>확인할 수 있는 것</th><th>확인할 수 없는 것</th></tr></thead><tbody><tr><td>기존 인덱스를 Invisible로 변경</td><td>해당 인덱스를 제외한 조회 영향</td><td>물리적 제거로 줄어드는 유지 비용</td></tr><tr><td>새 후보를 Invisible로 생성</td><td>후보를 허용했을 때의 실행 계획</td><td>후보 생성 전의 쓰기 비용</td></tr><tr><td>테스트 복제본에서 인덱스 제거</td><td>조회와 쓰기를 포함한 제거 영향</td><td>운영과 다른 부하 조건의 영향</td></tr></tbody></table>
+<p>Invisible 상태에서도 유일 인덱스의 유일성 검사는 유지됩니다. <code>UNUSABLE</code> 상태와 혼동하지 않아야 합니다.</p>
+<p>다음 예제는 새 후보를 특정 세션에서 비교합니다. 새 실습 테이블을 만드는 코드이며, 기존 장의 테이블은 사용하지 않습니다. 테이블 생성 권한, 저장공간 할당량, <code>ALTER SESSION</code> 권한이 필요합니다. 실행 계획은 11장 2.2항의 공통 실행 방법으로 확인합니다. 두 SQL의 식별용 주석으로 커서를 찾고 SQL 식별자와 자식 커서 번호를 지정합니다.</p>
+<p>SQL Developer에서 자동 커밋을 끄고 스크립트 실행으로 실행합니다. DDL은 암묵적 커밋을 발생시킵니다. 따라서 진행 중인 다른 변경 작업이 없는 세션을 사용합니다.</p>
+<p><strong>예제 18-1 — Invisible 인덱스를 테스트 세션에서 비교하기</strong></p>
+<p><strong>파일명:</strong> <code>ch18_invisible_test.sql</code></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73</div><pre><code class="language-sql" data-code="CREATE TABLE ch18_orders (
+    order_id    NUMBER       NOT NULL,
+    member_id   NUMBER       NOT NULL,
+    ordered_at  DATE         NOT NULL,
+    status      VARCHAR2(12) NOT NULL,
+    amount      NUMBER(10)   NOT NULL,
+    CONSTRAINT pk_ch18_orders PRIMARY KEY (order_id)
+);
+
+INSERT INTO ch18_orders (
+    order_id, member_id, ordered_at, status, amount
+)
+SELECT level,
+       MOD(level - 1, 1000) + 1,
+       DATE &#x27;2026-01-01&#x27; + (level - 1) / 1440,
+       CASE
+           WHEN MOD(level, 10) = 0 THEN &#x27;CANCELLED&#x27;
+           ELSE &#x27;PAID&#x27;
+       END,
+       1000 + MOD(level, 100) * 100
+FROM dual
+CONNECT BY level &lt;= 100000;
+
+COMMIT;
+
+CREATE INDEX ix_ch18_member_time
+    ON ch18_orders (member_id, ordered_at)
+    INVISIBLE;
+
+BEGIN
+    DBMS_STATS.GATHER_TABLE_STATS(
+        ownname =&gt; USER,
+        tabname =&gt; &#x27;CH18_ORDERS&#x27;,
+        cascade =&gt; TRUE
+    );
+END;
+/
+
+ALTER SESSION SET optimizer_use_invisible_indexes = FALSE;
+
+SELECT /*+ GATHER_PLAN_STATISTICS */
+       /* ch18_candidate_disabled */
+       SUM(amount) AS total_amount
+FROM ch18_orders
+WHERE member_id = 42;
+
+SELECT *
+FROM TABLE(
+    DBMS_XPLAN.DISPLAY_CURSOR(
+        NULL, NULL, &#x27;ALLSTATS LAST&#x27;
+    )
+);
+
+ALTER SESSION SET optimizer_use_invisible_indexes = TRUE;
+
+SELECT /*+ GATHER_PLAN_STATISTICS */
+       /* ch18_candidate_enabled */
+       SUM(amount) AS total_amount
+FROM ch18_orders
+WHERE member_id = 42;
+
+SELECT *
+FROM TABLE(
+    DBMS_XPLAN.DISPLAY_CURSOR(
+        NULL, NULL, &#x27;ALLSTATS LAST&#x27;
+    )
+);
+
+ALTER SESSION SET optimizer_use_invisible_indexes = FALSE;
+
+SELECT index_name, visibility, status
+FROM user_indexes
+WHERE index_name = &#x27;IX_CH18_MEMBER_TIME&#x27;;"><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> ch18_orders <span class="token punctuation">(</span>
+    order_id    NUMBER       <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    member_id   NUMBER       <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    ordered_at  <span class="token keyword">DATE</span>         <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token keyword">status</span>      VARCHAR2<span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    amount      NUMBER<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>   <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token keyword">CONSTRAINT</span> pk_ch18_orders <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span>order_id<span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> ch18_orders <span class="token punctuation">(</span>
+    order_id<span class="token punctuation">,</span> member_id<span class="token punctuation">,</span> ordered_at<span class="token punctuation">,</span> <span class="token keyword">status</span><span class="token punctuation">,</span> amount
+<span class="token punctuation">)</span>
+<span class="token keyword">SELECT</span> <span class="token keyword">level</span><span class="token punctuation">,</span>
+       <span class="token function">MOD</span><span class="token punctuation">(</span><span class="token keyword">level</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span>
+       <span class="token keyword">DATE</span> <span class="token string">'2026-01-01'</span> <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token keyword">level</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">1440</span><span class="token punctuation">,</span>
+       <span class="token keyword">CASE</span>
+           <span class="token keyword">WHEN</span> <span class="token function">MOD</span><span class="token punctuation">(</span><span class="token keyword">level</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0</span> <span class="token keyword">THEN</span> <span class="token string">'CANCELLED'</span>
+           <span class="token keyword">ELSE</span> <span class="token string">'PAID'</span>
+       <span class="token keyword">END</span><span class="token punctuation">,</span>
+       <span class="token number">1000</span> <span class="token operator">+</span> <span class="token function">MOD</span><span class="token punctuation">(</span><span class="token keyword">level</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span>
+<span class="token keyword">FROM</span> dual
+<span class="token keyword">CONNECT</span> <span class="token keyword">BY</span> <span class="token keyword">level</span> <span class="token operator">&lt;=</span> <span class="token number">100000</span><span class="token punctuation">;</span>
+
+<span class="token keyword">COMMIT</span><span class="token punctuation">;</span>
+
+<span class="token keyword">CREATE</span> <span class="token keyword">INDEX</span> ix_ch18_member_time
+    <span class="token keyword">ON</span> ch18_orders <span class="token punctuation">(</span>member_id<span class="token punctuation">,</span> ordered_at<span class="token punctuation">)</span>
+    INVISIBLE<span class="token punctuation">;</span>
+
+<span class="token keyword">BEGIN</span>
+    DBMS_STATS<span class="token punctuation">.</span>GATHER_TABLE_STATS<span class="token punctuation">(</span>
+        ownname <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">USER</span><span class="token punctuation">,</span>
+        tabname <span class="token operator">=</span><span class="token operator">></span> <span class="token string">'CH18_ORDERS'</span><span class="token punctuation">,</span>
+        <span class="token keyword">cascade</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token boolean">TRUE</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">END</span><span class="token punctuation">;</span>
+<span class="token operator">/</span>
+
+<span class="token keyword">ALTER</span> <span class="token keyword">SESSION</span> <span class="token keyword">SET</span> optimizer_use_invisible_indexes <span class="token operator">=</span> <span class="token boolean">FALSE</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> <span class="token comment">/*+ GATHER_PLAN_STATISTICS */</span>
+       <span class="token comment">/* ch18_candidate_disabled */</span>
+       <span class="token function">SUM</span><span class="token punctuation">(</span>amount<span class="token punctuation">)</span> <span class="token keyword">AS</span> total_amount
+<span class="token keyword">FROM</span> ch18_orders
+<span class="token keyword">WHERE</span> member_id <span class="token operator">=</span> <span class="token number">42</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> <span class="token keyword">TABLE</span><span class="token punctuation">(</span>
+    DBMS_XPLAN<span class="token punctuation">.</span>DISPLAY_CURSOR<span class="token punctuation">(</span>
+        <span class="token boolean">NULL</span><span class="token punctuation">,</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span> <span class="token string">'ALLSTATS LAST'</span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">ALTER</span> <span class="token keyword">SESSION</span> <span class="token keyword">SET</span> optimizer_use_invisible_indexes <span class="token operator">=</span> <span class="token boolean">TRUE</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> <span class="token comment">/*+ GATHER_PLAN_STATISTICS */</span>
+       <span class="token comment">/* ch18_candidate_enabled */</span>
+       <span class="token function">SUM</span><span class="token punctuation">(</span>amount<span class="token punctuation">)</span> <span class="token keyword">AS</span> total_amount
+<span class="token keyword">FROM</span> ch18_orders
+<span class="token keyword">WHERE</span> member_id <span class="token operator">=</span> <span class="token number">42</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> <span class="token keyword">TABLE</span><span class="token punctuation">(</span>
+    DBMS_XPLAN<span class="token punctuation">.</span>DISPLAY_CURSOR<span class="token punctuation">(</span>
+        <span class="token boolean">NULL</span><span class="token punctuation">,</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span> <span class="token string">'ALLSTATS LAST'</span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">ALTER</span> <span class="token keyword">SESSION</span> <span class="token keyword">SET</span> optimizer_use_invisible_indexes <span class="token operator">=</span> <span class="token boolean">FALSE</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> index_name<span class="token punctuation">,</span> visibility<span class="token punctuation">,</span> <span class="token keyword">status</span>
+<span class="token keyword">FROM</span> user_indexes
+<span class="token keyword">WHERE</span> index_name <span class="token operator">=</span> <span class="token string">'IX_CH18_MEMBER_TIME'</span><span class="token punctuation">;</span></code></pre></div></div>
+<p><strong>실행 결과</strong></p>
+<p>두 집계 SQL은 모두 다음 값을 반환합니다.</p>
+<div class="code-wrap" data-kind="output" data-lang="text"><div class="code-label"><span class="code-label__name">출력</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3</div><pre><code data-code="TOTAL_AMOUNT
+------------
+      510000">TOTAL_AMOUNT
+------------
+      510000</code></pre></div></div>
+<p>마지막 확인에서 후보 인덱스는 여전히 <code>INVISIBLE</code>이며, 사용 가능 상태는 <code>VALID</code>입니다.</p>
+<p>첫 번째 SQL에서는 후보 인덱스를 사용할 수 없습니다. 두 번째 SQL에서는 후보를 선택할 수 있습니다. 다만 <code>TRUE</code>가 후보 인덱스의 사용을 강제하지는 않습니다. 실제로 선택했는지는 실행 계획에서 확인합니다.</p>
+<p>두 SQL은 주석을 달리하여 서로 다른 SQL 텍스트로 작성했습니다. 비교할 때는 <code>Buffers</code>, 실제 반환 행 수, 테이블 접근을 함께 기록합니다. 경과 시간은 캐시의 영향을 받으므로 같은 조건에서 반복하여 판단합니다.</p>
+<p><code>optimizer_use_invisible_indexes = TRUE</code>는 해당 세션에서 다른 Invisible 인덱스도 허용합니다. 특정 후보 하나만 활성화하는 설정이 아니므로 비교 대상 테이블의 다른 인덱스도 확인해야 합니다.</p>
+<p>기존 인덱스의 제거 영향을 시험할 때는 다음처럼 바꿉니다.</p>
+<p><strong>코드 조각</strong></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5</div><pre><code class="language-sql" data-code="ALTER INDEX ix_ch18_member_time VISIBLE;
+
+ALTER INDEX ix_ch18_member_time INVISIBLE;
+
+ALTER INDEX ix_ch18_member_time VISIBLE;"><span class="token keyword">ALTER</span> <span class="token keyword">INDEX</span> ix_ch18_member_time VISIBLE<span class="token punctuation">;</span>
+
+<span class="token keyword">ALTER</span> <span class="token keyword">INDEX</span> ix_ch18_member_time INVISIBLE<span class="token punctuation">;</span>
+
+<span class="token keyword">ALTER</span> <span class="token keyword">INDEX</span> ix_ch18_member_time VISIBLE<span class="token punctuation">;</span></code></pre></div></div>
+<p>실제 검증에서는 첫 번째 상태에서 기준값을 기록합니다. 두 번째 상태에서 대표 업무를 실행합니다. 마지막 문장은 원상 복구에 사용합니다. <code>ROLLBACK</code>으로 가시성을 되돌릴 수는 없습니다.</p>
+<h4>3.2 재구성·병합의 필요성 판단</h4>
+<p><strong>재구성(rebuild)</strong>은 인덱스를 새 구조로 다시 만드는 작업입니다. <strong>병합(coalesce)</strong>은 합칠 수 있는 인접 리프 블록의 내용을 모아 블록을 재사용할 수 있게 하는 작업입니다.</p>
+<p>재구성과 병합은 목적과 비용이 다릅니다.</p>
+<table><thead><tr><th>판단 항목</th><th>재구성</th><th>병합</th></tr></thead><tbody><tr><td>구조 변경</td><td>새 트리 구성</td><td>기존 트리의 리프 블록 정리</td></tr><tr><td>높이 감소</td><td>조건에 따라 가능</td><td>높이 감소를 목적으로 하지 않음</td></tr><tr><td>테이블스페이스 이동</td><td>가능</td><td>불가능</td></tr><tr><td>추가 공간</td><td>새 구조를 만들 공간 고려</td><td>재구성보다 부담이 작음</td></tr><tr><td>주된 검토 목적</td><td>이동·저장 설정 변경·구조 재구성</td><td>리프 블록의 내부 공간 재사용</td></tr></tbody></table>
+<p>병합했다고 세그먼트의 할당 공간이 반드시 줄어드는 것은 아닙니다. 내부 재사용 공간 확보와 테이블스페이스에 공간을 반환하는 일은 구분해야 합니다.</p>
+<p>다음은 예제 18-1의 인덱스에 적용할 수 있는 구문입니다. 두 문장을 차례로 실행할 필요는 없습니다. 목적에 맞는 작업을 선택합니다.</p>
+<p><strong>코드 조각</strong></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1</div><pre><code class="language-sql" data-code="ALTER INDEX ix_ch18_member_time COALESCE;"><span class="token keyword">ALTER</span> <span class="token keyword">INDEX</span> ix_ch18_member_time <span class="token keyword">COALESCE</span><span class="token punctuation">;</span></code></pre></div></div>
+<p><strong>코드 조각</strong></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1</div><pre><code class="language-sql" data-code="ALTER INDEX ix_ch18_member_time REBUILD;"><span class="token keyword">ALTER</span> <span class="token keyword">INDEX</span> ix_ch18_member_time REBUILD<span class="token punctuation">;</span></code></pre></div></div>
+<p>삭제가 많았거나 <code>BLEVEL</code>이 증가했다는 이유만으로 재구성하지 않습니다. 대표 조회의 읽기량이 늘었는지 확인합니다. 앞으로 삽입될 데이터가 빈 공간을 재사용할 수 있는지도 살펴야 합니다.</p>
+<p>예를 들어 오래된 주문을 대량 삭제한 뒤 남은 주문의 범위를 자주 읽는다면 리프 블록 정리의 효과를 시험할 수 있습니다. 반대로 곧 비슷한 위치에 데이터가 다시 들어간다면 공간을 그대로 두는 편이 나을 수 있습니다.</p>
+<p>재구성은 인덱스 컬럼 순서나 SQL의 비효율을 고치지 않습니다. 작업 전후에 같은 업무를 측정하여 개선 효과가 지속되는지도 확인해야 합니다. 작업에 필요한 추가 공간, I/O, 리두를 고려하고 잠금 영향도 예상해야 합니다. <code>ONLINE</code>을 사용하더라도 잠금과 자원 사용이 완전히 사라지는 것은 아닙니다.</p>
+<h4>3.3 조회 개선과 쓰기 성능 저하 함께 측정</h4>
+<p>인덱스 변경은 업무 SQL 묶음으로 평가합니다. 회원별 주문 조회가 빨라져도 주문 등록과 상태 변경이 허용 시간을 넘으면 적용안을 조정해야 합니다.</p>
+<p>예제 18-1의 후보 인덱스라면 다음 작업을 함께 측정할 수 있습니다.</p>
+<table><thead><tr><th>업무</th><th>고정할 조건</th><th>비교할 값</th></tr></thead><tbody><tr><td>회원별 주문 조회</td><td>회원번호, 결과 인출 범위</td><td>경과 시간, CPU, Buffers</td></tr><tr><td>주문 등록</td><td>입력 건수, 키 분포, 커밋 간격</td><td>처리 시간, 리두 발생량</td></tr><tr><td>주문일시 변경</td><td>대상 행과 변경값</td><td>처리 시간, 읽기량</td></tr><tr><td>주문 취소</td><td>주문상태 변경 건수</td><td>처리 시간, 대기</td></tr><tr><td>동시 주문 등록</td><td>세션 수, 실행 시간</td><td>총처리량, 응답 시간, 대기</td></tr></tbody></table>
+<p>후보 인덱스에는 <code>status</code>가 없습니다. 주문 취소만 측정하면 후보의 키 변경 비용을 충분히 드러내지 못합니다. 삽입, 삭제, 후보 키 컬럼의 변경을 포함해야 합니다.</p>
+<p>다음은 측정용 작업의 예입니다. 예제 18-1의 테이블을 대상으로 하며, 각 작업은 따로 실행하고 확정 또는 취소합니다.</p>
+<p><strong>코드 조각</strong></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9
+10</div><pre><code class="language-sql" data-code="INSERT INTO ch18_orders (
+    order_id, member_id, ordered_at, status, amount
+)
+SELECT 100000 + level,
+       MOD(level - 1, 1000) + 1,
+       DATE &#x27;2026-04-01&#x27; + (level - 1) / 1440,
+       &#x27;PAID&#x27;,
+       2000
+FROM dual
+CONNECT BY level &lt;= 10000;"><span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> ch18_orders <span class="token punctuation">(</span>
+    order_id<span class="token punctuation">,</span> member_id<span class="token punctuation">,</span> ordered_at<span class="token punctuation">,</span> <span class="token keyword">status</span><span class="token punctuation">,</span> amount
+<span class="token punctuation">)</span>
+<span class="token keyword">SELECT</span> <span class="token number">100000</span> <span class="token operator">+</span> <span class="token keyword">level</span><span class="token punctuation">,</span>
+       <span class="token function">MOD</span><span class="token punctuation">(</span><span class="token keyword">level</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span>
+       <span class="token keyword">DATE</span> <span class="token string">'2026-04-01'</span> <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token keyword">level</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">1440</span><span class="token punctuation">,</span>
+       <span class="token string">'PAID'</span><span class="token punctuation">,</span>
+       <span class="token number">2000</span>
+<span class="token keyword">FROM</span> dual
+<span class="token keyword">CONNECT</span> <span class="token keyword">BY</span> <span class="token keyword">level</span> <span class="token operator">&lt;=</span> <span class="token number">10000</span><span class="token punctuation">;</span></code></pre></div></div>
+<p><strong>코드 조각</strong></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3</div><pre><code class="language-sql" data-code="UPDATE ch18_orders
+SET ordered_at = ordered_at + 1
+WHERE order_id BETWEEN 1 AND 10000;"><span class="token keyword">UPDATE</span> ch18_orders
+<span class="token keyword">SET</span> ordered_at <span class="token operator">=</span> ordered_at <span class="token operator">+</span> <span class="token number">1</span>
+<span class="token keyword">WHERE</span> order_id <span class="token operator">BETWEEN</span> <span class="token number">1</span> <span class="token operator">AND</span> <span class="token number">10000</span><span class="token punctuation">;</span></code></pre></div></div>
+<p><strong>코드 조각</strong></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2</div><pre><code class="language-sql" data-code="DELETE FROM ch18_orders
+WHERE order_id BETWEEN 90001 AND 100000;"><span class="token keyword">DELETE</span> <span class="token keyword">FROM</span> ch18_orders
+<span class="token keyword">WHERE</span> order_id <span class="token operator">BETWEEN</span> <span class="token number">90001</span> <span class="token operator">AND</span> <span class="token number">100000</span><span class="token punctuation">;</span></code></pre></div></div>
+<p>쓰기 비용을 비교하려면 후보가 없는 상태와 실제로 존재하는 상태가 필요합니다. 후보를 Invisible로 바꾸는 것만으로는 유지 비용이 없어지지 않습니다. 동일한 데이터로 준비한 별도 실습 스키마나 복제 테이블을 사용하면 비교하기 편합니다.</p>
+<p>각 작업 뒤 <code>ROLLBACK</code>으로 논리적 데이터를 되돌릴 수는 있습니다. 그러나 캐시와 인덱스 블록 상태까지 처음과 같아지는 것은 아닙니다. 정밀하게 비교하려면 동일한 초기 데이터와 준비 절차를 사용합니다. 트랜잭션 전체 시간을 비교한다면 커밋 시간도 포함합니다.</p>
+<p>측정 결과를 해석할 때는 단위 작업의 비용과 업무 빈도를 함께 봅니다. 조회 한 번의 절약량만으로 쓰기 증가분을 상쇄했다고 판단하지 않습니다. 일일 실행 횟수, 피크 시간대의 동시성, 응답 시간 목표를 함께 적용합니다.</p>
+<h3>4. 연습문제 — 업무 SQL 묶음의 인덱스 정리안 작성</h3>
+<p>다음 주문 테이블을 운영한다고 가정합니다. 모든 업무 컬럼은 일반 컬럼이며, 주문상태는 여러 사용자가 동시에 변경합니다.</p>
+<table><thead><tr><th>컬럼</th><th>의미</th></tr></thead><tbody><tr><td><code>order_id</code></td><td>주문번호</td></tr><tr><td><code>member_id</code></td><td>회원번호</td></tr><tr><td><code>ordered_at</code></td><td>주문일시</td></tr><tr><td><code>status</code></td><td>주문상태</td></tr><tr><td><code>amount</code></td><td>주문금액</td></tr></tbody></table>
+<p>현재 인덱스는 다음과 같습니다.</p>
+<table><thead><tr><th>인덱스</th><th>정의</th><th>비고</th></tr></thead><tbody><tr><td><code>pk_orders</code></td><td><code>(order_id)</code></td><td>기본키 지원</td></tr><tr><td><code>ix_orders_member</code></td><td><code>(member_id)</code></td><td>회원번호 검색</td></tr><tr><td><code>ix_orders_member_time</code></td><td><code>(member_id, ordered_at)</code></td><td>회원별 기간 검색</td></tr><tr><td><code>ix_orders_status</code></td><td><code>(status)</code></td><td>일반 B-tree 인덱스</td></tr><tr><td><code>ix_orders_time</code></td><td><code>(ordered_at)</code></td><td>기간 검색</td></tr><tr><td><code>ix_orders_time_desc</code></td><td><code>(ordered_at DESC)</code></td><td>최신순 조회용으로 추가</td></tr></tbody></table>
+<p><strong>요구사항</strong></p>
+<ol>
+<li>주문번호 한 건 조회, 회원별 최근 주문, 기간별 매출 집계를 대표 SQL로 작성합니다.</li>
+<li>주문 등록, 주문상태 변경, 주문 삭제를 쓰기 측정에 포함합니다.</li>
+<li>각 인덱스를 유지·제거 검토·추가 관찰 중 하나로 분류합니다.</li>
+<li>분류 근거에 컬럼 순서, 정렬 방향, 제약조건, 업무 빈도를 포함합니다.</li>
+<li>주문상태의 비트맵 인덱스 전환 제안을 동시 DML 관점에서 평가합니다.</li>
+<li>순차 주문번호의 리버스 키 전환에 필요한 증거를 적습니다.</li>
+<li>제거 후보를 Invisible로 바꾸어 조회 영향을 확인할 절차를 작성합니다.</li>
+<li>실제 제거에 따른 쓰기 개선은 별도 테스트 환경에서 측정합니다.</li>
+</ol>
+<p><strong>기록할 내용</strong></p>
+<table><thead><tr><th>후보 변경</th><th>개선을 기대하는 업무</th><th>저하 가능 업무</th><th>검증 방법</th><th>복구 방법</th></tr></thead><tbody><tr><td>회원번호 단일 인덱스 제거</td><td>주문 등록</td><td>회원별 조회</td><td>후보 제외 후 실행 통계 비교</td><td>가시성 복구 또는 재생성</td></tr><tr><td>날짜 내림차순 인덱스 제거</td><td>주문 등록</td><td>최신순 조회</td><td>역방향 스캔과 읽기량 확인</td><td>가시성 복구 또는 재생성</td></tr><tr><td>주문상태 비트맵 인덱스 도입</td><td>상태별 분석</td><td>동시 상태 변경</td><td>분석 조회와 동시 DML 비교</td><td>기존 인덱스 구성 복구</td></tr></tbody></table>
+<p>표는 검증 계획의 예입니다. 측정 전에 제거 결론을 확정하지 않습니다.</p>
+<p><strong>완료 조건</strong></p>
+<ul>
+<li>정의가 비슷하다는 이유만으로 인덱스를 제거하지 않습니다.</li>
+<li>기본키·유일성 제약조건과 외래키 관련 역할을 확인합니다.</li>
+<li>미사용 판단의 관찰 기간과 포함한 업무를 기록합니다.</li>
+<li>조회 결과의 동등성과 변경 전후 실행 통계를 제시합니다.</li>
+<li>Invisible 검증과 실제 제거 검증의 범위를 구분합니다.</li>
+<li>조회 개선, 쓰기 비용, 동시 실행 결과를 근거로 최종 정리안을 작성합니다.</li>
+</ul><nav class="chapter-nav"><button type="button" class="text" data-prev="true" data-href="17.html">← 이전 장</button><span>18 / 30</span><button type="button" class="text" data-next="true" data-href="19.html">다음 장 →</button></nav></section></main></div><script src="../assets/book-fe9af60309390aae.js"></script></body></html>

@@ -1,0 +1,706 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data: blob:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'"><meta name="viewport" content="width=device-width,initial-scale=1"><title>디비설계강의</title><link rel="stylesheet" href="../assets/book-e288a86a0216c70b.css"></head><body><div class="reader" data-toc="open"><header class="book-bar"><button type="button" class="toc-toggle" aria-expanded="true" aria-controls="toc">목차</button><span class="book-bar__title">디비설계강의</span></header><aside class="toc" id="toc"><p class="caption">목차 / CONTENTS</p><div class="toc-title">디비설계강의</div><a href="../index.html" data-chapter="0" title="표지" aria-current="false">표지</a><a href="01.html" data-chapter="1" title="1장. 관계형 데이터베이스와 DBMS란?" aria-current="false">1장. 관계형 데이터베이스와 DBMS란?</a><a href="02.html" data-chapter="2" title="2장. Oracle 실습 환경 구성" aria-current="false">2장. Oracle 실습 환경 구성</a><a href="03.html" data-chapter="3" title="3장. 요구사항 분석과 데이터 모델링이란?" aria-current="false">3장. 요구사항 분석과 데이터 모델링이란?</a><a href="04.html" data-chapter="4" title="4장. 식별자와 관계 설계란?" aria-current="false">4장. 식별자와 관계 설계란?</a><a href="05.html" data-chapter="5" title="5장. 정규화란?" aria-current="false">5장. 정규화란?</a><a href="06.html" data-chapter="6" title="6장. 무결성과 물리 설계란?" aria-current="false">6장. 무결성과 물리 설계란?</a><a href="07.html" data-chapter="7" title="7장. Oracle 인스턴스와 데이터베이스란?" aria-current="false">7장. Oracle 인스턴스와 데이터베이스란?</a><a href="08.html" data-chapter="8" title="8장. Oracle 저장구조와 블록 접근이란?" aria-current="false">8장. Oracle 저장구조와 블록 접근이란?</a><a href="09.html" data-chapter="9" title="9장. 트랜잭션과 읽기 일관성이란?" aria-current="false">9장. 트랜잭션과 읽기 일관성이란?</a><a href="10.html" data-chapter="10" title="10장. SQL 처리와 옵티마이저란?" aria-current="false">10장. SQL 처리와 옵티마이저란?</a><a href="11.html" data-chapter="11" title="11장. 실행 계획과 성능 측정이란?" aria-current="false">11장. 실행 계획과 성능 측정이란?</a><a href="12.html" data-chapter="12" title="12장. B-tree 인덱스와 스캔 방식이란?" aria-current="false">12장. B-tree 인덱스와 스캔 방식이란?</a><a href="13.html" data-chapter="13" title="13장. 복합 인덱스와 탐색 범위 튜닝이란?" aria-current="false">13장. 복합 인덱스와 탐색 범위 튜닝이란?</a><a href="14.html" data-chapter="14" title="14장. 테이블 접근 최소화란?" aria-current="false">14장. 테이블 접근 최소화란?</a><a href="15.html" data-chapter="15" title="15장. 검색 조건과 인덱스 활용이란?" aria-current="false">15장. 검색 조건과 인덱스 활용이란?</a><a href="16.html" data-chapter="16" title="16장. 정렬·페이징·집계 튜닝이란?" aria-current="false">16장. 정렬·페이징·집계 튜닝이란?</a><a href="17.html" data-chapter="17" title="17장. 조인·서브쿼리 튜닝이란?" aria-current="false">17장. 조인·서브쿼리 튜닝이란?</a><a href="18.html" data-chapter="18" title="18장. 특수 인덱스와 인덱스 운영이란?" aria-current="false">18장. 특수 인덱스와 인덱스 운영이란?</a><a href="19.html" data-chapter="19" title="19장. 파티셔닝과 파티션 프루닝이란?" aria-current="true">19장. 파티셔닝과 파티션 프루닝이란?</a><a href="20.html" data-chapter="20" title="20장. 파티션 인덱스와 유지관리란?" aria-current="false">20장. 파티션 인덱스와 유지관리란?</a><a href="21.html" data-chapter="21" title="21장. 반정규화와 통계 테이블 설계란?" aria-current="false">21장. 반정규화와 통계 테이블 설계란?</a><a href="22.html" data-chapter="22" title="22장. 공통코드 설계란?" aria-current="false">22장. 공통코드 설계란?</a><a href="23.html" data-chapter="23" title="23장. 계층 구조 설계란?" aria-current="false">23장. 계층 구조 설계란?</a><a href="24.html" data-chapter="24" title="24장. 상속 관계 설계란?" aria-current="false">24장. 상속 관계 설계란?</a><a href="25.html" data-chapter="25" title="25장. 데이터 변경 추적과 감사 기록이란?" aria-current="false">25장. 데이터 변경 추적과 감사 기록이란?</a><a href="26.html" data-chapter="26" title="26장. 데이터 변경 이력과 시간 모델링이란?" aria-current="false">26장. 데이터 변경 이력과 시간 모델링이란?</a><a href="27.html" data-chapter="27" title="27장. 동적 속성과 EAV 설계란?" aria-current="false">27장. 동적 속성과 EAV 설계란?</a><a href="28.html" data-chapter="28" title="28장. JSON 데이터 설계란?" aria-current="false">28장. JSON 데이터 설계란?</a><a href="29.html" data-chapter="29" title="29장. 논리 삭제란?" aria-current="false">29장. 논리 삭제란?</a><a href="30.html" data-chapter="30" title="30장. 요구사항 변경 대응과 설계·튜닝 종합 실습" aria-current="false">30장. 요구사항 변경 대응과 설계·튜닝 종합 실습</a><footer>30장</footer></aside><main class="reading"><section class="chapter" id="chapter-19"><div class="eyebrow">디비설계강의 / CHAPTER 19</div><span class="chapter-num" aria-hidden="true">19</span><h2>19장. 파티셔닝과 파티션 프루닝이란?</h2><h3>1. 파티셔닝의 목적과 저장구조</h3>
+<h4>1.1 성능·보관 기간·유지관리 요구</h4>
+<p><strong>파티셔닝(partitioning)</strong>은 하나의 테이블을 일정한 기준에 따라 여러 부분으로 나누는 방법입니다. 테이블 파티셔닝에서는 컬럼 구성을 유지하면서 행을 나눕니다. 애플리케이션에서는 하나의 테이블 이름으로 조회합니다.</p>
+<p>예를 들어 거래 테이블을 거래일시 기준으로 월별로 나눌 수 있습니다. 1월 거래와 2월 거래는 서로 다른 파티션에 저장됩니다. SQL에서는 같은 거래 테이블을 사용합니다.</p>
+<p>파티셔닝을 검토하는 이유는 조회 성능을 높이고 데이터를 관리하기 위해서입니다.</p>
+<table><thead><tr><th>요구</th><th>파티셔닝으로 얻으려는 효과</th><th>확인할 조건</th></tr></thead><tbody><tr><td>최근 한 달 거래 조회</td><td>다른 달의 저장공간을 읽지 않기</td><td>조회 조건에 거래일시가 있는가</td></tr><tr><td>보관 기간이 지난 거래 제거</td><td>기간별로 데이터를 관리하기</td><td>제거 기준과 파티션 경계가 맞는가</td></tr><tr><td>월별 데이터 적재와 점검</td><td>작업 대상을 특정 기간으로 한정하기</td><td>작업이 해당 기간 안에서 끝나는가</td></tr></tbody></table>
+<p>큰 테이블을 나눈다고 조회가 빨라지는 것은 아닙니다. 월별로 나눈 테이블에서도 날짜 조건 없이 전체 거래를 집계하면 모든 월을 읽어야 합니다. 파티셔닝의 성능 효과는 불필요한 파티션을 제외할 수 있는지에 달려 있습니다.</p>
+<p>일반적인 단일 단계 힙 테이블 파티셔닝에서는 파티션마다 별도 세그먼트를 사용합니다. 각 세그먼트는 익스텐트와 블록으로 구성됩니다. 파티션을 나눠도 실제 데이터를 읽는 단위는 여전히 블록입니다. 세그먼트 생성이 지연된 빈 파티션에는 아직 저장공간이 할당되지 않을 수도 있습니다.</p>
+<figure class="book-figure" data-type="generated" id="figure-ee4e9e829224"><div class="figure-scroll"><img src="../assets/img/d1f580ab4e587358.png" alt="하나의 거래 테이블과 월별 저장공간" data-raster="true"/></div><figcaption>하나의 거래 테이블과 월별 저장공간</figcaption></figure>
+<p>이 장의 생성 예제는 파티셔닝을 사용할 수 있는 Oracle Database 21c 환경을 전제로 합니다. 2장에서 다룬 에디션과 기능 사용 조건을 먼저 확인합니다. 실습 계정에는 테이블 생성 권한과 저장공간 할당량이 필요합니다.</p>
+<h4>1.2 파티션 키와 데이터 분포</h4>
+<p><strong>파티션 키(partitioning key)</strong>는 행을 어느 파티션에 저장할지 결정하는 컬럼 또는 컬럼 조합입니다. 기본키가 행을 구별한다면, 파티션 키는 행의 저장 위치를 결정합니다. 두 키가 반드시 같을 필요는 없습니다.</p>
+<p>거래번호가 기본키이고 거래일시가 파티션 키인 설계를 생각해 봅시다. 거래번호만으로 한 건을 찾는 요청에는 날짜별 분할이 직접적인 도움이 되지 않을 수 있습니다. 반면 특정 달의 거래를 읽는 요청에는 날짜별 분할이 유리합니다.</p>
+<p>파티션 키를 고를 때는 조회 조건과 보관 기준을 함께 봅니다.</p>
+<table><thead><tr><th>후보 컬럼</th><th>유리한 요구</th><th>주의할 점</th></tr></thead><tbody><tr><td>거래일시</td><td>기간 조회, 기간별 보관</td><td>최신 기간에 입력이 집중될 수 있음</td></tr><tr><td>회원번호</td><td>회원별 조회, 해시 분산</td><td>기간별 제거 단위와 맞지 않음</td></tr><tr><td>지역코드</td><td>지역별 조회와 관리</td><td>지역마다 데이터양이 다를 수 있음</td></tr><tr><td>처리상태</td><td>상태별 분리</td><td>상태 변경이 잦고 특정 상태에 행이 몰릴 수 있음</td></tr></tbody></table>
+<p>행 수뿐 아니라 파티션별 블록 수와 접근 빈도도 확인해야 합니다. 과거 파티션과 최신 파티션의 크기가 같더라도 최신 파티션에만 입력과 조회가 집중될 수 있습니다.</p>
+<p>파티션 키의 변경 가능성도 검토합니다. 키 변경으로 행이 다른 파티션으로 이동해야 한다면 기본 설정에서는 오류가 발생합니다. 이런 변경을 허용하려면 행 이동 설정을 검토해야 합니다. 이동 과정에서 ROWID도 바뀔 수 있습니다.</p>
+<h3>2. 파티션 방식 선택</h3>
+<h4>2.1 Range·List·Hash 파티션</h4>
+<p><strong>Range 파티션(range partitioning)</strong>은 값의 범위로 행을 나눕니다. 날짜나 순서가 있는 번호에 적합합니다. <code>VALUES LESS THAN</code>에 지정한 상한값은 해당 파티션에 포함되지 않습니다.</p>
+<p><strong>List 파티션(list partitioning)</strong>은 명시한 값의 목록으로 행을 나눕니다. 지역코드나 업무 유형처럼 값별로 관리해야 할 때 적합합니다.</p>
+<p><strong>Hash 파티션(hash partitioning)</strong>은 파티션 키에 해시 함수를 적용해 행을 나눕니다. 같은 키 값은 같은 파티션에 저장됩니다. 값의 대소 순서는 저장 위치와 관계가 없습니다.</p>
+<table><thead><tr><th>방식</th><th>분할 기준</th><th>대표적인 사용 목적</th></tr></thead><tbody><tr><td>Range</td><td>값의 구간</td><td>월별 거래 관리</td></tr><tr><td>List</td><td>지정한 값의 목록</td><td>지역별 데이터 관리</td></tr><tr><td>Hash</td><td>해시 계산 결과</td><td>다양한 키 값을 여러 파티션에 분산</td></tr></tbody></table>
+<p>Hash 파티션이 모든 상황에서 같은 행 수를 보장하지는 않습니다. 특정 회원의 거래가 대부분이라면 그 회원번호에 해당하는 파티션으로 행이 몰립니다.</p>
+<p>다음 예제는 같은 거래 데이터를 세 방식으로 나눕니다. SQL Developer의 스크립트 실행으로 한 번 실행합니다. <code>CH19_</code>로 시작하는 실습 객체가 없는 상태를 전제로 합니다.</p>
+<p><strong>예제 19-1 — 세 가지 방식으로 거래 나누기</strong></p>
+<p><strong>파일명:</strong> <code>ch19_partition_types.sql</code></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65</div><pre><code class="language-sql" data-code="CREATE TABLE ch19_trade_range (
+    trade_id   NUMBER NOT NULL,
+    trade_at   DATE NOT NULL,
+    member_id  NUMBER NOT NULL,
+    region_cd  VARCHAR2(10) NOT NULL,
+    amount     NUMBER(12, 2) NOT NULL
+)
+PARTITION BY RANGE (trade_at) (
+    PARTITION p_before VALUES LESS THAN (DATE &#x27;2026-01-01&#x27;),
+    PARTITION p_202601 VALUES LESS THAN (DATE &#x27;2026-02-01&#x27;),
+    PARTITION p_202602 VALUES LESS THAN (DATE &#x27;2026-03-01&#x27;),
+    PARTITION p_future VALUES LESS THAN (MAXVALUE)
+);
+
+INSERT INTO ch19_trade_range
+VALUES (1, DATE &#x27;2026-01-10&#x27;, 101, &#x27;SEOUL&#x27;, 12000);
+
+INSERT INTO ch19_trade_range
+VALUES (2, DATE &#x27;2026-01-31&#x27; + 18 / 24, 102, &#x27;BUSAN&#x27;, 18000);
+
+INSERT INTO ch19_trade_range
+VALUES (3, DATE &#x27;2026-02-01&#x27;, 101, &#x27;SEOUL&#x27;, 25000);
+
+INSERT INTO ch19_trade_range
+VALUES (4, DATE &#x27;2026-03-05&#x27;, 103, &#x27;JEJU&#x27;, 9000);
+
+CREATE TABLE ch19_trade_list (
+    trade_id   NUMBER NOT NULL,
+    trade_at   DATE NOT NULL,
+    member_id  NUMBER NOT NULL,
+    region_cd  VARCHAR2(10) NOT NULL,
+    amount     NUMBER(12, 2) NOT NULL
+)
+PARTITION BY LIST (region_cd) (
+    PARTITION p_seoul VALUES (&#x27;SEOUL&#x27;),
+    PARTITION p_busan VALUES (&#x27;BUSAN&#x27;),
+    PARTITION p_other VALUES (DEFAULT)
+);
+
+INSERT INTO ch19_trade_list
+SELECT * FROM ch19_trade_range;
+
+CREATE TABLE ch19_trade_hash (
+    trade_id   NUMBER NOT NULL,
+    trade_at   DATE NOT NULL,
+    member_id  NUMBER NOT NULL,
+    region_cd  VARCHAR2(10) NOT NULL,
+    amount     NUMBER(12, 2) NOT NULL
+)
+PARTITION BY HASH (member_id)
+PARTITIONS 4;
+
+INSERT INTO ch19_trade_hash
+SELECT * FROM ch19_trade_range;
+
+COMMIT;
+
+SELECT &#x27;RANGE_JAN&#x27; AS target, COUNT(*) AS row_count
+FROM ch19_trade_range PARTITION (p_202601)
+UNION ALL
+SELECT &#x27;LIST_OTHER&#x27;, COUNT(*)
+FROM ch19_trade_list PARTITION (p_other)
+UNION ALL
+SELECT &#x27;HASH_TOTAL&#x27;, COUNT(*)
+FROM ch19_trade_hash;"><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> ch19_trade_range <span class="token punctuation">(</span>
+    trade_id   NUMBER <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    trade_at   <span class="token keyword">DATE</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    member_id  NUMBER <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    region_cd  VARCHAR2<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    amount     NUMBER<span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span>
+<span class="token punctuation">)</span>
+<span class="token keyword">PARTITION</span> <span class="token keyword">BY</span> RANGE <span class="token punctuation">(</span>trade_at<span class="token punctuation">)</span> <span class="token punctuation">(</span>
+    <span class="token keyword">PARTITION</span> p_before <span class="token keyword">VALUES</span> LESS THAN <span class="token punctuation">(</span><span class="token keyword">DATE</span> <span class="token string">'2026-01-01'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token keyword">PARTITION</span> p_202601 <span class="token keyword">VALUES</span> LESS THAN <span class="token punctuation">(</span><span class="token keyword">DATE</span> <span class="token string">'2026-02-01'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token keyword">PARTITION</span> p_202602 <span class="token keyword">VALUES</span> LESS THAN <span class="token punctuation">(</span><span class="token keyword">DATE</span> <span class="token string">'2026-03-01'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token keyword">PARTITION</span> p_future <span class="token keyword">VALUES</span> LESS THAN <span class="token punctuation">(</span>MAXVALUE<span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> ch19_trade_range
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token keyword">DATE</span> <span class="token string">'2026-01-10'</span><span class="token punctuation">,</span> <span class="token number">101</span><span class="token punctuation">,</span> <span class="token string">'SEOUL'</span><span class="token punctuation">,</span> <span class="token number">12000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> ch19_trade_range
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token keyword">DATE</span> <span class="token string">'2026-01-31'</span> <span class="token operator">+</span> <span class="token number">18</span> <span class="token operator">/</span> <span class="token number">24</span><span class="token punctuation">,</span> <span class="token number">102</span><span class="token punctuation">,</span> <span class="token string">'BUSAN'</span><span class="token punctuation">,</span> <span class="token number">18000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> ch19_trade_range
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token keyword">DATE</span> <span class="token string">'2026-02-01'</span><span class="token punctuation">,</span> <span class="token number">101</span><span class="token punctuation">,</span> <span class="token string">'SEOUL'</span><span class="token punctuation">,</span> <span class="token number">25000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> ch19_trade_range
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token keyword">DATE</span> <span class="token string">'2026-03-05'</span><span class="token punctuation">,</span> <span class="token number">103</span><span class="token punctuation">,</span> <span class="token string">'JEJU'</span><span class="token punctuation">,</span> <span class="token number">9000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> ch19_trade_list <span class="token punctuation">(</span>
+    trade_id   NUMBER <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    trade_at   <span class="token keyword">DATE</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    member_id  NUMBER <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    region_cd  VARCHAR2<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    amount     NUMBER<span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span>
+<span class="token punctuation">)</span>
+<span class="token keyword">PARTITION</span> <span class="token keyword">BY</span> LIST <span class="token punctuation">(</span>region_cd<span class="token punctuation">)</span> <span class="token punctuation">(</span>
+    <span class="token keyword">PARTITION</span> p_seoul <span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token string">'SEOUL'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token keyword">PARTITION</span> p_busan <span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token string">'BUSAN'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token keyword">PARTITION</span> p_other <span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token keyword">DEFAULT</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> ch19_trade_list
+<span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> ch19_trade_range<span class="token punctuation">;</span>
+
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> ch19_trade_hash <span class="token punctuation">(</span>
+    trade_id   NUMBER <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    trade_at   <span class="token keyword">DATE</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    member_id  NUMBER <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    region_cd  VARCHAR2<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    amount     NUMBER<span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span>
+<span class="token punctuation">)</span>
+<span class="token keyword">PARTITION</span> <span class="token keyword">BY</span> <span class="token keyword">HASH</span> <span class="token punctuation">(</span>member_id<span class="token punctuation">)</span>
+PARTITIONS <span class="token number">4</span><span class="token punctuation">;</span>
+
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> ch19_trade_hash
+<span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> ch19_trade_range<span class="token punctuation">;</span>
+
+<span class="token keyword">COMMIT</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> <span class="token string">'RANGE_JAN'</span> <span class="token keyword">AS</span> target<span class="token punctuation">,</span> <span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> row_count
+<span class="token keyword">FROM</span> ch19_trade_range <span class="token keyword">PARTITION</span> <span class="token punctuation">(</span>p_202601<span class="token punctuation">)</span>
+<span class="token keyword">UNION</span> <span class="token keyword">ALL</span>
+<span class="token keyword">SELECT</span> <span class="token string">'LIST_OTHER'</span><span class="token punctuation">,</span> <span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span>
+<span class="token keyword">FROM</span> ch19_trade_list <span class="token keyword">PARTITION</span> <span class="token punctuation">(</span>p_other<span class="token punctuation">)</span>
+<span class="token keyword">UNION</span> <span class="token keyword">ALL</span>
+<span class="token keyword">SELECT</span> <span class="token string">'HASH_TOTAL'</span><span class="token punctuation">,</span> <span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span>
+<span class="token keyword">FROM</span> ch19_trade_hash<span class="token punctuation">;</span></code></pre></div></div>
+<p><strong>실행 결과</strong></p>
+<div class="code-wrap" data-kind="output" data-lang="text"><div class="code-label"><span class="code-label__name">출력</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5</div><pre><code data-code="TARGET       ROW_COUNT
+-----------  ---------
+RANGE_JAN            2
+LIST_OTHER           1
+HASH_TOTAL           4">TARGET       ROW_COUNT
+-----------  ---------
+RANGE_JAN            2
+LIST_OTHER           1
+HASH_TOTAL           4</code></pre></div></div>
+<p><code>2026-02-01 00:00:00</code>인 거래는 1월 파티션에 들어가지 않습니다. 1월 파티션의 상한과 같으므로 2월 파티션에 들어갑니다.</p>
+<p><code>p_before</code>에는 2026년 이전 값이 들어갑니다. 첫 번째 Range 파티션은 하한을 따로 지정하지 않습니다. 따라서 업무상 허용할 최소 날짜는 따로 검증해야 합니다.</p>
+<p>List 방식의 <code>DEFAULT</code>는 다른 목록에 없는 값을 받습니다. 이 예제에서는 <code>JEJU</code>가 <code>p_other</code>에 들어갑니다. 일반적인 수동 List 파티션에서는 값이 목록에 없고 <code>DEFAULT</code>도 없으면 입력할 수 없습니다.</p>
+<p>Hash 방식에서는 애플리케이션이 특정 회원번호의 파티션을 계산하지 않습니다. Oracle이 저장할 파티션을 결정합니다. 해시 파티션 키의 동등 조건과 <code>IN</code> 조건은 읽을 파티션을 줄이는 데 활용할 수 있습니다. 하지만 번호 범위는 해시 배치와 대응하지 않습니다.</p>
+<h4>2.2 Interval·복합 파티션</h4>
+<p><strong>Interval 파티션(interval partitioning)</strong>은 Range 방식을 확장한 기능입니다. 기준 경계를 넘는 데이터가 입력되면 지정한 간격에 맞는 파티션을 자동으로 생성합니다.</p>
+<p>월별 거래에서는 다음 달 파티션을 미리 만드는 부담을 줄일 수 있습니다. 다만 잘못 입력한 미래 날짜도 새 파티션을 만들 수 있습니다. 자동 생성과 날짜 검증은 별개의 문제입니다.</p>
+<p><strong>예제 19-2 — 필요한 달의 파티션 자동 생성하기</strong></p>
+<p><strong>파일명:</strong> <code>ch19_interval.sql</code></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</div><pre><code class="language-sql" data-code="CREATE TABLE ch19_trade_interval (
+    trade_id NUMBER NOT NULL,
+    trade_at DATE NOT NULL,
+    amount   NUMBER(12, 2) NOT NULL
+)
+PARTITION BY RANGE (trade_at)
+INTERVAL (NUMTOYMINTERVAL(1, &#x27;MONTH&#x27;)) (
+    PARTITION p_before VALUES LESS THAN (DATE &#x27;2026-01-01&#x27;)
+);
+
+INSERT INTO ch19_trade_interval
+VALUES (1, DATE &#x27;2026-01-15&#x27;, 12000);
+
+INSERT INTO ch19_trade_interval
+VALUES (2, DATE &#x27;2026-03-15&#x27;, 9000);
+
+COMMIT;
+
+SELECT partition_position, interval
+FROM user_tab_partitions
+WHERE table_name = &#x27;CH19_TRADE_INTERVAL&#x27;
+ORDER BY partition_position;
+
+SELECT COUNT(*) AS feb_count
+FROM ch19_trade_interval
+WHERE trade_at &gt;= DATE &#x27;2026-02-01&#x27;
+  AND trade_at &lt;  DATE &#x27;2026-03-01&#x27;;"><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> ch19_trade_interval <span class="token punctuation">(</span>
+    trade_id NUMBER <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    trade_at <span class="token keyword">DATE</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    amount   NUMBER<span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span>
+<span class="token punctuation">)</span>
+<span class="token keyword">PARTITION</span> <span class="token keyword">BY</span> RANGE <span class="token punctuation">(</span>trade_at<span class="token punctuation">)</span>
+<span class="token keyword">INTERVAL</span> <span class="token punctuation">(</span>NUMTOYMINTERVAL<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'MONTH'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>
+    <span class="token keyword">PARTITION</span> p_before <span class="token keyword">VALUES</span> LESS THAN <span class="token punctuation">(</span><span class="token keyword">DATE</span> <span class="token string">'2026-01-01'</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> ch19_trade_interval
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token keyword">DATE</span> <span class="token string">'2026-01-15'</span><span class="token punctuation">,</span> <span class="token number">12000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> ch19_trade_interval
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token keyword">DATE</span> <span class="token string">'2026-03-15'</span><span class="token punctuation">,</span> <span class="token number">9000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">COMMIT</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> partition_position<span class="token punctuation">,</span> <span class="token keyword">interval</span>
+<span class="token keyword">FROM</span> user_tab_partitions
+<span class="token keyword">WHERE</span> table_name <span class="token operator">=</span> <span class="token string">'CH19_TRADE_INTERVAL'</span>
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span> partition_position<span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> <span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> feb_count
+<span class="token keyword">FROM</span> ch19_trade_interval
+<span class="token keyword">WHERE</span> trade_at <span class="token operator">>=</span> <span class="token keyword">DATE</span> <span class="token string">'2026-02-01'</span>
+  <span class="token operator">AND</span> trade_at <span class="token operator">&lt;</span>  <span class="token keyword">DATE</span> <span class="token string">'2026-03-01'</span><span class="token punctuation">;</span></code></pre></div></div>
+<p><strong>실행 결과</strong></p>
+<div class="code-wrap" data-kind="output" data-lang="text"><div class="code-label"><span class="code-label__name">출력</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9</div><pre><code data-code="PARTITION_POSITION  INTERVAL
+------------------  --------
+                 1  NO
+                 2  YES
+                 4  YES
+
+FEB_COUNT
+---------
+        0">PARTITION_POSITION  INTERVAL
+------------------  --------
+                 1  NO
+                 2  YES
+                 4  YES
+
+FEB_COUNT
+---------
+        0</code></pre></div></div>
+<p>기준 Range 파티션의 상한인 <code>2026-01-01</code>이 자동 생성 구간의 출발점입니다. 1월과 3월 데이터가 입력되므로 두 달의 Interval 파티션이 생성됩니다. 2월 파티션은 미리 만들지 않습니다. 이 때문에 파티션 위치 번호에도 빈자리가 나타날 수 있습니다.</p>
+<p><strong>복합 파티션(composite partitioning)</strong>은 먼저 나눈 파티션을 다른 기준으로 다시 나누는 방식입니다. 안쪽 분할 단위를 <strong>서브파티션(subpartition)</strong>이라고 합니다.</p>
+<p>거래를 월별로 나누고, 각 월 안에서 회원번호로 Hash 분할할 수 있습니다. 월별 관리 단위를 유지하면서 각 월의 데이터를 여러 저장 단위로 나누는 구조입니다.</p>
+<p><strong>코드 조각</strong></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14</div><pre><code class="language-sql" data-code="CREATE TABLE ch19_trade_composite (
+    trade_id  NUMBER NOT NULL,
+    trade_at  DATE NOT NULL,
+    member_id NUMBER NOT NULL,
+    amount    NUMBER(12, 2) NOT NULL
+)
+PARTITION BY RANGE (trade_at)
+SUBPARTITION BY HASH (member_id)
+SUBPARTITIONS 4 (
+    PARTITION p_before VALUES LESS THAN (DATE &#x27;2026-01-01&#x27;),
+    PARTITION p_202601 VALUES LESS THAN (DATE &#x27;2026-02-01&#x27;),
+    PARTITION p_202602 VALUES LESS THAN (DATE &#x27;2026-03-01&#x27;),
+    PARTITION p_future VALUES LESS THAN (MAXVALUE)
+);"><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> ch19_trade_composite <span class="token punctuation">(</span>
+    trade_id  NUMBER <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    trade_at  <span class="token keyword">DATE</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    member_id NUMBER <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    amount    NUMBER<span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span>
+<span class="token punctuation">)</span>
+<span class="token keyword">PARTITION</span> <span class="token keyword">BY</span> RANGE <span class="token punctuation">(</span>trade_at<span class="token punctuation">)</span>
+SUBPARTITION <span class="token keyword">BY</span> <span class="token keyword">HASH</span> <span class="token punctuation">(</span>member_id<span class="token punctuation">)</span>
+SUBPARTITIONS <span class="token number">4</span> <span class="token punctuation">(</span>
+    <span class="token keyword">PARTITION</span> p_before <span class="token keyword">VALUES</span> LESS THAN <span class="token punctuation">(</span><span class="token keyword">DATE</span> <span class="token string">'2026-01-01'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token keyword">PARTITION</span> p_202601 <span class="token keyword">VALUES</span> LESS THAN <span class="token punctuation">(</span><span class="token keyword">DATE</span> <span class="token string">'2026-02-01'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token keyword">PARTITION</span> p_202602 <span class="token keyword">VALUES</span> LESS THAN <span class="token punctuation">(</span><span class="token keyword">DATE</span> <span class="token string">'2026-03-01'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token keyword">PARTITION</span> p_future <span class="token keyword">VALUES</span> LESS THAN <span class="token punctuation">(</span>MAXVALUE<span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div></div>
+<p>이 구조에서는 서브파티션 단위로 데이터 세그먼트를 만듭니다. 날짜 조건으로 바깥쪽 파티션을 줄일 수 있습니다. 회원번호 동등 조건으로는 선택된 파티션 안의 서브파티션을 줄일 수 있습니다.</p>
+<p>분할 단위가 늘면 관리 대상도 늘어납니다. 월별 데이터가 작거나 회원번호 조건이 거의 없다면 복합 구조의 이점이 작을 수 있습니다. 필요한 관리 단위와 실제 읽기량을 근거로 선택합니다.</p>
+<h4>2.3 Reference Partitioning의 개념과 적용 상황</h4>
+<p><strong>Reference Partitioning</strong>은 외래키로 연결된 부모의 파티션 구분을 자식에게 적용하는 방식입니다.</p>
+<p>주문은 주문일시로 월별 분할하고, 주문상세는 주문번호로 주문을 참조한다고 생각해 봅시다. 주문상세에 주문일시가 없어도 참조 관계를 이용할 수 있습니다. 부모 주문과 대응하는 파티션에 주문상세를 저장하는 방식입니다.</p>
+<table><thead><tr><th>구분</th><th>부모 주문</th><th>자식 주문상세</th></tr></thead><tbody><tr><td>파티션 결정 근거</td><td>주문일시</td><td>부모를 참조하는 외래키</td></tr><tr><td>1월 주문 관련 데이터</td><td>1월 주문 파티션</td><td>대응하는 주문상세 파티션</td></tr><tr><td>날짜 중복 저장</td><td>주문일시 저장</td><td>파티션 배치만을 위한 날짜 복제 불필요</td></tr></tbody></table>
+<p>두 테이블에 같은 파티션 이름을 붙이는 것만으로는 이 관계가 만들어지지 않습니다. 활성화된 참조 제약조건을 바탕으로 부모와 자식의 분할 관계를 정의합니다. 참조에 사용하는 자식 외래키 컬럼에는 <code>NOT NULL</code>이 필요합니다.</p>
+<p>이 방식은 부모와 자식의 보관 기간과 관리 단위가 같을 때 검토합니다. 예를 들어 주문과 주문상세를 같은 기간 단위로 관리하는 경우입니다.</p>
+<p>반면 주문상세를 주문과 다른 기준으로 보관해야 한다면 제약이 됩니다. 자식이 부모의 구조와 관리 작업에 영향을 받기 때문입니다. 자식 테이블을 부모와 독립적으로 운영해야 하는지 먼저 판단합니다.</p>
+<p>조회에서도 참조 관계를 활용할 수 있습니다. 부모의 날짜 조건으로 주문을 제한하고 자식과 조인하면 자식 측 프루닝으로 이어질 수 있습니다. 다만 자식 외래키 조건만으로 부모의 날짜 파티션을 항상 바로 알아내는 것은 아닙니다. 실행 계획을 확인해야 합니다.</p>
+<h3>3. 필요한 파티션만 읽기</h3>
+<h4>3.1 정적·동적 파티션 프루닝</h4>
+<p><strong>파티션 프루닝(partition pruning)</strong>은 조회에 필요하지 않은 파티션을 읽기 대상에서 제외하는 최적화입니다.</p>
+<p>월별로 분할한 거래 테이블에서 2월 거래를 조회하면 다른 기간의 파티션을 제외할 수 있습니다. 선택된 2월 파티션 안에서는 전체 스캔이나 인덱스 접근을 수행합니다. 프루닝과 인덱스 사용은 서로 다른 판단입니다.</p>
+<figure class="book-figure" data-type="generated" id="figure-e798e85ec1a2"><div class="figure-scroll"><img src="../assets/img/04a5e8684f29b3d9.png" alt="날짜 조건으로 읽을 파티션 줄이기" data-raster="true"/></div><figcaption>날짜 조건으로 읽을 파티션 줄이기</figcaption></figure>
+<p><strong>정적 파티션 프루닝(static partition pruning)</strong>은 실행 계획을 만들 때 읽을 파티션을 결정하는 방식입니다. 파티션 키를 명확한 상수와 비교할 때 대표적으로 나타납니다.</p>
+<p><strong>코드 조각</strong></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4</div><pre><code class="language-sql" data-code="SELECT SUM(amount)
+FROM ch19_trade_range
+WHERE trade_at &gt;= DATE &#x27;2026-02-01&#x27;
+  AND trade_at &lt;  DATE &#x27;2026-03-01&#x27;;"><span class="token keyword">SELECT</span> <span class="token function">SUM</span><span class="token punctuation">(</span>amount<span class="token punctuation">)</span>
+<span class="token keyword">FROM</span> ch19_trade_range
+<span class="token keyword">WHERE</span> trade_at <span class="token operator">>=</span> <span class="token keyword">DATE</span> <span class="token string">'2026-02-01'</span>
+  <span class="token operator">AND</span> trade_at <span class="token operator">&lt;</span>  <span class="token keyword">DATE</span> <span class="token string">'2026-03-01'</span><span class="token punctuation">;</span></code></pre></div></div>
+<p>앞서 만든 테이블에서 이 구간은 세 번째 파티션인 <code>p_202602</code>에 해당합니다. 정적 프루닝이 적용되면 실행 계획의 시작·종료 파티션 정보에 해당 위치가 나타납니다.</p>
+<p><strong>동적 파티션 프루닝(dynamic partition pruning)</strong>은 실행 중에 주어지는 값으로 읽을 파티션을 결정하는 방식입니다. 바인드 변수나 조인에서 얻은 값이 대표적인 근거입니다.</p>
+<p><strong>코드 조각</strong></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4</div><pre><code class="language-sql" data-code="SELECT SUM(amount)
+FROM ch19_trade_range
+WHERE trade_at &gt;= :from_date
+  AND trade_at &lt;  :to_date;"><span class="token keyword">SELECT</span> <span class="token function">SUM</span><span class="token punctuation">(</span>amount<span class="token punctuation">)</span>
+<span class="token keyword">FROM</span> ch19_trade_range
+<span class="token keyword">WHERE</span> trade_at <span class="token operator">>=</span> :from_date
+  <span class="token operator">AND</span> trade_at <span class="token operator">&lt;</span>  :to_date<span class="token punctuation">;</span></code></pre></div></div>
+<p><code>:from_date</code>와 <code>:to_date</code>에는 <code>DATE</code> 타입으로 값을 바인딩합니다. 바인드 변수를 사용한다는 이유로 모든 파티션을 읽어야 하는 것은 아닙니다. 실행 시점의 날짜 범위로 프루닝할 수 있습니다.</p>
+<p>동적 프루닝이 정적 프루닝보다 나쁜 실행 방식이라는 뜻은 아닙니다. 실행 전까지 알 수 없는 값을 이용해 불필요한 읽기를 줄이는 방법입니다.</p>
+<h4>3.2 함수·형 변환·바인드 조건의 영향</h4>
+<p>파티션 키를 가공하면 저장 구간과 조회 조건의 대응이 불분명해질 수 있습니다.</p>
+<p>다음 조건은 날짜를 문자로 바꾼 뒤 비교합니다.</p>
+<p><strong>코드 조각</strong></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3</div><pre><code class="language-sql" data-code="SELECT SUM(amount)
+FROM ch19_trade_range
+WHERE TO_CHAR(trade_at, &#x27;YYYYMM&#x27;) = &#x27;202602&#x27;;"><span class="token keyword">SELECT</span> <span class="token function">SUM</span><span class="token punctuation">(</span>amount<span class="token punctuation">)</span>
+<span class="token keyword">FROM</span> ch19_trade_range
+<span class="token keyword">WHERE</span> TO_CHAR<span class="token punctuation">(</span>trade_at<span class="token punctuation">,</span> <span class="token string">'YYYYMM'</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token string">'202602'</span><span class="token punctuation">;</span></code></pre></div></div>
+<p>사람은 2월 거래를 뜻한다고 이해할 수 있습니다. 하지만 원래 날짜 컬럼으로 정의한 파티션 경계를 직접 비교하는 조건은 아닙니다. 불필요한 파티션을 제외하지 못할 수 있으므로 실행 계획으로 확인해야 합니다.</p>
+<p>같은 기간을 다음처럼 표현하면 날짜 경계가 드러납니다.</p>
+<p><strong>코드 조각</strong></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4</div><pre><code class="language-sql" data-code="SELECT SUM(amount)
+FROM ch19_trade_range
+WHERE trade_at &gt;= DATE &#x27;2026-02-01&#x27;
+  AND trade_at &lt;  DATE &#x27;2026-03-01&#x27;;"><span class="token keyword">SELECT</span> <span class="token function">SUM</span><span class="token punctuation">(</span>amount<span class="token punctuation">)</span>
+<span class="token keyword">FROM</span> ch19_trade_range
+<span class="token keyword">WHERE</span> trade_at <span class="token operator">>=</span> <span class="token keyword">DATE</span> <span class="token string">'2026-02-01'</span>
+  <span class="token operator">AND</span> trade_at <span class="token operator">&lt;</span>  <span class="token keyword">DATE</span> <span class="token string">'2026-03-01'</span><span class="token punctuation">;</span></code></pre></div></div>
+<p>이 반개방 구간은 2월 마지막 날의 시각까지 포함합니다. 컬럼을 가공하지 않고 시작과 종료 경계를 비교하므로 파티션 구조와도 맞습니다.</p>
+<p>암시적 형 변환도 확인합니다. <code>DATE</code> 컬럼과 <code>TIMESTAMP</code> 값을 비교하면 컬럼 쪽에 변환이 생길 수 있습니다. 실행 계획의 조건 정보에 <code>INTERNAL_FUNCTION</code>이 보인다면 타입 변환 여부를 점검합니다.</p>
+<table><thead><tr><th>조건 작성 방식</th><th>확인할 사항</th></tr></thead><tbody><tr><td><code>DATE</code> 컬럼과 <code>DATE</code> 리터럴 비교</td><td>파티션 경계와 직접 대응하는가</td></tr><tr><td>날짜 컬럼과 문자열 비교</td><td>NLS 설정에 의존하는 변환이 있는가</td></tr><tr><td>날짜 컬럼을 함수로 가공</td><td>원래 파티션 키로 프루닝하는가</td></tr><tr><td>바인드 변수와 비교</td><td>컬럼에 맞는 데이터 타입으로 바인딩했는가</td></tr></tbody></table>
+<p>함수가 있다는 이유만으로 프루닝 실패를 단정하지는 않습니다. 값 쪽의 변환과 컬럼 쪽의 변환은 영향이 다릅니다. 가상 컬럼의 표현식을 기준으로 파티셔닝한 경우도 있습니다. 최종 조건과 파티션 경계가 어떻게 대응하는지 확인해야 합니다.</p>
+<h4>3.3 PSTART·PSTOP과 실제 읽기량 확인</h4>
+<p>실행 계획의 <code>PSTART</code>는 시작 파티션, <code>PSTOP</code>은 종료 파티션 정보를 나타냅니다. 단순한 Range 파티션의 정적 프루닝에서는 파티션 위치 번호를 확인할 수 있습니다.</p>
+<table><thead><tr><th>표시 예</th><th>해석</th></tr></thead><tbody><tr><td><code>3</code> / <code>3</code></td><td>세 번째 파티션 하나를 대상으로 함</td></tr><tr><td><code>2</code> / <code>3</code></td><td>두 번째부터 세 번째까지 대상으로 함</td></tr><tr><td><code>KEY</code> / <code>KEY</code></td><td>실행 중에 계산할 파티션 정보</td></tr><tr><td><code>KEY(I)</code> / <code>KEY(I)</code></td><td>IN 목록을 이용한 파티션 결정 정보</td></tr></tbody></table>
+<p><code>KEY</code>는 파티션 이름이나 기본키를 뜻하지 않습니다. 또 <code>PSTART</code>와 <code>PSTOP</code>은 읽은 블록 수를 보여 주지 않습니다. 실제 읽기량은 <code>Buffers</code> 같은 실행 통계로 확인합니다.</p>
+<p>다음 예제는 같은 결과를 만드는 두 조건을 비교합니다. 앞의 작은 예제와 별도로 12개월 데이터를 준비합니다. 실행 계획은 11장 2.2항의 공통 실행 방법으로 확인합니다. <code>CH19_FUNCTION</code>과 <code>CH19_RANGE</code> 주석으로 각각의 커서를 찾아 SQL 식별자와 자식 커서 번호를 지정합니다.</p>
+<p><strong>예제 19-3 — 프루닝 여부와 실제 읽기량 비교하기</strong></p>
+<p><strong>파일명:</strong> <code>ch19_pruning_measure.sql</code></p>
+<div class="code-wrap" data-kind="code" data-lang="sql"><div class="code-label"><span class="code-label__name">SQL</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63</div><pre><code class="language-sql" data-code="CREATE TABLE ch19_trade_measure (
+    trade_id NUMBER NOT NULL,
+    trade_at DATE NOT NULL,
+    amount   NUMBER(12, 2) NOT NULL,
+    padding  VARCHAR2(200) NOT NULL
+)
+PARTITION BY RANGE (trade_at)
+INTERVAL (NUMTOYMINTERVAL(1, &#x27;MONTH&#x27;)) (
+    PARTITION p_before VALUES LESS THAN (DATE &#x27;2026-01-01&#x27;)
+);
+
+INSERT INTO ch19_trade_measure (
+    trade_id, trade_at, amount, padding
+)
+SELECT LEVEL,
+       ADD_MONTHS(
+           DATE &#x27;2026-01-01&#x27;,
+           TRUNC((LEVEL - 1) / 10000)
+       ) + MOD(LEVEL - 1, 28),
+       100,
+       RPAD(&#x27;X&#x27;, 200, &#x27;X&#x27;)
+FROM dual
+CONNECT BY LEVEL &lt;= 120000;
+
+COMMIT;
+
+BEGIN
+    DBMS_STATS.GATHER_TABLE_STATS(
+        ownname     =&gt; USER,
+        tabname     =&gt; &#x27;CH19_TRADE_MEASURE&#x27;,
+        granularity =&gt; &#x27;ALL&#x27;
+    );
+END;
+/
+
+SELECT /*+ GATHER_PLAN_STATISTICS NO_PARALLEL(t) */
+       /* CH19_FUNCTION */
+       COUNT(*) AS trade_count,
+       SUM(t.amount) AS total_amount
+FROM ch19_trade_measure t
+WHERE TO_CHAR(t.trade_at, &#x27;YYYYMM&#x27;) = &#x27;202606&#x27;;
+
+SELECT *
+FROM TABLE(
+    DBMS_XPLAN.DISPLAY_CURSOR(
+        NULL, NULL, &#x27;ALLSTATS LAST +PARTITION +PREDICATE&#x27;
+    )
+);
+
+SELECT /*+ GATHER_PLAN_STATISTICS NO_PARALLEL(t) */
+       /* CH19_RANGE */
+       COUNT(*) AS trade_count,
+       SUM(t.amount) AS total_amount
+FROM ch19_trade_measure t
+WHERE t.trade_at &gt;= DATE &#x27;2026-06-01&#x27;
+  AND t.trade_at &lt;  DATE &#x27;2026-07-01&#x27;;
+
+SELECT *
+FROM TABLE(
+    DBMS_XPLAN.DISPLAY_CURSOR(
+        NULL, NULL, &#x27;ALLSTATS LAST +PARTITION +PREDICATE&#x27;
+    )
+);"><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> ch19_trade_measure <span class="token punctuation">(</span>
+    trade_id NUMBER <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    trade_at <span class="token keyword">DATE</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    amount   NUMBER<span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    padding  VARCHAR2<span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span>
+<span class="token punctuation">)</span>
+<span class="token keyword">PARTITION</span> <span class="token keyword">BY</span> RANGE <span class="token punctuation">(</span>trade_at<span class="token punctuation">)</span>
+<span class="token keyword">INTERVAL</span> <span class="token punctuation">(</span>NUMTOYMINTERVAL<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'MONTH'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>
+    <span class="token keyword">PARTITION</span> p_before <span class="token keyword">VALUES</span> LESS THAN <span class="token punctuation">(</span><span class="token keyword">DATE</span> <span class="token string">'2026-01-01'</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> ch19_trade_measure <span class="token punctuation">(</span>
+    trade_id<span class="token punctuation">,</span> trade_at<span class="token punctuation">,</span> amount<span class="token punctuation">,</span> padding
+<span class="token punctuation">)</span>
+<span class="token keyword">SELECT</span> <span class="token keyword">LEVEL</span><span class="token punctuation">,</span>
+       ADD_MONTHS<span class="token punctuation">(</span>
+           <span class="token keyword">DATE</span> <span class="token string">'2026-01-01'</span><span class="token punctuation">,</span>
+           TRUNC<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">LEVEL</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">10000</span><span class="token punctuation">)</span>
+       <span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">MOD</span><span class="token punctuation">(</span><span class="token keyword">LEVEL</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">28</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+       <span class="token number">100</span><span class="token punctuation">,</span>
+       RPAD<span class="token punctuation">(</span><span class="token string">'X'</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">,</span> <span class="token string">'X'</span><span class="token punctuation">)</span>
+<span class="token keyword">FROM</span> dual
+<span class="token keyword">CONNECT</span> <span class="token keyword">BY</span> <span class="token keyword">LEVEL</span> <span class="token operator">&lt;=</span> <span class="token number">120000</span><span class="token punctuation">;</span>
+
+<span class="token keyword">COMMIT</span><span class="token punctuation">;</span>
+
+<span class="token keyword">BEGIN</span>
+    DBMS_STATS<span class="token punctuation">.</span>GATHER_TABLE_STATS<span class="token punctuation">(</span>
+        ownname     <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">USER</span><span class="token punctuation">,</span>
+        tabname     <span class="token operator">=</span><span class="token operator">></span> <span class="token string">'CH19_TRADE_MEASURE'</span><span class="token punctuation">,</span>
+        granularity <span class="token operator">=</span><span class="token operator">></span> <span class="token string">'ALL'</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">END</span><span class="token punctuation">;</span>
+<span class="token operator">/</span>
+
+<span class="token keyword">SELECT</span> <span class="token comment">/*+ GATHER_PLAN_STATISTICS NO_PARALLEL(t) */</span>
+       <span class="token comment">/* CH19_FUNCTION */</span>
+       <span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> trade_count<span class="token punctuation">,</span>
+       <span class="token function">SUM</span><span class="token punctuation">(</span>t<span class="token punctuation">.</span>amount<span class="token punctuation">)</span> <span class="token keyword">AS</span> total_amount
+<span class="token keyword">FROM</span> ch19_trade_measure t
+<span class="token keyword">WHERE</span> TO_CHAR<span class="token punctuation">(</span>t<span class="token punctuation">.</span>trade_at<span class="token punctuation">,</span> <span class="token string">'YYYYMM'</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token string">'202606'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> <span class="token keyword">TABLE</span><span class="token punctuation">(</span>
+    DBMS_XPLAN<span class="token punctuation">.</span>DISPLAY_CURSOR<span class="token punctuation">(</span>
+        <span class="token boolean">NULL</span><span class="token punctuation">,</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span> <span class="token string">'ALLSTATS LAST +PARTITION +PREDICATE'</span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> <span class="token comment">/*+ GATHER_PLAN_STATISTICS NO_PARALLEL(t) */</span>
+       <span class="token comment">/* CH19_RANGE */</span>
+       <span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> trade_count<span class="token punctuation">,</span>
+       <span class="token function">SUM</span><span class="token punctuation">(</span>t<span class="token punctuation">.</span>amount<span class="token punctuation">)</span> <span class="token keyword">AS</span> total_amount
+<span class="token keyword">FROM</span> ch19_trade_measure t
+<span class="token keyword">WHERE</span> t<span class="token punctuation">.</span>trade_at <span class="token operator">>=</span> <span class="token keyword">DATE</span> <span class="token string">'2026-06-01'</span>
+  <span class="token operator">AND</span> t<span class="token punctuation">.</span>trade_at <span class="token operator">&lt;</span>  <span class="token keyword">DATE</span> <span class="token string">'2026-07-01'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> <span class="token keyword">TABLE</span><span class="token punctuation">(</span>
+    DBMS_XPLAN<span class="token punctuation">.</span>DISPLAY_CURSOR<span class="token punctuation">(</span>
+        <span class="token boolean">NULL</span><span class="token punctuation">,</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span> <span class="token string">'ALLSTATS LAST +PARTITION +PREDICATE'</span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div></div>
+<p><strong>실행 결과</strong></p>
+<p>두 집계 SQL의 기대 결과는 같습니다.</p>
+<div class="code-wrap" data-kind="output" data-lang="text"><div class="code-label"><span class="code-label__name">출력</span><div class="code-tools"><span class="copy-result" aria-live="polite"></span><button type="button" class="small copy">복사</button></div></div><div class="code-body"><div class="code-ln" aria-hidden="true">1
+2
+3</div><pre><code data-code="TRADE_COUNT  TOTAL_AMOUNT
+-----------  ------------
+      10000       1000000">TRADE_COUNT  TOTAL_AMOUNT
+-----------  ------------
+      10000       1000000</code></pre></div></div>
+<p>실행 계획의 구체적인 모양과 <code>Buffers</code> 값은 실습 환경에서 확인합니다. 함수 조건에서는 모든 기간을 읽고 필터링할 수 있습니다. 범위 조건에서는 6월에 해당하는 파티션만 읽는지 확인합니다.</p>
+<p>Interval 파티션에서는 프루닝을 하더라도 <code>PSTART</code>와 <code>PSTOP</code>에 <code>KEY</code> 계열 표시가 나올 수 있습니다. 반대로 전체 파티션에 접근할 때는 <code>PSTOP</code>에 <code>1048575</code> 같은 큰 값이 보일 수도 있습니다. 이 값을 실제 생성된 파티션 수로 해석하면 안 됩니다.</p>
+<table><thead><tr><th>확인 대상</th><th>비교할 내용</th></tr></thead><tbody><tr><td>집계 결과</td><td>건수와 합계가 같은가</td></tr><tr><td>파티션 연산</td><td><code>ALL</code>, <code>SINGLE</code>, <code>ITERATOR</code> 중 무엇인가</td></tr><tr><td><code>PSTART</code>·<code>PSTOP</code></td><td>전체 범위인가, 제한된 범위인가</td></tr><tr><td>테이블 접근 연산의 <code>Starts</code></td><td>파티션 접근에 따라 몇 번 시작했는가</td></tr><tr><td><code>Buffers</code></td><td>결과를 얻기까지 읽은 블록이 줄었는가</td></tr><tr><td>조건 정보</td><td>컬럼 가공이나 타입 변환이 남아 있는가</td></tr></tbody></table>
+<p><code>TABLE ACCESS FULL</code>이 보이더라도 파티션 정보를 함께 읽어야 합니다. 선택된 한 달의 파티션만 전체 스캔했다면 나머지 달은 읽지 않은 것입니다.</p>
+<p>집계 연산의 <code>A-Rows</code>가 1이라고 해서 읽은 거래가 한 건이라는 뜻은 아닙니다. 아래쪽 테이블 접근 연산과 <code>Buffers</code>를 함께 확인합니다. 읽기량은 공통 실행 방법에 따라 두 계획의 같은 위치에서 비교합니다.</p>
+<p>이 예제는 인덱스를 만들지 않았습니다. 따라서 인덱스 선택의 영향 없이 파티션 제외 효과를 관찰할 수 있습니다. SQL을 고친 뒤 결과가 같은지 확인하고, 그다음 읽기량이 줄었는지 판단합니다.</p>
+<h3>4. 연습문제 — 거래 데이터의 파티션 키와 방식 선택</h3>
+<p>결제 서비스에서 거래 테이블의 분할 방식을 검토합니다. 한 행은 확정된 결제 거래 한 건입니다.</p>
+<p><strong>요구사항</strong></p>
+<ol>
+<li>거래에는 거래번호, 거래일시, 회원번호, 지역코드, 금액이 있습니다.</li>
+<li>하루에 약 200만 건이 추가됩니다.</li>
+<li>거래일시는 한국 표준시 기준의 <code>DATE</code> 값이며 확정 후 바꾸지 않습니다.</li>
+<li>주요 조회는 최근 하루 또는 한 달의 거래 집계입니다.</li>
+<li>회원별 거래 조회에는 조회 기간을 함께 입력합니다.</li>
+<li>거래번호만으로 찾는 단건 조회도 있습니다.</li>
+<li>데이터는 거래일시 기준으로 36개월을 보관합니다. 제거 작업은 월 단위로 수행합니다.</li>
+<li>지역별 거래량은 크게 다릅니다.</li>
+<li>현재 월에 입력과 조회가 집중됩니다.</li>
+</ol>
+<p><strong>작성할 내용</strong></p>
+<ol>
+<li>파티셔닝의 목적을 조회 성능과 보관 관리로 나누어 적습니다.</li>
+<li>거래일시·회원번호·지역코드를 파티션 키 후보로 비교합니다.</li>
+<li>Range·List·Hash 중 기본 방식을 선택하고 이유를 적습니다.</li>
+<li>월별 Range와 월별 Interval 중 하나를 선택합니다.</li>
+<li>복합 파티션을 바로 적용할지, 측정 후 검토할지 결정합니다.</li>
+<li>2026년 6월 조회 조건과 월 경계의 테스트 데이터를 작성합니다.</li>
+<li>날짜 조건이 없는 거래번호 단건 조회에서 파티셔닝만으로 해결되지 않는 점을 설명합니다.</li>
+</ol>
+<p><strong>완료 조건</strong></p>
+<ul>
+<li>월별 보관 기준과 파티션 경계가 일치합니다.</li>
+<li><code>2026-06-01 00:00:00</code>은 6월 조회에 포함됩니다.</li>
+<li><code>2026-06-30 23:59:59</code>는 6월 조회에 포함됩니다.</li>
+<li><code>2026-07-01 00:00:00</code>은 6월 조회에서 제외됩니다.</li>
+<li>조회 조건은 거래일시 컬럼을 가공하지 않는 반개방 구간입니다.</li>
+<li>프루닝 여부를 <code>PSTART</code>·<code>PSTOP</code>과 파티션 연산으로 확인합니다.</li>
+<li>개선 효과를 반환 건수만으로 판단하지 않고 실제 읽기량으로 확인합니다.</li>
+<li>미래 날짜의 오입력과 최신 파티션의 접근 집중에 대한 확인 사항을 남깁니다.</li>
+</ul><nav class="chapter-nav"><button type="button" class="text" data-prev="true" data-href="18.html">← 이전 장</button><span>19 / 30</span><button type="button" class="text" data-next="true" data-href="20.html">다음 장 →</button></nav></section></main></div><script src="../assets/book-fe9af60309390aae.js"></script></body></html>
